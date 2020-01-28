@@ -1,0 +1,105 @@
+# To fetch schema from
+introspection: http://localhost:8080/query
+
+servers:
+  - url: https://demo.nearbycomputing.com
+    description: Demo
+
+info:
+  title: NearbyComputing API
+  description: Documentation for GraphQL API Gateway
+
+domains:
+  - name: Devices
+    description: View, register and remove devices
+    usecases:
+      - name: List devices
+        description: Query one or more registered devices
+        query: query.devices
+      - name: List nearby devices
+        description: Find devices within range of a reference device
+        query: query.nearbyDevices
+      - name: Register device
+        description: Register a new device
+        query: mutation.device
+      - name: Remove device
+        description: Unregister a device
+        query: mutation.removeDevice
+
+  - name: Services
+    description: View information on currently deployed services
+    usecases:
+      - name: List services
+        description: View information on currently deployed services
+        query: query.services
+      - name: Service chain
+        description: Fetch service chain by ID
+        query: query.serviceChain
+      - name: Service chains
+        description: List all service chains
+        query: query.serviceChains
+      - name: Service types
+        description: Search service types, filtered by keyword
+        query: query.serviceTypes
+      - name: Deploy service
+        description: Deploy a single service
+        query: mutation.deployService
+      - name: Remove service
+        description: Remove a running service
+        query: mutation.removeService
+      - name: Deploy service chain
+        description: Deploy a chain of connected services
+        query: mutation.deployServiceChain
+      - name: Update service chain
+        description: Modify a service chain that is already running
+        query: mutation.updateServiceChain
+      - name: Remove service chain
+        description: Undeploy a running service chain
+        query: mutation.removeServiceChain
+
+  - name: Service definitions
+    description: Create, edit and delete service definitions
+    usecases:
+      - name: Service defs
+        description: Query one or more service definitions
+        query: query.serviceDefs
+      - name: Service def
+        description: Create or update a service definition
+        query: mutation.serviceDef
+      - name: Remove service def
+        description: Remove a service definition
+        query: mutation.removeServiceDef
+      - name: Block defs
+        description: Query one or more block definitions
+        query: query.blockDefs
+      - name: Block def
+        description: Create or update a block definition
+        query: mutation.blockDef
+      - name: Remove block def
+        description: Remove a block definition
+        query: mutation.removeBlockDef
+      - name: Service diagram
+        description: Fetch the JSON-serialised diagram for use in the service designer
+        query: query.serviceDiagram
+      - name: Save service diagram
+        description: Save a JSON-serialised service diagram from the service designer
+        query: mutation.saveServiceDiagram
+
+  - name: Settings
+    description: Fetch the settings for the currently logged in user
+    usecases:
+      - name: Settings
+        description: Fetch settings
+        query: query.settings
+      - name: Allocate VLAN
+        description: Request an additional VLAN to be allocated to the current tenant
+        query: mutation.allocateVlan
+      - name: Release VLAN
+        description: Release an allocated VLAN from the current tenant
+        query: mutation.releaseVlan
+      - name: Set initial VLAN
+        description: Set the minimum VLAN ID to start allocating from
+        query: mutation.setInitialVlan
+      - name: Set default map position
+        description: Set the default position and zoom of the map shown in the dashboard
+        query: mutation.setDefaultMapPosition

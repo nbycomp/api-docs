@@ -1,0 +1,16 @@
+{
+  "name": "nearbycomputing-api-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "dociql config.yml"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dociql": "^1.0.3"
+  }
+}
