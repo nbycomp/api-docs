@@ -1,0 +1,101 @@
+resources:
+  - name: schema-repo
+    type: git
+    source:
+      uri: git@github.com:nbycomp/graphql-hello-world.git
+      branch: master
+      private_key: ((botnbycomp_private_key))
+      paths: [graphql-backend/schema]
+
+  - name: api-docs-repo
+    type: git
+    source:
+      uri: git@github.com:nbycomp/api-docs.git
+      branch: master
+      private_key: ((botnbycomp_private_key))
+
+  - name: task-image
+    type: registry-image
+    source:
+      {
+        repository: registry.nearbycomputing.com/nbycomp/core/api-gateway/docs-task,
+      }
+
+jobs:
+  - name: task-image
+    public: true
+    serial: true
+    plan:
+      - get: api-docs-repo
+        trigger: true
+      - task: build
+        privileged: true
+        config:
+          platform: linux
+          image_resource:
+            type: registry-image
+            source: { repository: vito/oci-build-task }
+          params:
+            CONTEXT: api-docs-repo
+          inputs: [{ name: api-docs-repo }]
+          outputs: [{ name: image }]
+          caches: [{ path: cache }]
+          run: { path: build }
+      - put: task-image
+        params:
+          image: image/image.tar
+
+  - name: generate-docs
+    public: true
+    serial: true
+    plan:
+      - get: schema-repo
+        trigger: true
+      - task: build-api-gw
+        file: schema-repo/graphql-backend/ci/build.yml
+        input_mapping: { repo: schema-repo }
+        output_mapping: { image: api-gw-image }
+        privileged: true
+      - get: task-image
+        passed: [task-image]
+        params: { format: oci }
+      - task: generate
+        privileged: true
+        config:
+          platform: linux
+          image_resource:
+            type: registry-image
+            source:
+              repository: karlkfi/concourse-dcind
+          inputs:
+            - name: api-gw-image
+            - name: task-image
+          outputs:
+            - name: public
+          run:
+            path: entrypoint.sh
+            args:
+              - bash
+              - -c
+              - |
+                docker load -i api-gw-image/image.tar
+                docker tag "$(cat api-gw-image/digest)" api-gw
+
+                docker load -i task-image/image.tar
+                docker tag "$(cat task-image/digest)" docs
+
+                docker network create docs
+
+                docker run -d --network docs \
+                  -e APIGW_VALIDATE_JWT=false \
+                  -e APIGW_SCHEMA_PATH=/opt/schema/*.graphql \
+                  -e APIGW_SKIP_DB=true \
+                  -e NSO_BASE_URL= \
+                  -e NSO_RESTCONF_BASE_URL= \
+                  -e LINKMETRICS_GRPC_ADDR= \
+                  -e DEVREPO_GRPC_ADDR= \
+                  -e SERMGR_GRPC_ADDR= \
+                  -e SETTINGS_GRPC_ADDR= \
+                  api-gw
+
+                docker run --network docs registry.nearbycomputing.com/nbycomp/core/api-gateway/docs-task

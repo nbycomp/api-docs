@@ -1,5 +1,5 @@
 # To fetch schema from
-introspection: http://localhost:8080/query
+introspection: http://api-gw:8080/query
 
 servers:
   - url: https://demo.nearbycomputing.com
