@@ -13,6 +13,7 @@ resources:
       uri: git@github.com:nbycomp/api-docs.git
       branch: master
       private_key: ((botnbycomp_private_key))
+      ignore_paths: [public]
 
   - name: task-image
     type: registry-image
@@ -49,8 +50,12 @@ jobs:
     public: true
     serial: true
     plan:
-      - get: schema-repo
-        trigger: true
+      - in_parallel:
+          - get: schema-repo
+            trigger: true
+          - get: api-docs-repo
+            trigger: true
+            passed: [task-image]
       - task: build-api-gw
         file: schema-repo/graphql-backend/ci/build.yml
         input_mapping: { repo: schema-repo }
@@ -76,17 +81,16 @@ jobs:
             path: entrypoint.sh
             args:
               - bash
-              - -c
+              - -ceux
               - |
                 docker load -i api-gw-image/image.tar
                 docker tag "$(cat api-gw-image/digest)" api-gw
 
                 docker load -i task-image/image.tar
-                docker tag "$(cat task-image/digest)" docs
 
                 docker network create docs
 
-                docker run -d --network docs \
+                docker run -d --name api-gw --network docs \
                   -e APIGW_VALIDATE_JWT=false \
                   -e APIGW_SCHEMA_PATH=/opt/schema/*.graphql \
                   -e APIGW_SKIP_DB=true \
@@ -98,4 +102,33 @@ jobs:
                   -e SETTINGS_GRPC_ADDR= \
                   api-gw
 
-                docker run --network docs registry.nearbycomputing.com/nbycomp/core/api-gateway/docs-task
+                docker run --network docs -v "$PWD"/public:/public \
+                  registry.nearbycomputing.com/nbycomp/core/api-gateway/docs-task
+      - task: update-repo
+        config:
+          platform: linux
+          image_resource:
+            type: registry-image
+            source:
+              repository: alpine/git
+          inputs:
+            - name: api-docs-repo
+            - name: public
+          outputs:
+            - name: updated-repo
+          run:
+            path: sh
+            args:
+              - -ceux
+              - |
+                git clone api-docs-repo updated-repo
+                cp -r public updated-repo/public
+
+                git config --global user.name "Dale Concourse"
+                git config --global user.email "bot@nearbycomputing.com"
+
+                cd updated-repo
+                git add public
+                git commit -m "Update API docs"
+      - put: api-docs-repo
+        params: { repository: updated-repo }
