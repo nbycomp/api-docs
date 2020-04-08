@@ -128,7 +128,10 @@ jobs:
                 git config --global user.email "bot@nearbycomputing.com"
 
                 cd updated-repo
-                git add public
-                git commit -m "Update API docs"
+
+                if [ "$(git status --porcelain)" ]; then
+                  git add public
+                  git commit -m "Update API docs"
+                fi
       - put: api-docs-repo
         params: { repository: updated-repo }
