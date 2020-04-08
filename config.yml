@@ -29,9 +29,6 @@ domains:
   - name: Services
     description: View information on currently deployed services
     usecases:
-      - name: List services
-        description: View information on currently deployed services
-        query: query.services
       - name: Service chain
         description: Fetch service chain by ID
         query: query.serviceChain
@@ -41,12 +38,6 @@ domains:
       - name: Service types
         description: Search service types, filtered by keyword
         query: query.serviceTypes
-      - name: Deploy service
-        description: Deploy a single service
-        query: mutation.deployService
-      - name: Remove service
-        description: Remove a running service
-        query: mutation.removeService
       - name: Deploy service chain
         description: Deploy a chain of connected services
         query: mutation.deployServiceChain
