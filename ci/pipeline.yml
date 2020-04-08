@@ -5,7 +5,7 @@ resources:
       uri: git@github.com:nbycomp/graphql-hello-world.git
       branch: master
       private_key: ((botnbycomp_private_key))
-      paths: [graphql-backend/schema]
+      paths: [graphql-backend]
 
   - name: api-docs-repo
     type: git
