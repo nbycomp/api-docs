@@ -1335,7 +1335,7 @@ https://demo.nearbycomputing.com
   <span class="hljs-attr">&quot;blocks&quot;</span>: [
     {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-      <span class="hljs-attr">&quot;serviceDef&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;blockDefId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -1592,7 +1592,7 @@ https://demo.nearbycomputing.com
   <span class="hljs-attr">&quot;blocks&quot;</span>: [
     {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-      <span class="hljs-attr">&quot;serviceDef&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;blockDefId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -3555,72 +3555,73 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;def&quot;</span>: {
+      <span class="hljs-attr">&quot;block&quot;</span>: {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;valueFields&quot;</span>: [
-          {
-            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-            <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-          }
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;menuPath&quot;</span>: [
+          <span class="hljs-string">&quot;string&quot;</span>
         ],
-        <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
-          {
-            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-            <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-              <span class="hljs-attr">&quot;tags&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                }
-              ],
-              <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                <span class="hljs-string">&quot;object&quot;</span>
-              ]
-            },
-            <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-          }
-        ],
-        <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
-          {
-            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-            <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-              <span class="hljs-attr">&quot;tags&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                }
-              ],
-              <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                <span class="hljs-string">&quot;object&quot;</span>
-              ]
-            },
-            <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
-              <span class="hljs-attr">&quot;tags&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                }
-              ],
-              <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                <span class="hljs-string">&quot;object&quot;</span>
-              ]
+        <span class="hljs-attr">&quot;serviceDef&quot;</span>: {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;valueFields&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+              <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
             }
-          }
-        ]
+          ],
+          <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+              <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                <span class="hljs-attr">&quot;tags&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                  }
+                ],
+                <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                  <span class="hljs-string">&quot;object&quot;</span>
+                ]
+              },
+              <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+            }
+          ],
+          <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+              <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                <span class="hljs-attr">&quot;tags&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                  }
+                ],
+                <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                  <span class="hljs-string">&quot;object&quot;</span>
+                ]
+              },
+              <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
+                <span class="hljs-attr">&quot;tags&quot;</span>: [
+                  <span class="hljs-literal">null</span>
+                ]
+              }
+            }
+          ]
+        }
       }
     }
   ]
@@ -3968,8 +3969,8 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="serviceDef">
-                      <span class="json-property-name">serviceDef:</span>
+                    <dt data-property-name="blockDefId">
+                      <span class="json-property-name">blockDefId:</span>
                       <div class="json-property-type">
                         <div class="">
                           <a class="json-schema-ref" href="#/definitions/ID">ID</a>
@@ -4055,7 +4056,7 @@ https://demo.nearbycomputing.com
                   <head></head>
                   <body><pre><code class="hljs language-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-  <span class="hljs-attr">&quot;serviceDef&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;blockDefId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
   <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -4211,76 +4212,73 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;def&quot;</span>: {
+      <span class="hljs-attr">&quot;block&quot;</span>: {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;valueFields&quot;</span>: [
-          {
-            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-            <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-          }
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;menuPath&quot;</span>: [
+          <span class="hljs-string">&quot;string&quot;</span>
         ],
-        <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
-          {
-            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-            <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-              <span class="hljs-attr">&quot;tags&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                }
-              ],
-              <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                <span class="hljs-string">&quot;object&quot;</span>
-              ]
-            },
-            <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-          }
-        ],
-        <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
-          {
-            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-            <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-              <span class="hljs-attr">&quot;tags&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                }
-              ],
-              <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                <span class="hljs-string">&quot;object&quot;</span>
-              ]
-            },
-            <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
-              <span class="hljs-attr">&quot;tags&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                }
-              ],
-              <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                <span class="hljs-string">&quot;object&quot;</span>
-              ]
-            },
-            <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-          }
-        ],
-        <span class="hljs-attr">&quot;parentDeviceFields&quot;</span>: [
-          <span class="hljs-literal">null</span>
-        ]
+        <span class="hljs-attr">&quot;serviceDef&quot;</span>: {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;valueFields&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+              <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+            }
+          ],
+          <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+              <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                <span class="hljs-attr">&quot;tags&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                  }
+                ],
+                <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                  <span class="hljs-string">&quot;object&quot;</span>
+                ]
+              },
+              <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+            }
+          ],
+          <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+              <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                <span class="hljs-attr">&quot;tags&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                  }
+                ],
+                <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                  <span class="hljs-string">&quot;object&quot;</span>
+                ]
+              },
+              <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
+                <span class="hljs-attr">&quot;tags&quot;</span>: [
+                  {}
+                ]
+              }
+            }
+          ]
+        }
       }
     }
   ]
@@ -6969,6 +6967,15 @@ https://demo.nearbycomputing.com
                     <dd>
                       <p>human-readable instance name, assigned at deploy time</p>
                     </dd>
+                    <dt data-property-name="block">
+                      <span class="json-property-name">block:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/BlockDef">BlockDef</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
                     <dt data-property-name="def" class="has-description">
                       <span class="json-property-name">def:</span>
                       <div class="json-property-type">
@@ -7087,76 +7094,76 @@ https://demo.nearbycomputing.com
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
   <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;def&quot;</span>: {
+  <span class="hljs-attr">&quot;block&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-    <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-    <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;valueFields&quot;</span>: [
-      {
-        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-        <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-        <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-      }
+    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;menuPath&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
     ],
-    <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
-      {
-        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-        <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-        <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-          <span class="hljs-attr">&quot;tags&quot;</span>: [
-            {
-              <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-            }
-          ],
-          <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-            <span class="hljs-string">&quot;object&quot;</span>
-          ]
-        },
-        <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-      }
-    ],
-    <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
-      {
-        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-        <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-        <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-          <span class="hljs-attr">&quot;tags&quot;</span>: [
-            {
-              <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-            }
-          ],
-          <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-            <span class="hljs-string">&quot;object&quot;</span>
-          ]
-        },
-        <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
-          <span class="hljs-attr">&quot;tags&quot;</span>: [
-            {
-              <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-            }
-          ],
-          <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-            <span class="hljs-string">&quot;object&quot;</span>
-          ]
-        },
-        <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-      }
-    ],
-    <span class="hljs-attr">&quot;parentDeviceFields&quot;</span>: [
-      {}
-    ]
+    <span class="hljs-attr">&quot;serviceDef&quot;</span>: {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;valueFields&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+          <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+          <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+        }
+      ],
+      <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+          <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+          <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+            <span class="hljs-attr">&quot;tags&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+              }
+            ],
+            <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+              <span class="hljs-string">&quot;object&quot;</span>
+            ]
+          },
+          <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+        }
+      ],
+      <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+          <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+          <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+            <span class="hljs-attr">&quot;tags&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+              }
+            ],
+            <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+              <span class="hljs-string">&quot;object&quot;</span>
+            ]
+          },
+          <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
+            <span class="hljs-attr">&quot;tags&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
 </code></pre> </body>
@@ -7332,49 +7339,51 @@ https://demo.nearbycomputing.com
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
         <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
         <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;def&quot;</span>: {
+        <span class="hljs-attr">&quot;block&quot;</span>: {
           <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-          <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-          <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;valueFields&quot;</span>: [
-            {
-              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-              <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-            }
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;menuPath&quot;</span>: [
+            <span class="hljs-string">&quot;string&quot;</span>
           ],
-          <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
-            {
-              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-              <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-                <span class="hljs-attr">&quot;tags&quot;</span>: [
-                  {
-                    <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                  }
-                ],
-                <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                  <span class="hljs-string">&quot;object&quot;</span>
-                ]
-              },
-              <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-            }
-          ],
-          <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
-            {
-              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-            }
-          ]
+          <span class="hljs-attr">&quot;serviceDef&quot;</span>: {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;valueFields&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+              }
+            ],
+            <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                  <span class="hljs-attr">&quot;tags&quot;</span>: [
+                    {
+                      <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                    }
+                  ],
+                  <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                    <span class="hljs-string">&quot;object&quot;</span>
+                  ]
+                },
+                <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+              }
+            ],
+            <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
+              <span class="hljs-literal">null</span>
+            ]
+          }
         }
       }
     ]
@@ -7960,66 +7969,65 @@ https://demo.nearbycomputing.com
             <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
             <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
             <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;def&quot;</span>: {
+            <span class="hljs-attr">&quot;block&quot;</span>: {
               <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;valueFields&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                  <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                  <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                }
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;menuPath&quot;</span>: [
+                <span class="hljs-string">&quot;string&quot;</span>
               ],
-              <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                  <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                  <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-                    <span class="hljs-attr">&quot;tags&quot;</span>: [
-                      {
-                        <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                        <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                      }
-                    ],
-                    <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                      <span class="hljs-string">&quot;object&quot;</span>
-                    ]
-                  },
-                  <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                }
-              ],
-              <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                  <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                  <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-                    <span class="hljs-attr">&quot;tags&quot;</span>: [
-                      {
-                        <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                        <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                      }
-                    ],
-                    <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                      <span class="hljs-string">&quot;object&quot;</span>
-                    ]
-                  },
-                  <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
-                    <span class="hljs-attr">&quot;tags&quot;</span>: [
-                      {}
-                    ]
+              <span class="hljs-attr">&quot;serviceDef&quot;</span>: {
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;valueFields&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                    <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                    <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                    <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
                   }
-                }
-              ]
+                ],
+                <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                    <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                    <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                    <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                      <span class="hljs-attr">&quot;tags&quot;</span>: [
+                        {
+                          <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                        }
+                      ],
+                      <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                        <span class="hljs-string">&quot;object&quot;</span>
+                      ]
+                    },
+                    <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                  }
+                ],
+                <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                    <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                    <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                    <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                      <span class="hljs-attr">&quot;tags&quot;</span>: [
+                        {
+                          <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
             }
           }
         ]
@@ -8757,68 +8765,68 @@ https://demo.nearbycomputing.com
           <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
           <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
           <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;def&quot;</span>: {
+          <span class="hljs-attr">&quot;block&quot;</span>: {
             <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;valueFields&quot;</span>: [
-              {
-                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-              }
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;menuPath&quot;</span>: [
+              <span class="hljs-string">&quot;string&quot;</span>
             ],
-            <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
-              {
-                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-                  <span class="hljs-attr">&quot;tags&quot;</span>: [
-                    {
-                      <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                    }
-                  ],
-                  <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                    <span class="hljs-string">&quot;object&quot;</span>
-                  ]
-                },
-                <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-              }
-            ],
-            <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
-              {
-                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-                  <span class="hljs-attr">&quot;tags&quot;</span>: [
-                    {
-                      <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                    }
-                  ],
-                  <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                    <span class="hljs-string">&quot;object&quot;</span>
-                  ]
-                },
-                <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
-                  <span class="hljs-attr">&quot;tags&quot;</span>: [
-                    {
-                      <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                    }
-                  ]
+            <span class="hljs-attr">&quot;serviceDef&quot;</span>: {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;valueFields&quot;</span>: [
+                {
+                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                  <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                  <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                  <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
                 }
-              }
-            ]
+              ],
+              <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
+                {
+                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                  <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                  <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                  <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                    <span class="hljs-attr">&quot;tags&quot;</span>: [
+                      {
+                        <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                      }
+                    ],
+                    <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                      <span class="hljs-string">&quot;object&quot;</span>
+                    ]
+                  },
+                  <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                }
+              ],
+              <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
+                {
+                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                  <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                  <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                  <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                    <span class="hljs-attr">&quot;tags&quot;</span>: [
+                      {
+                        <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                      }
+                    ],
+                    <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                      <span class="hljs-literal">null</span>
+                    ]
+                  }
+                }
+              ]
+            }
           }
         }
       ]
