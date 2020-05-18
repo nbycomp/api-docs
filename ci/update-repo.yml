@@ -1,0 +1,28 @@
+---
+platform: linux
+image_resource:
+  type: registry-image
+  source:
+    repository: alpine/git
+inputs:
+  - name: api-docs-repo
+  - name: public
+outputs:
+  - name: updated-repo
+run:
+  path: sh
+  args:
+    - -ceux
+    - |
+      git clone api-docs-repo updated-repo
+      cp -r public updated-repo/public
+
+      git config --global user.name "Dale Concourse"
+      git config --global user.email "bot@nearbycomputing.com"
+
+      cd updated-repo
+
+      if [ "$(git status --porcelain)" ]; then
+        git add public
+        git commit -m "Update API docs"
+      fi
