@@ -41,9 +41,6 @@
             <a href="#tag-Services">Services</a>
             <ul>
               <li>
-                <a href="#operation-list_services-post"> List services </a>
-              </li>
-              <li>
                 <a href="#operation-service_chain-post"> Service chain </a>
               </li>
               <li>
@@ -51,12 +48,6 @@
               </li>
               <li>
                 <a href="#operation-service_types-post"> Service types </a>
-              </li>
-              <li>
-                <a href="#operation-deploy_service-post"> Deploy service </a>
-              </li>
-              <li>
-                <a href="#operation-remove_service-post"> Remove service </a>
               </li>
               <li>
                 <a href="#operation-deploy_service_chain-post"> Deploy service chain </a>
@@ -136,6 +127,7 @@
           <a href="#definition-DeviceLayerInput"> DeviceLayerInput </a>
           <a href="#definition-DeviceLink"> DeviceLink </a>
           <a href="#definition-DevicesResult"> DevicesResult </a>
+          <a href="#definition-EditDeviceInput"> EditDeviceInput </a>
           <a href="#definition-FieldInput"> FieldInput </a>
           <a href="#definition-FieldParam"> FieldParam </a>
           <a href="#definition-Float"> Float </a>
@@ -149,7 +141,6 @@
           <a href="#definition-Metric"> Metric </a>
           <a href="#definition-NearbyDeviceField"> NearbyDeviceField </a>
           <a href="#definition-NearbyDeviceFieldInput"> NearbyDeviceFieldInput </a>
-          <a href="#definition-NearbyFieldInput"> NearbyFieldInput </a>
           <a href="#definition-NetInput"> NetInput </a>
           <a href="#definition-ParentDeviceField"> ParentDeviceField </a>
           <a href="#definition-ParentDeviceFieldInput"> ParentDeviceFieldInput </a>
@@ -167,6 +158,8 @@
           <a href="#definition-ServiceParam"> ServiceParam </a>
           <a href="#definition-ServiceType"> ServiceType </a>
           <a href="#definition-Settings"> Settings </a>
+          <a href="#definition-SharedNet"> SharedNet </a>
+          <a href="#definition-SharedNetInput"> SharedNetInput </a>
           <a href="#definition-Status"> Status </a>
           <a href="#definition-String"> String </a>
           <a href="#definition-Tag"> Tag </a>
@@ -632,6 +625,7 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">status</span>
     <span class="hljs-symbol">mac</span>
     <span class="hljs-symbol">probeIp</span>
+    <span class="hljs-symbol">hostIp</span>
     <span class="hljs-symbol">links</span>
     <span class="hljs-symbol">telemetryUrl</span>
   }</span></span>
@@ -668,7 +662,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20device(%24dev%3A%20DeviceInput!)%7B%0A%20%20device(dev%3A%20%24dev)%7B%0A%20%20%20%20id%0A%20%20%20%20tags%0A%20%20%20%20parents%0A%20%20%20%20displayName%0A%20%20%20%20deviceName%0A%20%20%20%20img%0A%20%20%20%20iconType%0A%20%20%20%20specs%0A%20%20%20%20status%0A%20%20%20%20mac%0A%20%20%20%20probeIp%0A%20%20%20%20links%0A%20%20%20%20telemetryUrl%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                    <a href="https://demo.nearbycomputing.com?query=mutation%20device(%24dev%3A%20DeviceInput!)%7B%0A%20%20device(dev%3A%20%24dev)%7B%0A%20%20%20%20id%0A%20%20%20%20tags%0A%20%20%20%20parents%0A%20%20%20%20displayName%0A%20%20%20%20deviceName%0A%20%20%20%20img%0A%20%20%20%20iconType%0A%20%20%20%20specs%0A%20%20%20%20status%0A%20%20%20%20mac%0A%20%20%20%20probeIp%0A%20%20%20%20hostIp%0A%20%20%20%20links%0A%20%20%20%20telemetryUrl%0A%20%20%7D%0A%7D" target="_blank">Try it now
                       <a/> </section>
               </div>
             </div>
@@ -725,6 +719,7 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;telemetryUrl&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   }
@@ -851,152 +846,6 @@ https://demo.nearbycomputing.com
           <div class="tag-description doc-row">
             <div class="doc-copy">
               <p>View information on currently deployed services</p>
-            </div>
-          </div>
-          <div id="operation-list_services-post" class="operation panel" data-traverse-target="operation-list_services-post">
-            <!-- <section class="operation-tags row"> -->
-            <!-- <div class="doc-copy"> -->
-            <div class="operation-tags">
-              <a class="label" href="#tag-Services">Services</a>
-              <!---->
-            </div>
-            <!-- </div> -->
-            <!-- </section> -->
-            <h2 class="operation-title">
-              <span class="operation-summary">List services</span>
-            </h2>
-            <div class="doc-row">
-              <div class="doc-copy">
-                <section class="swagger-operation-description">
-                  <p>View information on currently deployed services</p>
-                </section>
-              </div>
-            </div>
-            <div class="doc-row">
-              <div class="doc-copy">
-                <section class="swagger-request-body"> </section>
-                <section class="swagger-request-params">
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
-                      <div class="prop-title">tenant:
-                        <span class="prop-type">
-                          <div class="json-property-type">string</div>
-                          <span class="json-property-range" title="Value limits"></span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="prop-value">
-                      <p class="no-description">(no description)</p>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
-                      <div class="prop-title">qualifiedType:
-                        <span class="prop-type">
-                          <div class="json-property-type">string</div>
-                          <span class="json-property-range" title="Value limits"></span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="prop-value">
-                      <p class="no-description">(no description)</p>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div class="doc-examples">
-                <section>
-                  <h4>Example</h3>
-                    <h5>Request Content-Types:
-                      <span>application/json</span>
-                    </h5>
-                    <h5>Query</h5>
-                    <!-- <div class="hljs"> -->
-                    <html>
-                    <head></head>
-                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> services<span class="hljs-tag">(<span class="hljs-code">$tenant</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$qualifiedType</span>:<span class="hljs-type"> String)</span>{
-  services(tenant: <span class="hljs-code">$tenant</span>, qualifiedType: <span class="hljs-code">$qualifiedType</span>)</span><span class="hljs-tag">{
-    <span class="hljs-symbol">id</span>
-    <span class="hljs-symbol">diagramNode</span>
-    <span class="hljs-symbol">name</span>
-    <span class="hljs-symbol">status</span>
-    <span class="hljs-symbol">fields</span>
-    <span class="hljs-symbol">tenant</span>
-    <span class="hljs-symbol">owner</span>
-    <span class="hljs-symbol">createdAt</span>
-  }</span></span>
-}
-</code></pre> </body>
-                    </html>
-                    <!-- </div> -->
-                    <h5>Variables</h5>
-                    <!-- <div class="hljs"> -->
-                    <html>
-                    <head></head>
-                    <body><pre><code class="hljs language-json">{
-  <span class="hljs-attr">&quot;tenant&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;qualifiedType&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-}
-</code></pre> </body>
-                    </html>
-                    <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20services(%24tenant%3A%20String%2C%20%24qualifiedType%3A%20String)%7B%0A%20%20services(tenant%3A%20%24tenant%2C%20qualifiedType%3A%20%24qualifiedType)%7B%0A%20%20%20%20id%0A%20%20%20%20diagramNode%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20fields%0A%20%20%20%20tenant%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now
-                      <a/> </section>
-              </div>
-            </div>
-            <div class="doc-row">
-              <div class="doc-copy">
-                <section class="swagger-responses">
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
-                      <div class="prop-title">200 OK</div>
-                    </div>
-                    <div class="prop-value">
-                      <p>Successful operation</p>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-inner">
-                    <div class="prop-name">type</div>
-                    <div class="prop-value">
-                      <div class="json-property-type">
-                        <div class="json-schema-ref-array">
-                          <a class="json-schema-ref" href="#/definitions/Service">Service</a>
-                        </div>
-                      </div>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div class="doc-examples">
-                <h5>Response Content-Types:
-                  <span>application/json</span>
-                </h5>
-                <section>
-                  <h5>Response Example
-                    <span>(200 OK)</span>
-                  </h5>
-                  <!-- <div class="hljs"> -->
-                  <html>
-                  <head></head>
-                  <body><pre><code class="hljs language-json">{
-  <span class="hljs-attr">&quot;data&quot;</span>: {
-    <span class="hljs-attr">&quot;services&quot;</span>: [
-      {
-        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;tenant&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-      }
-    ]
-  }
-}
-</code></pre> </body>
-                  </html>
-                  <!-- </div> -->
-                </section>
-              </div>
             </div>
           </div>
           <div id="operation-service_chain-post" class="operation panel" data-traverse-target="operation-service_chain-post">
@@ -1352,376 +1201,6 @@ https://demo.nearbycomputing.com
               </div>
             </div>
           </div>
-          <div id="operation-deploy_service-post" class="operation panel" data-traverse-target="operation-deploy_service-post">
-            <!-- <section class="operation-tags row"> -->
-            <!-- <div class="doc-copy"> -->
-            <div class="operation-tags">
-              <a class="label" href="#tag-Services">Services</a>
-              <!---->
-            </div>
-            <!-- </div> -->
-            <!-- </section> -->
-            <h2 class="operation-title">
-              <span class="operation-summary">Deploy service</span>
-            </h2>
-            <div class="doc-row">
-              <div class="doc-copy">
-                <section class="swagger-operation-description">
-                  <p>Deploy a single service</p>
-                </section>
-              </div>
-            </div>
-            <div class="doc-row">
-              <div class="doc-copy">
-                <section class="swagger-request-body"> </section>
-                <section class="swagger-request-params">
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
-                      <div class="prop-title">id:
-                        <span class="prop-type">
-                          <div class="json-property-type">string</div>
-                          <span class="json-property-range" title="Value limits"></span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="prop-value">
-                      <p class="no-description">(no description)</p>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
-                      <div class="prop-title">name:
-                        <span class="prop-type">
-                          <div class="json-property-type">string</div>
-                          <span class="json-property-range" title="Value limits"></span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="prop-value">
-                      <p class="no-description">(no description)</p>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
-                      <div class="prop-title">type:
-                        <span class="prop-type">
-                          <div class="json-property-type">string</div>
-                          <span class="json-property-range" title="Value limits"></span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="prop-value">
-                      <p class="no-description">(no description)</p>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
-                      <div class="prop-title">tenant:
-                        <span class="prop-type">
-                          <div class="json-property-type">string</div>
-                          <span class="json-property-range" title="Value limits"></span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="prop-value">
-                      <p class="no-description">(no description)</p>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
-                      <div class="prop-title">fields:
-                        <span class="prop-type">
-                          <div class="json-property-type">
-                            <div class="json-schema-ref-array">
-                              <a class="json-schema-ref" href="#/definitions/FieldInput">FieldInput</a>
-                            </div>
-                          </div>
-                          <span class="json-property-range" title="Value limits"></span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="prop-value">
-                      <p class="no-description">(no description)</p>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
-                      <div class="prop-title">nearbyFields:
-                        <span class="prop-type">
-                          <div class="json-property-type">
-                            <div class="json-schema-ref-array">
-                              <a class="json-schema-ref" href="#/definitions/NearbyFieldInput">NearbyFieldInput</a>
-                            </div>
-                          </div>
-                          <span class="json-property-range" title="Value limits"></span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="prop-value">
-                      <p class="no-description">(no description)</p>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div class="doc-examples">
-                <section>
-                  <h4>Example</h3>
-                    <h5>Request Content-Types:
-                      <span>application/json</span>
-                    </h5>
-                    <h5>Query</h5>
-                    <!-- <div class="hljs"> -->
-                    <html>
-                    <head></head>
-                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">mutation</span> deployService<span class="hljs-tag">(<span class="hljs-code">$id</span>: ID!, <span class="hljs-code">$name</span>:<span class="hljs-type"> String!</span>, <span class="hljs-code">$type</span>:<span class="hljs-type"> String!</span>, <span class="hljs-code">$tenant</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$fields</span>: <span class="hljs-type">[FieldInput!</span>], <span class="hljs-code">$nearbyFields</span>: <span class="hljs-type">[NearbyFieldInput!</span>])</span><span class="hljs-tag">{
-  <span class="hljs-symbol">deployService<span class="hljs-tag">(id: <span class="hljs-code">$id</span>, name: <span class="hljs-code">$name</span>, type: <span class="hljs-code">$type</span>, tenant: <span class="hljs-code">$tenant</span>, fields: <span class="hljs-code">$fields</span>, nearbyFields: <span class="hljs-code">$nearbyFields</span>)</span><span class="hljs-tag">{
-    <span class="hljs-symbol">id</span>
-    <span class="hljs-symbol">diagramNode</span>
-    <span class="hljs-symbol">name</span>
-    <span class="hljs-symbol">status</span>
-    <span class="hljs-symbol">fields</span>
-    <span class="hljs-symbol">tenant</span>
-    <span class="hljs-symbol">owner</span>
-    <span class="hljs-symbol">createdAt</span>
-  }</span></span>
-}</span></span>
-</code></pre> </body>
-                    </html>
-                    <!-- </div> -->
-                    <h5>Variables</h5>
-                    <!-- <div class="hljs"> -->
-                    <html>
-                    <head></head>
-                    <body><pre><code class="hljs language-json">{
-  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;tenant&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;fields&quot;</span>: [
-    {
-      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-    }
-  ],
-  <span class="hljs-attr">&quot;nearbyFields&quot;</span>: [
-    {
-      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;tags&quot;</span>: [
-        {
-          <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-        }
-      ],
-      <span class="hljs-attr">&quot;nearbyDevice&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-      <span class="hljs-attr">&quot;radius&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-      <span class="hljs-attr">&quot;latency&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
-    }
-  ]
-}
-</code></pre> </body>
-                    </html>
-                    <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20deployService(%24id%3A%20ID!%2C%20%24name%3A%20String!%2C%20%24type%3A%20String!%2C%20%24tenant%3A%20String%2C%20%24fields%3A%20%5BFieldInput!%5D%2C%20%24nearbyFields%3A%20%5BNearbyFieldInput!%5D)%7B%0A%20%20deployService(id%3A%20%24id%2C%20name%3A%20%24name%2C%20type%3A%20%24type%2C%20tenant%3A%20%24tenant%2C%20fields%3A%20%24fields%2C%20nearbyFields%3A%20%24nearbyFields)%7B%0A%20%20%20%20id%0A%20%20%20%20diagramNode%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20fields%0A%20%20%20%20tenant%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now
-                      <a/> </section>
-              </div>
-            </div>
-            <div class="doc-row">
-              <div class="doc-copy">
-                <section class="swagger-responses">
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
-                      <div class="prop-title">200 OK</div>
-                    </div>
-                    <div class="prop-value">
-                      <p>Successful operation</p>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-inner">
-                    <div class="prop-name">type</div>
-                    <div class="prop-value">
-                      <div class="json-property-type">
-                        <div class="">
-                          <a class="json-schema-ref" href="#/definitions/Service">Service</a>
-                        </div>
-                      </div>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div class="doc-examples">
-                <h5>Response Content-Types:
-                  <span>application/json</span>
-                </h5>
-                <section>
-                  <h5>Response Example
-                    <span>(200 OK)</span>
-                  </h5>
-                  <!-- <div class="hljs"> -->
-                  <html>
-                  <head></head>
-                  <body><pre><code class="hljs language-json">{
-  <span class="hljs-attr">&quot;data&quot;</span>: {
-    <span class="hljs-attr">&quot;deployService&quot;</span>: {
-      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;tenant&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-    }
-  }
-}
-</code></pre> </body>
-                  </html>
-                  <!-- </div> -->
-                </section>
-              </div>
-            </div>
-          </div>
-          <div id="operation-remove_service-post" class="operation panel" data-traverse-target="operation-remove_service-post">
-            <!-- <section class="operation-tags row"> -->
-            <!-- <div class="doc-copy"> -->
-            <div class="operation-tags">
-              <a class="label" href="#tag-Services">Services</a>
-              <!---->
-            </div>
-            <!-- </div> -->
-            <!-- </section> -->
-            <h2 class="operation-title">
-              <span class="operation-summary">Remove service</span>
-            </h2>
-            <div class="doc-row">
-              <div class="doc-copy">
-                <section class="swagger-operation-description">
-                  <p>Remove a running service</p>
-                </section>
-              </div>
-            </div>
-            <div class="doc-row">
-              <div class="doc-copy">
-                <section class="swagger-request-body"> </section>
-                <section class="swagger-request-params">
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
-                      <div class="prop-title">id:
-                        <span class="prop-type">
-                          <div class="json-property-type">string</div>
-                          <span class="json-property-range" title="Value limits"></span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="prop-value">
-                      <p class="no-description">(no description)</p>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
-                      <div class="prop-title">type:
-                        <span class="prop-type">
-                          <div class="json-property-type">string</div>
-                          <span class="json-property-range" title="Value limits"></span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="prop-value">
-                      <p class="no-description">(no description)</p>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div class="doc-examples">
-                <section>
-                  <h4>Example</h3>
-                    <h5>Request Content-Types:
-                      <span>application/json</span>
-                    </h5>
-                    <h5>Query</h5>
-                    <!-- <div class="hljs"> -->
-                    <html>
-                    <head></head>
-                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">mutation</span> removeService<span class="hljs-tag">(<span class="hljs-code">$id</span>: ID!, <span class="hljs-code">$type</span>:<span class="hljs-type"> String!</span>)</span><span class="hljs-tag">{
-  <span class="hljs-symbol">removeService<span class="hljs-tag">(id: <span class="hljs-code">$id</span>, type: <span class="hljs-code">$type</span>)</span><span class="hljs-tag">{
-    <span class="hljs-symbol">id</span>
-    <span class="hljs-symbol">diagramNode</span>
-    <span class="hljs-symbol">name</span>
-    <span class="hljs-symbol">status</span>
-    <span class="hljs-symbol">fields</span>
-    <span class="hljs-symbol">tenant</span>
-    <span class="hljs-symbol">owner</span>
-    <span class="hljs-symbol">createdAt</span>
-  }</span></span>
-}</span></span>
-</code></pre> </body>
-                    </html>
-                    <!-- </div> -->
-                    <h5>Variables</h5>
-                    <!-- <div class="hljs"> -->
-                    <html>
-                    <head></head>
-                    <body><pre><code class="hljs language-json">{
-  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-}
-</code></pre> </body>
-                    </html>
-                    <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20removeService(%24id%3A%20ID!%2C%20%24type%3A%20String!)%7B%0A%20%20removeService(id%3A%20%24id%2C%20type%3A%20%24type)%7B%0A%20%20%20%20id%0A%20%20%20%20diagramNode%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20fields%0A%20%20%20%20tenant%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now
-                      <a/> </section>
-              </div>
-            </div>
-            <div class="doc-row">
-              <div class="doc-copy">
-                <section class="swagger-responses">
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
-                      <div class="prop-title">200 OK</div>
-                    </div>
-                    <div class="prop-value">
-                      <p>Successful operation</p>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-inner">
-                    <div class="prop-name">type</div>
-                    <div class="prop-value">
-                      <div class="json-property-type">
-                        <div class="">
-                          <a class="json-schema-ref" href="#/definitions/Service">Service</a>
-                        </div>
-                      </div>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div class="doc-examples">
-                <h5>Response Content-Types:
-                  <span>application/json</span>
-                </h5>
-                <section>
-                  <h5>Response Example
-                    <span>(200 OK)</span>
-                  </h5>
-                  <!-- <div class="hljs"> -->
-                  <html>
-                  <head></head>
-                  <body><pre><code class="hljs language-json">{
-  <span class="hljs-attr">&quot;data&quot;</span>: {
-    <span class="hljs-attr">&quot;removeService&quot;</span>: {
-      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;tenant&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-    }
-  }
-}
-</code></pre> </body>
-                  </html>
-                  <!-- </div> -->
-                </section>
-              </div>
-            </div>
-          </div>
           <div id="operation-deploy_service_chain-post" class="operation panel" data-traverse-target="operation-deploy_service_chain-post">
             <!-- <section class="operation-tags row"> -->
             <!-- <div class="doc-copy"> -->
@@ -1857,7 +1336,7 @@ https://demo.nearbycomputing.com
   <span class="hljs-attr">&quot;blocks&quot;</span>: [
     {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-      <span class="hljs-attr">&quot;serviceDef&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;blockDefId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -2114,7 +1593,7 @@ https://demo.nearbycomputing.com
   <span class="hljs-attr">&quot;blocks&quot;</span>: [
     {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-      <span class="hljs-attr">&quot;serviceDef&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;blockDefId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -4077,72 +3556,73 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;def&quot;</span>: {
+      <span class="hljs-attr">&quot;block&quot;</span>: {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;valueFields&quot;</span>: [
-          {
-            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-            <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-          }
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;menuPath&quot;</span>: [
+          <span class="hljs-string">&quot;string&quot;</span>
         ],
-        <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
-          {
-            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-            <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-              <span class="hljs-attr">&quot;tags&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                }
-              ],
-              <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                <span class="hljs-string">&quot;object&quot;</span>
-              ]
-            },
-            <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-          }
-        ],
-        <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
-          {
-            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-            <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-              <span class="hljs-attr">&quot;tags&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                }
-              ],
-              <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                <span class="hljs-string">&quot;object&quot;</span>
-              ]
-            },
-            <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
-              <span class="hljs-attr">&quot;tags&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                }
-              ],
-              <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                <span class="hljs-string">&quot;object&quot;</span>
-              ]
+        <span class="hljs-attr">&quot;serviceDef&quot;</span>: {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;valueFields&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+              <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
             }
-          }
-        ]
+          ],
+          <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+              <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                <span class="hljs-attr">&quot;tags&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                  }
+                ],
+                <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                  <span class="hljs-string">&quot;object&quot;</span>
+                ]
+              },
+              <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+            }
+          ],
+          <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+              <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                <span class="hljs-attr">&quot;tags&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                  }
+                ],
+                <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                  <span class="hljs-string">&quot;object&quot;</span>
+                ]
+              },
+              <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
+                <span class="hljs-attr">&quot;tags&quot;</span>: [
+                  <span class="hljs-literal">null</span>
+                ]
+              }
+            }
+          ]
+        }
       }
     }
   ]
@@ -4490,8 +3970,8 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="serviceDef">
-                      <span class="json-property-name">serviceDef:</span>
+                    <dt data-property-name="blockDefId">
+                      <span class="json-property-name">blockDefId:</span>
                       <div class="json-property-type">
                         <div class="">
                           <a class="json-schema-ref" href="#/definitions/ID">ID</a>
@@ -4577,7 +4057,7 @@ https://demo.nearbycomputing.com
                   <head></head>
                   <body><pre><code class="hljs language-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-  <span class="hljs-attr">&quot;serviceDef&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;blockDefId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
   <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -4733,76 +4213,73 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;def&quot;</span>: {
+      <span class="hljs-attr">&quot;block&quot;</span>: {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;valueFields&quot;</span>: [
-          {
-            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-            <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-          }
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;menuPath&quot;</span>: [
+          <span class="hljs-string">&quot;string&quot;</span>
         ],
-        <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
-          {
-            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-            <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-              <span class="hljs-attr">&quot;tags&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                }
-              ],
-              <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                <span class="hljs-string">&quot;object&quot;</span>
-              ]
-            },
-            <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-          }
-        ],
-        <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
-          {
-            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-            <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-            <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-              <span class="hljs-attr">&quot;tags&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                }
-              ],
-              <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                <span class="hljs-string">&quot;object&quot;</span>
-              ]
-            },
-            <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
-              <span class="hljs-attr">&quot;tags&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                }
-              ],
-              <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                <span class="hljs-string">&quot;object&quot;</span>
-              ]
-            },
-            <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-          }
-        ],
-        <span class="hljs-attr">&quot;parentDeviceFields&quot;</span>: [
-          <span class="hljs-literal">null</span>
-        ]
+        <span class="hljs-attr">&quot;serviceDef&quot;</span>: {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;valueFields&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+              <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+            }
+          ],
+          <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+              <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                <span class="hljs-attr">&quot;tags&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                  }
+                ],
+                <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                  <span class="hljs-string">&quot;object&quot;</span>
+                ]
+              },
+              <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+            }
+          ],
+          <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+              <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                <span class="hljs-attr">&quot;tags&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                  }
+                ],
+                <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                  <span class="hljs-string">&quot;object&quot;</span>
+                ]
+              },
+              <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
+                <span class="hljs-attr">&quot;tags&quot;</span>: [
+                  {}
+                ]
+              }
+            }
+          ]
+        }
       }
     }
   ]
@@ -4998,6 +4475,15 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
+                    <dt data-property-name="hostIp">
+                      <span class="json-property-name">hostIp:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
                     <dt data-property-name="links">
                       <span class="json-property-name">links:</span>
                       <div class="json-property-type">
@@ -5049,6 +4535,7 @@ https://demo.nearbycomputing.com
   },
   <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;links&quot;</span>: [
     {
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
@@ -5076,6 +4563,7 @@ https://demo.nearbycomputing.com
         },
         <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;links&quot;</span>: [
           {
             <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
@@ -5086,9 +4574,7 @@ https://demo.nearbycomputing.com
               ],
               <span class="hljs-attr">&quot;parents&quot;</span>: [
                 <span class="hljs-string">&quot;object&quot;</span>
-              ],
-              <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;deviceName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+              ]
             }
           }
         ]
@@ -5689,6 +5175,7 @@ https://demo.nearbycomputing.com
     },
     <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;links&quot;</span>: [
       {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
@@ -5716,6 +5203,7 @@ https://demo.nearbycomputing.com
           },
           <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;links&quot;</span>: [
             {
               <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
@@ -5723,9 +5211,6 @@ https://demo.nearbycomputing.com
                 <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                 <span class="hljs-attr">&quot;tags&quot;</span>: [
                   <span class="hljs-string">&quot;string&quot;</span>
-                ],
-                <span class="hljs-attr">&quot;parents&quot;</span>: [
-                  <span class="hljs-string">&quot;object&quot;</span>
                 ]
               }
             }
@@ -5808,6 +5293,7 @@ https://demo.nearbycomputing.com
       },
       <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;links&quot;</span>: [
         {
           <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
@@ -5835,6 +5321,7 @@ https://demo.nearbycomputing.com
             },
             <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
             <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
             <span class="hljs-attr">&quot;links&quot;</span>: [
               {
                 <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
@@ -5844,9 +5331,8 @@ https://demo.nearbycomputing.com
                     <span class="hljs-string">&quot;string&quot;</span>
                   ],
                   <span class="hljs-attr">&quot;parents&quot;</span>: [
-                    <span class="hljs-string">&quot;object&quot;</span>
-                  ],
-                  <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+                    <span class="hljs-literal">null</span>
+                  ]
                 }
               }
             ]
@@ -5855,6 +5341,72 @@ https://demo.nearbycomputing.com
       ]
     }
   ]
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-EditDeviceInput" class="definition panel" data-traverse-target="definition-EditDeviceInput">
+            <h2 class="panel-title">
+              <a name="/definitions/EditDeviceInput"></a>EditDeviceInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="displayName">
+                      <span class="json-property-name">displayName:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="tags">
+                      <span class="json-property-name">tags:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="position">
+                      <span class="json-property-name">position:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/LatLngInput">LatLngInput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;tags&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;position&quot;</span>: {
+    <span class="hljs-attr">&quot;lat&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+    <span class="hljs-attr">&quot;lng&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+  }
 }
 </code></pre> </body>
                   </html>
@@ -6669,94 +6221,6 @@ https://demo.nearbycomputing.com
               </div>
             </div>
           </div>
-          <div id="definition-NearbyFieldInput" class="definition panel" data-traverse-target="definition-NearbyFieldInput">
-            <h2 class="panel-title">
-              <a name="/definitions/NearbyFieldInput"></a>NearbyFieldInput: object
-              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
-              <span class="json-property-range" title="Value limits"></span>
-              
-              
-              </span> -->
-            </h2>
-            <div class="doc-row">
-              <div class="doc-copy">
-                <section class="json-schema-properties">
-                  <dl>
-                    <dt data-property-name="name">
-                      <span class="json-property-name">name:</span>
-                      <div class="json-property-type">
-                        <div class="json-schema-ref-string">
-                          <a class="json-schema-ref" href="#/definitions/String">String</a>
-                        </div>
-                      </div>
-                      <span class="json-property-range" title="Value limits"></span>
-                      <span class="json-property-required"></span>
-                    </dt>
-                    <dt data-property-name="tags">
-                      <span class="json-property-name">tags:</span>
-                      <div class="json-property-type">
-                        <div class="json-schema-ref-array">
-                          <a class="json-schema-ref" href="#/definitions/TagInput">TagInput</a>
-                        </div>
-                      </div>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
-                    <dt data-property-name="nearbyDevice">
-                      <span class="json-property-name">nearbyDevice:</span>
-                      <div class="json-property-type">
-                        <div class="">
-                          <a class="json-schema-ref" href="#/definitions/ID">ID</a>
-                        </div>
-                      </div>
-                      <span class="json-property-range" title="Value limits"></span>
-                      <span class="json-property-required"></span>
-                    </dt>
-                    <dt data-property-name="radius">
-                      <span class="json-property-name">radius:</span>
-                      <div class="json-property-type">
-                        <div class="json-schema-ref-number">
-                          <a class="json-schema-ref" href="#/definitions/Float">Float</a>
-                        </div>
-                      </div>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
-                    <dt data-property-name="latency">
-                      <span class="json-property-name">latency:</span>
-                      <div class="json-property-type">
-                        <div class="json-schema-ref-number">
-                          <a class="json-schema-ref" href="#/definitions/Float">Float</a>
-                        </div>
-                      </div>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
-                  </dl>
-                </section>
-              </div>
-              <div class="doc-examples">
-                <section>
-                  <h5>Example</h5>
-                  <!-- <div class="hljs"> -->
-                  <html>
-                  <head></head>
-                  <body><pre><code class="hljs language-json">{
-  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;tags&quot;</span>: [
-    {
-      <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-    }
-  ],
-  <span class="hljs-attr">&quot;nearbyDevice&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-  <span class="hljs-attr">&quot;radius&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-  <span class="hljs-attr">&quot;latency&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
-}
-</code></pre> </body>
-                  </html>
-                  <!-- </div> -->
-                </section>
-              </div>
-            </div>
-          </div>
           <div id="definition-NetInput" class="definition panel" data-traverse-target="definition-NetInput">
             <h2 class="panel-title">
               <a name="/definitions/NetInput"></a>NetInput: object
@@ -7420,6 +6884,7 @@ https://demo.nearbycomputing.com
     },
     <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;links&quot;</span>: [
       {
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
@@ -7447,6 +6912,7 @@ https://demo.nearbycomputing.com
           },
           <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;links&quot;</span>: [
             {
               <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
@@ -7454,9 +6920,6 @@ https://demo.nearbycomputing.com
                 <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                 <span class="hljs-attr">&quot;tags&quot;</span>: [
                   <span class="hljs-string">&quot;string&quot;</span>
-                ],
-                <span class="hljs-attr">&quot;parents&quot;</span>: [
-                  <span class="hljs-string">&quot;object&quot;</span>
                 ]
               }
             }
@@ -7571,6 +7034,15 @@ https://demo.nearbycomputing.com
                     <dd>
                       <p>human-readable instance name, assigned at deploy time</p>
                     </dd>
+                    <dt data-property-name="block">
+                      <span class="json-property-name">block:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/BlockDef">BlockDef</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
                     <dt data-property-name="def" class="has-description">
                       <span class="json-property-name">def:</span>
                       <div class="json-property-type">
@@ -7689,76 +7161,76 @@ https://demo.nearbycomputing.com
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
   <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
   <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;def&quot;</span>: {
+  <span class="hljs-attr">&quot;block&quot;</span>: {
     <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-    <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-    <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-    <span class="hljs-attr">&quot;valueFields&quot;</span>: [
-      {
-        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-        <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-        <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-      }
+    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;menuPath&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
     ],
-    <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
-      {
-        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-        <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-        <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-          <span class="hljs-attr">&quot;tags&quot;</span>: [
-            {
-              <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-            }
-          ],
-          <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-            <span class="hljs-string">&quot;object&quot;</span>
-          ]
-        },
-        <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-      }
-    ],
-    <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
-      {
-        <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-        <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-        <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-          <span class="hljs-attr">&quot;tags&quot;</span>: [
-            {
-              <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-            }
-          ],
-          <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-            <span class="hljs-string">&quot;object&quot;</span>
-          ]
-        },
-        <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
-          <span class="hljs-attr">&quot;tags&quot;</span>: [
-            {
-              <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-            }
-          ],
-          <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-            <span class="hljs-string">&quot;object&quot;</span>
-          ]
-        },
-        <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-      }
-    ],
-    <span class="hljs-attr">&quot;parentDeviceFields&quot;</span>: [
-      {}
-    ]
+    <span class="hljs-attr">&quot;serviceDef&quot;</span>: {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;valueFields&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+          <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+          <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+        }
+      ],
+      <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+          <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+          <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+            <span class="hljs-attr">&quot;tags&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+              }
+            ],
+            <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+              <span class="hljs-string">&quot;object&quot;</span>
+            ]
+          },
+          <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+        }
+      ],
+      <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+          <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+          <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+            <span class="hljs-attr">&quot;tags&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+              }
+            ],
+            <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+              <span class="hljs-string">&quot;object&quot;</span>
+            ]
+          },
+          <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
+            <span class="hljs-attr">&quot;tags&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+              }
+            ]
+          }
+        }
+      ]
+    }
   }
 }
 </code></pre> </body>
@@ -7934,49 +7406,51 @@ https://demo.nearbycomputing.com
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
         <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
         <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;def&quot;</span>: {
+        <span class="hljs-attr">&quot;block&quot;</span>: {
           <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-          <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-          <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;valueFields&quot;</span>: [
-            {
-              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-              <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-            }
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;menuPath&quot;</span>: [
+            <span class="hljs-string">&quot;string&quot;</span>
           ],
-          <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
-            {
-              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-              <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-                <span class="hljs-attr">&quot;tags&quot;</span>: [
-                  {
-                    <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                    <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                  }
-                ],
-                <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                  <span class="hljs-string">&quot;object&quot;</span>
-                ]
-              },
-              <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-            }
-          ],
-          <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
-            {
-              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-              <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-            }
-          ]
+          <span class="hljs-attr">&quot;serviceDef&quot;</span>: {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+            <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;valueFields&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+              }
+            ],
+            <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                  <span class="hljs-attr">&quot;tags&quot;</span>: [
+                    {
+                      <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                      <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                    }
+                  ],
+                  <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                    <span class="hljs-string">&quot;object&quot;</span>
+                  ]
+                },
+                <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+              }
+            ],
+            <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
+              <span class="hljs-literal">null</span>
+            ]
+          }
         }
       }
     ]
@@ -8562,72 +8036,206 @@ https://demo.nearbycomputing.com
             <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
             <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
             <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;def&quot;</span>: {
+            <span class="hljs-attr">&quot;block&quot;</span>: {
               <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-              <span class="hljs-attr">&quot;valueFields&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                  <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                  <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                }
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;menuPath&quot;</span>: [
+                <span class="hljs-string">&quot;string&quot;</span>
               ],
-              <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                  <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                  <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-                    <span class="hljs-attr">&quot;tags&quot;</span>: [
-                      {
-                        <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                        <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                      }
-                    ],
-                    <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                      <span class="hljs-string">&quot;object&quot;</span>
-                    ]
-                  },
-                  <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                }
-              ],
-              <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
-                {
-                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                  <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                  <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-                    <span class="hljs-attr">&quot;tags&quot;</span>: [
-                      {
-                        <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                        <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                      }
-                    ],
-                    <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                      <span class="hljs-string">&quot;object&quot;</span>
-                    ]
-                  },
-                  <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
-                    <span class="hljs-attr">&quot;tags&quot;</span>: [
-                      {}
-                    ]
+              <span class="hljs-attr">&quot;serviceDef&quot;</span>: {
+                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;valueFields&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                    <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                    <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                    <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
                   }
-                }
-              ]
+                ],
+                <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                    <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                    <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                    <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                      <span class="hljs-attr">&quot;tags&quot;</span>: [
+                        {
+                          <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                        }
+                      ],
+                      <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                        <span class="hljs-string">&quot;object&quot;</span>
+                      ]
+                    },
+                    <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                  }
+                ],
+                <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
+                  {
+                    <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                    <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                    <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                    <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                      <span class="hljs-attr">&quot;tags&quot;</span>: [
+                        {
+                          <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
             }
           }
         ]
       }
     ]
   }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-SharedNet" class="definition panel" data-traverse-target="definition-SharedNet">
+            <h2 class="panel-title">
+              <a name="/definitions/SharedNet"></a>SharedNet: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="id">
+                      <span class="json-property-name">id:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="name">
+                      <span class="json-property-name">name:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="tenant">
+                      <span class="json-property-name">tenant:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="createdAt">
+                      <span class="json-property-name">createdAt:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/Time">Time</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;tenant&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-SharedNetInput" class="definition panel" data-traverse-target="definition-SharedNetInput">
+            <h2 class="panel-title">
+              <a name="/definitions/SharedNetInput"></a>SharedNetInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="id">
+                      <span class="json-property-name">id:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="name">
+                      <span class="json-property-name">name:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="tenant">
+                      <span class="json-property-name">tenant:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;tenant&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre> </body>
                   </html>
@@ -9224,68 +8832,68 @@ https://demo.nearbycomputing.com
           <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
           <span class="hljs-attr">&quot;diagramNode&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
           <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;def&quot;</span>: {
+          <span class="hljs-attr">&quot;block&quot;</span>: {
             <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;valueFields&quot;</span>: [
-              {
-                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-              }
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;menuPath&quot;</span>: [
+              <span class="hljs-string">&quot;string&quot;</span>
             ],
-            <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
-              {
-                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-                  <span class="hljs-attr">&quot;tags&quot;</span>: [
-                    {
-                      <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                    }
-                  ],
-                  <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                    <span class="hljs-string">&quot;object&quot;</span>
-                  ]
-                },
-                <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-              }
-            ],
-            <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
-              {
-                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-                <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
-                  <span class="hljs-attr">&quot;tags&quot;</span>: [
-                    {
-                      <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
-                    }
-                  ],
-                  <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
-                    <span class="hljs-string">&quot;object&quot;</span>
-                  ]
-                },
-                <span class="hljs-attr">&quot;nearbyDeviceLayer&quot;</span>: {
-                  <span class="hljs-attr">&quot;tags&quot;</span>: [
-                    {
-                      <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
-                    }
-                  ]
+            <span class="hljs-attr">&quot;serviceDef&quot;</span>: {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;serviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;valueFields&quot;</span>: [
+                {
+                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                  <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                  <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                  <span class="hljs-attr">&quot;defaultValue&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
                 }
-              }
-            ]
+              ],
+              <span class="hljs-attr">&quot;deviceFields&quot;</span>: [
+                {
+                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                  <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                  <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                  <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                    <span class="hljs-attr">&quot;tags&quot;</span>: [
+                      {
+                        <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                      }
+                    ],
+                    <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                      <span class="hljs-string">&quot;object&quot;</span>
+                    ]
+                  },
+                  <span class="hljs-attr">&quot;resolveAtRuntime&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                }
+              ],
+              <span class="hljs-attr">&quot;nearbyDeviceFields&quot;</span>: [
+                {
+                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                  <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+                  <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                  <span class="hljs-attr">&quot;visible&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
+                  <span class="hljs-attr">&quot;deviceLayer&quot;</span>: {
+                    <span class="hljs-attr">&quot;tags&quot;</span>: [
+                      {
+                        <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+                      }
+                    ],
+                    <span class="hljs-attr">&quot;selectedIds&quot;</span>: [
+                      <span class="hljs-literal">null</span>
+                    ]
+                  }
+                }
+              ]
+            }
           }
         }
       ]
