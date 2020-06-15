@@ -15,7 +15,9 @@ run:
     - -ceux
     - |
       git clone api-docs-repo updated-repo
-      cp -r public updated-repo/public
+
+      rm -rf updated-repo/public
+      cp -r public updated-repo
 
       git config --global user.name "Dale Concourse"
       git config --global user.email "bot@nearbycomputing.com"
