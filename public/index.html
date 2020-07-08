@@ -134,6 +134,7 @@
           <a href="#definition-ID"> ID </a>
           <a href="#definition-IfaceInput"> IfaceInput </a>
           <a href="#definition-Int"> Int </a>
+          <a href="#definition-IpmiCommand"> IpmiCommand </a>
           <a href="#definition-KPI"> KPI </a>
           <a href="#definition-LatLng"> LatLng </a>
           <a href="#definition-LatLngInput"> LatLngInput </a>
@@ -625,6 +626,7 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">status</span>
     <span class="hljs-symbol">mac</span>
     <span class="hljs-symbol">probeIp</span>
+    <span class="hljs-symbol">nztpWorkflow</span>
     <span class="hljs-symbol">hostIp</span>
     <span class="hljs-symbol">links</span>
     <span class="hljs-symbol">telemetryUrl</span>
@@ -665,7 +667,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20device(%24dev%3A%20DeviceInput!)%7B%0A%20%20device(dev%3A%20%24dev)%7B%0A%20%20%20%20id%0A%20%20%20%20tags%0A%20%20%20%20parents%0A%20%20%20%20displayName%0A%20%20%20%20deviceName%0A%20%20%20%20img%0A%20%20%20%20iconType%0A%20%20%20%20specs%0A%20%20%20%20status%0A%20%20%20%20mac%0A%20%20%20%20probeIp%0A%20%20%20%20hostIp%0A%20%20%20%20links%0A%20%20%20%20telemetryUrl%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                    <a href="https://demo.nearbycomputing.com?query=mutation%20device(%24dev%3A%20DeviceInput!)%7B%0A%20%20device(dev%3A%20%24dev)%7B%0A%20%20%20%20id%0A%20%20%20%20tags%0A%20%20%20%20parents%0A%20%20%20%20displayName%0A%20%20%20%20deviceName%0A%20%20%20%20img%0A%20%20%20%20iconType%0A%20%20%20%20specs%0A%20%20%20%20status%0A%20%20%20%20mac%0A%20%20%20%20probeIp%0A%20%20%20%20nztpWorkflow%0A%20%20%20%20hostIp%0A%20%20%20%20links%0A%20%20%20%20telemetryUrl%0A%20%20%7D%0A%7D" target="_blank">Try it now
                       <a/> </section>
               </div>
             </div>
@@ -722,6 +724,7 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;nztpWorkflow&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;telemetryUrl&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
@@ -4478,6 +4481,15 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
+                    <dt data-property-name="nztpWorkflow">
+                      <span class="json-property-name">nztpWorkflow:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
                     <dt data-property-name="hostIp">
                       <span class="json-property-name">hostIp:</span>
                       <div class="json-property-type">
@@ -4538,6 +4550,7 @@ https://demo.nearbycomputing.com
   },
   <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;nztpWorkflow&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;links&quot;</span>: [
     {
@@ -4566,6 +4579,7 @@ https://demo.nearbycomputing.com
         },
         <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;nztpWorkflow&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;links&quot;</span>: [
           {
@@ -4574,9 +4588,6 @@ https://demo.nearbycomputing.com
               <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
               <span class="hljs-attr">&quot;tags&quot;</span>: [
                 <span class="hljs-string">&quot;string&quot;</span>
-              ],
-              <span class="hljs-attr">&quot;parents&quot;</span>: [
-                <span class="hljs-string">&quot;object&quot;</span>
               ]
             }
           }
@@ -5208,6 +5219,7 @@ https://demo.nearbycomputing.com
     },
     <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;nztpWorkflow&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;links&quot;</span>: [
       {
@@ -5236,16 +5248,12 @@ https://demo.nearbycomputing.com
           },
           <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;nztpWorkflow&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;links&quot;</span>: [
             {
               <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;device&quot;</span>: {
-                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;tags&quot;</span>: [
-                  <span class="hljs-string">&quot;string&quot;</span>
-                ]
-              }
+              <span class="hljs-attr">&quot;device&quot;</span>: {}
             }
           ]
         }
@@ -5326,6 +5334,7 @@ https://demo.nearbycomputing.com
       },
       <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;nztpWorkflow&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;links&quot;</span>: [
         {
@@ -5354,18 +5363,13 @@ https://demo.nearbycomputing.com
             },
             <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
             <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;nztpWorkflow&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
             <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
             <span class="hljs-attr">&quot;links&quot;</span>: [
               {
                 <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                 <span class="hljs-attr">&quot;device&quot;</span>: {
-                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;tags&quot;</span>: [
-                    <span class="hljs-string">&quot;string&quot;</span>
-                  ],
-                  <span class="hljs-attr">&quot;parents&quot;</span>: [
-                    <span class="hljs-literal">null</span>
-                  ]
+                  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
                 }
               }
             ]
@@ -5422,6 +5426,15 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
+                    <dt data-property-name="nztpWorkflow">
+                      <span class="json-property-name">nztpWorkflow:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
                   </dl>
                 </section>
               </div>
@@ -5439,7 +5452,8 @@ https://demo.nearbycomputing.com
   <span class="hljs-attr">&quot;position&quot;</span>: {
     <span class="hljs-attr">&quot;lat&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
     <span class="hljs-attr">&quot;lng&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
-  }
+  },
+  <span class="hljs-attr">&quot;nztpWorkflow&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre> </body>
                   </html>
@@ -5691,6 +5705,56 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                   </html>
                   <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-IpmiCommand" class="definition panel" data-traverse-target="definition-IpmiCommand">
+            <h2 class="panel-title">
+              <a name="/definitions/IpmiCommand"></a>IpmiCommand: string
+              <!-- <span class="json-property-type"><div class="json-property-type"></div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-anyOf">
+                  <dl>
+                    <dt>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-enum" title="Possible values">
+                        <span class="json-property-enum-item">RESTART</span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd> </dd>
+                    <dt>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-enum" title="Possible values">
+                        <span class="json-property-enum-item">RESET</span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd> </dd>
+                    <dt>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-enum" title="Possible values">
+                        <span class="json-property-enum-item">POWER_ON</span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd> </dd>
+                    <dt>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-enum" title="Possible values">
+                        <span class="json-property-enum-item">POWER_OFF</span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd> </dd>
+                  </dl>
                 </section>
               </div>
             </div>
@@ -6917,6 +6981,7 @@ https://demo.nearbycomputing.com
     },
     <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;nztpWorkflow&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;links&quot;</span>: [
       {
@@ -6945,16 +7010,12 @@ https://demo.nearbycomputing.com
           },
           <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;nztpWorkflow&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;hostIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;links&quot;</span>: [
             {
               <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-              <span class="hljs-attr">&quot;device&quot;</span>: {
-                <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;tags&quot;</span>: [
-                  <span class="hljs-string">&quot;string&quot;</span>
-                ]
-              }
+              <span class="hljs-attr">&quot;device&quot;</span>: {}
             }
           ]
         }
