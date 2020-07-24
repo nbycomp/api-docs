@@ -287,6 +287,19 @@ https://demo.nearbycomputing.com
                       <p class="no-description">(no description)</p>
                     </div>
                   </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">searchTerm:
+                        <span class="prop-type">
+                          <div class="json-property-type">string</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p class="no-description">(no description)</p>
+                    </div>
+                  </div>
                 </section>
               </div>
               <div class="doc-examples">
@@ -299,12 +312,12 @@ https://demo.nearbycomputing.com
                     <!-- <div class="hljs"> -->
                     <html>
                     <head></head>
-                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> devices<span class="hljs-tag">(<span class="hljs-code">$id</span>: ID, <span class="hljs-code">$tags</span>: <span class="hljs-type">[TagInput!</span>], <span class="hljs-code">$parents</span>: [ID!], <span class="hljs-code">$bbox</span>: BBox)</span><span class="hljs-tag">{
-  <span class="hljs-symbol">devices<span class="hljs-tag">(id: <span class="hljs-code">$id</span>, tags: <span class="hljs-code">$tags</span>, parents: <span class="hljs-code">$parents</span>, bbox: <span class="hljs-code">$bbox</span>)</span><span class="hljs-tag">{
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> devices<span class="hljs-tag">(<span class="hljs-code">$id</span>: ID, <span class="hljs-code">$tags</span>: <span class="hljs-type">[TagInput!</span>], <span class="hljs-code">$parents</span>: [ID!], <span class="hljs-code">$bbox</span>: BBox, <span class="hljs-code">$searchTerm</span>:<span class="hljs-type"> String)</span>{
+  devices(id: <span class="hljs-code">$id</span>, tags: <span class="hljs-code">$tags</span>, parents: <span class="hljs-code">$parents</span>, bbox: <span class="hljs-code">$bbox</span>, searchTerm: <span class="hljs-code">$searchTerm</span>)</span><span class="hljs-tag">{
     <span class="hljs-symbol">devices</span>
     <span class="hljs-symbol">hits</span>
   }</span></span>
-}</span></span>
+}
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
@@ -332,12 +345,13 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;lat&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
       <span class="hljs-attr">&quot;lng&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
     }
-  }
+  },
+  <span class="hljs-attr">&quot;searchTerm&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20devices(%24id%3A%20ID%2C%20%24tags%3A%20%5BTagInput!%5D%2C%20%24parents%3A%20%5BID!%5D%2C%20%24bbox%3A%20BBox)%7B%0A%20%20devices(id%3A%20%24id%2C%20tags%3A%20%24tags%2C%20parents%3A%20%24parents%2C%20bbox%3A%20%24bbox)%7B%0A%20%20%20%20devices%0A%20%20%20%20hits%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                    <a href="https://demo.nearbycomputing.com?query=query%20devices(%24id%3A%20ID%2C%20%24tags%3A%20%5BTagInput!%5D%2C%20%24parents%3A%20%5BID!%5D%2C%20%24bbox%3A%20BBox%2C%20%24searchTerm%3A%20String)%7B%0A%20%20devices(id%3A%20%24id%2C%20tags%3A%20%24tags%2C%20parents%3A%20%24parents%2C%20bbox%3A%20%24bbox%2C%20searchTerm%3A%20%24searchTerm)%7B%0A%20%20%20%20devices%0A%20%20%20%20hits%0A%20%20%7D%0A%7D" target="_blank">Try it now
                       <a/> </section>
               </div>
             </div>
