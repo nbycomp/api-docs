@@ -237,7 +237,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Device ID (overrides other parameters)</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -254,7 +254,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>List of tag filters</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -267,7 +267,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>List of IDs of parent devices that matching devices must have</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -284,7 +284,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Geographic bounding box. Results outside this box will not be returned</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -297,7 +297,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Free text search field to filter by device display name, IP address and/or MAC address</p>
                     </div>
                   </div>
                 </section>
@@ -429,6 +429,19 @@ https://demo.nearbycomputing.com
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
+                      <div class="prop-title">device:
+                        <span class="prop-type">
+                          <div class="json-property-type">string</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>ID of the reference device</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
                       <div class="prop-title">tags:
                         <span class="prop-type">
                           <div class="json-property-type">
@@ -441,20 +454,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
-                    </div>
-                  </div>
-                  <div class="prop-row prop-group">
-                    <div class="prop-name">
-                      <div class="prop-title">device:
-                        <span class="prop-type">
-                          <div class="json-property-type">string</div>
-                          <span class="json-property-range" title="Value limits"></span>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>List of tag filters</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -467,7 +467,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Radius in metres of a circular cap on the Earth&#39;s surface, centered on the position of the reference device. Results outside this cap will not be returned.</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -480,7 +480,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Maximum network latency with the reference device, in milliseconds</p>
                     </div>
                   </div>
                 </section>
@@ -495,8 +495,8 @@ https://demo.nearbycomputing.com
                     <!-- <div class="hljs"> -->
                     <html>
                     <head></head>
-                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> nearbyDevices<span class="hljs-tag">(<span class="hljs-code">$tags</span>: <span class="hljs-type">[TagInput!</span>], <span class="hljs-code">$device</span>: ID!, <span class="hljs-code">$radius</span>:<span class="hljs-type"> Float,</span> <span class="hljs-code">$latency</span>:<span class="hljs-type"> Float)</span>{
-  nearbyDevices(tags: <span class="hljs-code">$tags</span>, device: <span class="hljs-code">$device</span>, radius: <span class="hljs-code">$radius</span>, latency: <span class="hljs-code">$latency</span>)</span><span class="hljs-tag">{
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> nearbyDevices<span class="hljs-tag">(<span class="hljs-code">$device</span>: ID!, <span class="hljs-code">$tags</span>: <span class="hljs-type">[TagInput!</span>], <span class="hljs-code">$radius</span>:<span class="hljs-type"> Float,</span> <span class="hljs-code">$latency</span>:<span class="hljs-type"> Float)</span>{
+  nearbyDevices(device: <span class="hljs-code">$device</span>, tags: <span class="hljs-code">$tags</span>, radius: <span class="hljs-code">$radius</span>, latency: <span class="hljs-code">$latency</span>)</span><span class="hljs-tag">{
     <span class="hljs-symbol">devices</span>
     <span class="hljs-symbol">hits</span>
   }</span></span>
@@ -509,20 +509,20 @@ https://demo.nearbycomputing.com
                     <html>
                     <head></head>
                     <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;device&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;tags&quot;</span>: [
     {
       <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;inc&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
     }
   ],
-  <span class="hljs-attr">&quot;device&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;radius&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
   <span class="hljs-attr">&quot;latency&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
 }
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20nearbyDevices(%24tags%3A%20%5BTagInput!%5D%2C%20%24device%3A%20ID!%2C%20%24radius%3A%20Float%2C%20%24latency%3A%20Float)%7B%0A%20%20nearbyDevices(tags%3A%20%24tags%2C%20device%3A%20%24device%2C%20radius%3A%20%24radius%2C%20latency%3A%20%24latency)%7B%0A%20%20%20%20devices%0A%20%20%20%20hits%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                    <a href="https://demo.nearbycomputing.com?query=query%20nearbyDevices(%24device%3A%20ID!%2C%20%24tags%3A%20%5BTagInput!%5D%2C%20%24radius%3A%20Float%2C%20%24latency%3A%20Float)%7B%0A%20%20nearbyDevices(device%3A%20%24device%2C%20tags%3A%20%24tags%2C%20radius%3A%20%24radius%2C%20latency%3A%20%24latency)%7B%0A%20%20%20%20devices%0A%20%20%20%20hits%0A%20%20%7D%0A%7D" target="_blank">Try it now
                       <a/> </section>
               </div>
             </div>
@@ -612,7 +612,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Properties of the new device to be registered</p>
                     </div>
                   </div>
                 </section>
@@ -785,7 +785,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>ID of device to remove</p>
                     </div>
                   </div>
                 </section>
@@ -902,7 +902,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Service chain ID</p>
                     </div>
                   </div>
                 </section>
@@ -1133,7 +1133,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Search string that any returned types must contain in their name</p>
                     </div>
                   </div>
                 </section>
@@ -1255,7 +1255,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Display name of the service chain</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -1268,7 +1268,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>ID of the corresponding service diagram</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -1285,7 +1285,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>List of blocks in the service chain</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -1302,7 +1302,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>List of targets to deploy the blocks onto</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -1319,7 +1319,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Description of network topology</p>
                     </div>
                   </div>
                 </section>
@@ -1365,7 +1365,6 @@ https://demo.nearbycomputing.com
         <span class="hljs-attr">&quot;master&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
         <span class="hljs-attr">&quot;host&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
       },
-      <span class="hljs-attr">&quot;deviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;fields&quot;</span>: [
         {
           <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -1498,7 +1497,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>ID of service chain ID to update</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -1511,7 +1510,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>New name for the service chain</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -1524,7 +1523,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>ID of new service diagram for the service chain</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -1541,7 +1540,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>New list of blocks in the service chain</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -1558,7 +1557,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Updated list of targets to deploy/move the blocks to</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -1575,7 +1574,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>New description of network topology</p>
                     </div>
                   </div>
                 </section>
@@ -1622,7 +1621,6 @@ https://demo.nearbycomputing.com
         <span class="hljs-attr">&quot;master&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
         <span class="hljs-attr">&quot;host&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
       },
-      <span class="hljs-attr">&quot;deviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
       <span class="hljs-attr">&quot;fields&quot;</span>: [
         {
           <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -1755,7 +1753,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>ID of the service chain to remove</p>
                     </div>
                   </div>
                 </section>
@@ -1888,7 +1886,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Service definition ID (overrides other parameters)</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -1901,7 +1899,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Search string that any returned service definitions must contain in their name</p>
                     </div>
                   </div>
                 </section>
@@ -2023,7 +2021,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>ID of the service definition to update. Providing this parameter implies an update.</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -2040,7 +2038,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Properties of the service definition</p>
                     </div>
                   </div>
                 </section>
@@ -2242,7 +2240,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>ID of the service definition to remove</p>
                     </div>
                   </div>
                 </section>
@@ -2353,7 +2351,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Block definition ID</p>
                     </div>
                   </div>
                 </section>
@@ -2483,7 +2481,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>ID of the block definition to update. Providing this parameter implies an update.</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -2500,7 +2498,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Definition of the block</p>
                     </div>
                   </div>
                 </section>
@@ -2643,7 +2641,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>ID of the block definition to remove</p>
                     </div>
                   </div>
                 </section>
@@ -2771,7 +2769,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Service diagram ID</p>
                     </div>
                   </div>
                 </section>
@@ -2892,7 +2890,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>ID of the service diagram</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -2905,7 +2903,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>JSON-serialized object containing block layout</p>
                     </div>
                   </div>
                 </section>
@@ -3200,7 +3198,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>VLAN ID</p>
                     </div>
                   </div>
                 </section>
@@ -3311,7 +3309,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Initial VLAN ID</p>
                     </div>
                   </div>
                 </section>
@@ -3426,7 +3424,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Default (Lat, Lng) to initially center the map at</p>
                     </div>
                   </div>
                   <div class="prop-row prop-group">
@@ -3439,7 +3437,7 @@ https://demo.nearbycomputing.com
                       </div>
                     </div>
                     <div class="prop-value">
-                      <p class="no-description">(no description)</p>
+                      <p>Default initial zoom level</p>
                     </div>
                   </div>
                 </section>
@@ -3668,7 +3666,7 @@ https://demo.nearbycomputing.com
               <div class="doc-copy">
                 <section class="json-schema-properties">
                   <dl>
-                    <dt data-property-name="nw">
+                    <dt data-property-name="nw" class="has-description">
                       <span class="json-property-name">nw:</span>
                       <div class="json-property-type">
                         <div class="">
@@ -3678,7 +3676,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="se">
+                    <dd>
+                      <p>Northwesternmost point of a bounding box</p>
+                    </dd>
+                    <dt data-property-name="se" class="has-description">
                       <span class="json-property-name">se:</span>
                       <div class="json-property-type">
                         <div class="">
@@ -3688,6 +3689,9 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
+                    <dd>
+                      <p>Southeasternmost point of a bounding box</p>
+                    </dd>
                   </dl>
                 </section>
               </div>
@@ -3889,9 +3893,12 @@ https://demo.nearbycomputing.com
             </h2>
             <div class="doc-row">
               <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>A definition of a Block</p>
+                </section>
                 <section class="json-schema-properties">
                   <dl>
-                    <dt data-property-name="name">
+                    <dt data-property-name="name" class="has-description">
                       <span class="json-property-name">name:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -3901,7 +3908,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="menuPath">
+                    <dd>
+                      <p>Name of the block, to be shown in the UI</p>
+                    </dd>
+                    <dt data-property-name="menuPath" class="has-description">
                       <span class="json-property-name">menuPath:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-array">
@@ -3910,7 +3920,11 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="defId">
+                    <dd>
+                      <p>List of path pieces to determine the location of the block in the UI.</p>
+                      <p>e.g. [&quot;block&quot;, &quot;path&quot;] would show the block inside a submenu &quot;path&quot; of the top-level menu section &quot;block&quot; in the UI.</p>
+                    </dd>
+                    <dt data-property-name="defId" class="has-description">
                       <span class="json-property-name">defId:</span>
                       <div class="json-property-type">
                         <div class="">
@@ -3919,7 +3933,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="type">
+                    <dd>
+                      <p>ID of the service definition associated with the block</p>
+                    </dd>
+                    <dt data-property-name="type" class="has-description">
                       <span class="json-property-name">type:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -3929,7 +3946,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="ports">
+                    <dd>
+                      <p>Fully-qualified type name of the service</p>
+                    </dd>
+                    <dt data-property-name="ports" class="has-description">
                       <span class="json-property-name">ports:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-array">
@@ -3938,6 +3958,9 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
+                    <dd>
+                      <p>List of ports from which connections can be made to other blocks</p>
+                    </dd>
                   </dl>
                 </section>
               </div>
@@ -3982,7 +4005,7 @@ https://demo.nearbycomputing.com
               <div class="doc-copy">
                 <section class="json-schema-properties">
                   <dl>
-                    <dt data-property-name="id">
+                    <dt data-property-name="id" class="has-description">
                       <span class="json-property-name">id:</span>
                       <div class="json-property-type">
                         <div class="">
@@ -3991,7 +4014,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="blockDefId">
+                    <dd>
+                      <p>ID of a previously-deployed block to update. Providing this parameter implies an update to an existing block, whereas inputs with no ID will be treated as new blocks.</p>
+                    </dd>
+                    <dt data-property-name="blockDefId" class="has-description">
                       <span class="json-property-name">blockDefId:</span>
                       <div class="json-property-type">
                         <div class="">
@@ -4001,7 +4027,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="diagramNode">
+                    <dd>
+                      <p>ID of the definition of the block</p>
+                    </dd>
+                    <dt data-property-name="diagramNode" class="has-description">
                       <span class="json-property-name">diagramNode:</span>
                       <div class="json-property-type">
                         <div class="">
@@ -4010,7 +4039,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="name">
+                    <dd>
+                      <p>ID of the node in the service diagram</p>
+                    </dd>
+                    <dt data-property-name="name" class="has-description">
                       <span class="json-property-name">name:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -4020,7 +4052,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="type">
+                    <dd>
+                      <p>Display name of the block</p>
+                    </dd>
+                    <dt data-property-name="type" class="has-description">
                       <span class="json-property-name">type:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -4030,7 +4065,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="target">
+                    <dd>
+                      <p>Fully-qualified type name of the service</p>
+                    </dd>
+                    <dt data-property-name="target" class="has-description">
                       <span class="json-property-name">target:</span>
                       <div class="json-property-type">
                         <div class="">
@@ -4040,16 +4078,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="deviceId">
-                      <span class="json-property-name">deviceId:</span>
-                      <div class="json-property-type">
-                        <div class="">
-                          <a class="json-schema-ref" href="#/definitions/ID">ID</a>
-                        </div>
-                      </div>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
-                    <dt data-property-name="fields">
+                    <dd>
+                      <p>Target device which this block should be deployed to</p>
+                    </dd>
+                    <dt data-property-name="fields" class="has-description">
                       <span class="json-property-name">fields:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-array">
@@ -4058,7 +4090,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="interfaces">
+                    <dd>
+                      <p>List of fields used to provide parameters to the block</p>
+                    </dd>
+                    <dt data-property-name="interfaces" class="has-description">
                       <span class="json-property-name">interfaces:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-array">
@@ -4067,6 +4102,9 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
+                    <dd>
+                      <p>List of network interfaces used by the block</p>
+                    </dd>
                   </dl>
                 </section>
               </div>
@@ -4086,7 +4124,6 @@ https://demo.nearbycomputing.com
     <span class="hljs-attr">&quot;master&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
     <span class="hljs-attr">&quot;host&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
   },
-  <span class="hljs-attr">&quot;deviceId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
   <span class="hljs-attr">&quot;fields&quot;</span>: [
     {
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -4813,7 +4850,7 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="resolveAtRuntime" class="has-description">
+                    <dt data-property-name="resolveAtRuntime">
                       <span class="json-property-name">resolveAtRuntime:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-boolean">
@@ -4823,9 +4860,6 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dd>
-                      <p>if true, the service can be deployed without a list of deviceIds</p>
-                    </dd>
                   </dl>
                 </section>
               </div>
@@ -4872,9 +4906,12 @@ https://demo.nearbycomputing.com
             </h2>
             <div class="doc-row">
               <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>Properties of a new device to be registered</p>
+                </section>
                 <section class="json-schema-properties">
                   <dl>
-                    <dt data-property-name="tags">
+                    <dt data-property-name="tags" class="has-description">
                       <span class="json-property-name">tags:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-array">
@@ -4883,7 +4920,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="parents">
+                    <dd>
+                      <p>List of tags that describe the device</p>
+                    </dd>
+                    <dt data-property-name="parents" class="has-description">
                       <span class="json-property-name">parents:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-array">
@@ -4892,7 +4932,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="displayName">
+                    <dd>
+                      <p>List of IDs of parent devices</p>
+                    </dd>
+                    <dt data-property-name="displayName" class="has-description">
                       <span class="json-property-name">displayName:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -4901,7 +4944,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="img">
+                    <dd>
+                      <p>Display name of device to be shown in the UI</p>
+                    </dd>
+                    <dt data-property-name="img" class="has-description">
                       <span class="json-property-name">img:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -4910,7 +4956,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="iconType">
+                    <dd>
+                      <p>Path to device image (currently unused)</p>
+                    </dd>
+                    <dt data-property-name="iconType" class="has-description">
                       <span class="json-property-name">iconType:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -4919,7 +4968,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="position">
+                    <dd>
+                      <p>Map icon of device (currently unused)</p>
+                    </dd>
+                    <dt data-property-name="position" class="has-description">
                       <span class="json-property-name">position:</span>
                       <div class="json-property-type">
                         <div class="">
@@ -4928,7 +4980,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="mac">
+                    <dd>
+                      <p>Geographical position of device</p>
+                    </dd>
+                    <dt data-property-name="mac" class="has-description">
                       <span class="json-property-name">mac:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -4937,7 +4992,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="probeIp">
+                    <dd>
+                      <p>MAC address of device</p>
+                    </dd>
+                    <dt data-property-name="probeIp" class="has-description">
                       <span class="json-property-name">probeIp:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -4946,7 +5004,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="nztpServer">
+                    <dd>
+                      <p>IP the probes should use to collect network metrics from the device</p>
+                    </dd>
+                    <dt data-property-name="nztpServer" class="has-description">
                       <span class="json-property-name">nztpServer:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -4955,7 +5016,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="nztpWorkflow">
+                    <dd>
+                      <p>Near Zero-Touch Provisioning server address</p>
+                    </dd>
+                    <dt data-property-name="nztpWorkflow" class="has-description">
                       <span class="json-property-name">nztpWorkflow:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -4964,7 +5028,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="ipmiAddress">
+                    <dd>
+                      <p>Near Zero-Touch Provisioning workflow</p>
+                    </dd>
+                    <dt data-property-name="ipmiAddress" class="has-description">
                       <span class="json-property-name">ipmiAddress:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -4973,7 +5040,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="ipmiUsername">
+                    <dd>
+                      <p>Address of the IPMI management interface of the device</p>
+                    </dd>
+                    <dt data-property-name="ipmiUsername" class="has-description">
                       <span class="json-property-name">ipmiUsername:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -4982,7 +5052,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="ipmiPassword">
+                    <dd>
+                      <p>Username used to authenticate when issuing IPMI commands</p>
+                    </dd>
+                    <dt data-property-name="ipmiPassword" class="has-description">
                       <span class="json-property-name">ipmiPassword:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -4991,6 +5064,9 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
+                    <dd>
+                      <p>Password used to authenticate when issuing IPMI commands</p>
+                    </dd>
                   </dl>
                 </section>
               </div>
@@ -5408,7 +5484,7 @@ https://demo.nearbycomputing.com
               <div class="doc-copy">
                 <section class="json-schema-properties">
                   <dl>
-                    <dt data-property-name="displayName">
+                    <dt data-property-name="displayName" class="has-description">
                       <span class="json-property-name">displayName:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -5417,7 +5493,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="tags">
+                    <dd>
+                      <p>Display name of device to be shown in the UI</p>
+                    </dd>
+                    <dt data-property-name="tags" class="has-description">
                       <span class="json-property-name">tags:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-array">
@@ -5426,7 +5505,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="position">
+                    <dd>
+                      <p>List of tags that describe the device</p>
+                    </dd>
+                    <dt data-property-name="position" class="has-description">
                       <span class="json-property-name">position:</span>
                       <div class="json-property-type">
                         <div class="">
@@ -5435,7 +5517,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="nztpWorkflow">
+                    <dd>
+                      <p>Geographical position of device</p>
+                    </dd>
+                    <dt data-property-name="nztpWorkflow" class="has-description">
                       <span class="json-property-name">nztpWorkflow:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -5444,7 +5529,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="ipmiAddress">
+                    <dd>
+                      <p>Near Zero-Touch Provisioning workflow</p>
+                    </dd>
+                    <dt data-property-name="ipmiAddress" class="has-description">
                       <span class="json-property-name">ipmiAddress:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -5453,7 +5541,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="ipmiUsername">
+                    <dd>
+                      <p>Address of the IPMI management interface of the device</p>
+                    </dd>
+                    <dt data-property-name="ipmiUsername" class="has-description">
                       <span class="json-property-name">ipmiUsername:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -5462,7 +5553,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="ipmiPassword">
+                    <dd>
+                      <p>Username used to authenticate when issuing IPMI commands</p>
+                    </dd>
+                    <dt data-property-name="ipmiPassword" class="has-description">
                       <span class="json-property-name">ipmiPassword:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -5471,6 +5565,9 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
+                    <dd>
+                      <p>Password used to authenticate when issuing IPMI commands</p>
+                    </dd>
                   </dl>
                 </section>
               </div>
@@ -5679,7 +5776,7 @@ https://demo.nearbycomputing.com
               <div class="doc-copy">
                 <section class="json-schema-properties">
                   <dl>
-                    <dt data-property-name="id">
+                    <dt data-property-name="id" class="has-description">
                       <span class="json-property-name">id:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -5689,7 +5786,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="network">
+                    <dd>
+                      <p>Unique ID of interface</p>
+                    </dd>
+                    <dt data-property-name="network" class="has-description">
                       <span class="json-property-name">network:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -5699,6 +5799,9 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
+                    <dd>
+                      <p>Network name</p>
+                    </dd>
                   </dl>
                 </section>
               </div>
@@ -5925,7 +6028,7 @@ https://demo.nearbycomputing.com
               <div class="doc-copy">
                 <section class="json-schema-properties">
                   <dl>
-                    <dt data-property-name="lat">
+                    <dt data-property-name="lat" class="has-description">
                       <span class="json-property-name">lat:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-number">
@@ -5935,7 +6038,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="lng">
+                    <dd>
+                      <p>Degrees latitude</p>
+                    </dd>
+                    <dt data-property-name="lng" class="has-description">
                       <span class="json-property-name">lng:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-number">
@@ -5945,6 +6051,9 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
+                    <dd>
+                      <p>Degrees longitude</p>
+                    </dd>
                   </dl>
                 </section>
               </div>
@@ -6370,7 +6479,7 @@ https://demo.nearbycomputing.com
               <div class="doc-copy">
                 <section class="json-schema-properties">
                   <dl>
-                    <dt data-property-name="target">
+                    <dt data-property-name="target" class="has-description">
                       <span class="json-property-name">target:</span>
                       <div class="json-property-type">
                         <div class="">
@@ -6380,7 +6489,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="physical">
+                    <dd>
+                      <p>Target device which network should be created on</p>
+                    </dd>
+                    <dt data-property-name="physical" class="has-description">
                       <span class="json-property-name">physical:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-array">
@@ -6389,7 +6501,10 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="virtual">
+                    <dd>
+                      <p>List of physical network definitions</p>
+                    </dd>
+                    <dt data-property-name="virtual" class="has-description">
                       <span class="json-property-name">virtual:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-array">
@@ -6398,6 +6513,9 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
+                    <dd>
+                      <p>List of virtual network definitions</p>
+                    </dd>
                   </dl>
                 </section>
               </div>
@@ -6722,7 +6840,7 @@ https://demo.nearbycomputing.com
               <div class="doc-copy">
                 <section class="json-schema-properties">
                   <dl>
-                    <dt data-property-name="name">
+                    <dt data-property-name="name" class="has-description">
                       <span class="json-property-name">name:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -6732,7 +6850,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="physicalIface">
+                    <dd>
+                      <p>Network name</p>
+                    </dd>
+                    <dt data-property-name="physicalIface" class="has-description">
                       <span class="json-property-name">physicalIface:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -6742,7 +6863,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="vlan">
+                    <dd>
+                      <p>Physical network interface associated with this network</p>
+                    </dd>
+                    <dt data-property-name="vlan" class="has-description">
                       <span class="json-property-name">vlan:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -6751,6 +6875,9 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
+                    <dd>
+                      <p>VLAN ID of this network</p>
+                    </dd>
                   </dl>
                 </section>
               </div>
@@ -6849,7 +6976,7 @@ https://demo.nearbycomputing.com
               <div class="doc-copy">
                 <section class="json-schema-properties">
                   <dl>
-                    <dt data-property-name="index">
+                    <dt data-property-name="index" class="has-description">
                       <span class="json-property-name">index:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-number">
@@ -6859,7 +6986,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="side">
+                    <dd>
+                      <p>Port index, used for visually sorting in the UI</p>
+                    </dd>
+                    <dt data-property-name="side" class="has-description">
                       <span class="json-property-name">side:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -6869,7 +6999,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="iface">
+                    <dd>
+                      <p>Side of the block that the port should initially be displayed on</p>
+                    </dd>
+                    <dt data-property-name="iface" class="has-description">
                       <span class="json-property-name">iface:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -6879,6 +7012,9 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
+                    <dd>
+                      <p>Network interface name to display on the port</p>
+                    </dd>
                   </dl>
                 </section>
               </div>
@@ -7153,7 +7289,7 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="name" class="has-description">
+                    <dt data-property-name="name">
                       <span class="json-property-name">name:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -7163,9 +7299,6 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dd>
-                      <p>human-readable instance name, assigned at deploy time</p>
-                    </dd>
                     <dt data-property-name="block">
                       <span class="json-property-name">block:</span>
                       <div class="json-property-type">
@@ -7175,7 +7308,7 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="def" class="has-description">
+                    <dt data-property-name="def">
                       <span class="json-property-name">def:</span>
                       <div class="json-property-type">
                         <div class="">
@@ -7184,10 +7317,7 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dd>
-                      <p>service definition that the instance corresponds to</p>
-                    </dd>
-                    <dt data-property-name="type" class="has-description">
+                    <dt data-property-name="type">
                       <span class="json-property-name">type:</span>
                       <div class="json-property-type">
                         <div class="">
@@ -7196,9 +7326,6 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dd>
-                      <p>package that the service definition uses</p>
-                    </dd>
                     <dt data-property-name="using">
                       <span class="json-property-name">using:</span>
                       <div class="json-property-type">
@@ -8567,7 +8694,11 @@ https://demo.nearbycomputing.com
               </span> -->
             </h2>
             <div class="doc-row">
-              <div class="doc-copy"> </div>
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>An ISO 8601 formatted Date and Time</p>
+                </section>
+              </div>
               <div class="doc-examples">
                 <section>
                   <h5>Example</h5>
@@ -8645,7 +8776,7 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="defaultValue" class="has-description">
+                    <dt data-property-name="defaultValue">
                       <span class="json-property-name">defaultValue:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -8654,9 +8785,6 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dd>
-                      <p>type: ValueFieldType!</p>
-                    </dd>
                   </dl>
                 </section>
               </div>
@@ -8704,7 +8832,7 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="index" class="has-description">
+                    <dt data-property-name="index">
                       <span class="json-property-name">index:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-number">
@@ -8714,10 +8842,7 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dd>
-                      <p>display order in service deployment form</p>
-                    </dd>
-                    <dt data-property-name="yangField" class="has-description">
+                    <dt data-property-name="yangField">
                       <span class="json-property-name">yangField:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -8727,10 +8852,7 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dd>
-                      <p>name of field in YANG</p>
-                    </dd>
-                    <dt data-property-name="label" class="has-description">
+                    <dt data-property-name="label">
                       <span class="json-property-name">label:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -8740,10 +8862,7 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dd>
-                      <p>display name in form</p>
-                    </dd>
-                    <dt data-property-name="visible" class="has-description">
+                    <dt data-property-name="visible">
                       <span class="json-property-name">visible:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-boolean">
@@ -8752,9 +8871,6 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dd>
-                      <p>show/hide field at deploy time</p>
-                    </dd>
                     <dt data-property-name="defaultValue">
                       <span class="json-property-name">defaultValue:</span>
                       <div class="json-property-type">
@@ -8875,7 +8991,7 @@ https://demo.nearbycomputing.com
               <div class="doc-copy">
                 <section class="json-schema-properties">
                   <dl>
-                    <dt data-property-name="name">
+                    <dt data-property-name="name" class="has-description">
                       <span class="json-property-name">name:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -8885,7 +9001,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="vlan">
+                    <dd>
+                      <p>Network name</p>
+                    </dd>
+                    <dt data-property-name="vlan" class="has-description">
                       <span class="json-property-name">vlan:</span>
                       <div class="json-property-type">
                         <div class="json-schema-ref-string">
@@ -8894,6 +9013,9 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
+                    <dd>
+                      <p>VLAN ID of this network</p>
+                    </dd>
                   </dl>
                 </section>
               </div>
