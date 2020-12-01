@@ -3025,12 +3025,13 @@ https://demo.nearbycomputing.com
                     <head></head>
                     <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> settings<span class="hljs-tag">{
   <span class="hljs-symbol">settings<span class="hljs-tag">{
+    <span class="hljs-symbol">devicesPinned</span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20settings%7B%0A%20%20settings%7B%0A%20%20%7D%0A%7D" target="_blank">Try it now
+                    <a href="https://demo.nearbycomputing.com?query=query%20settings%7B%0A%20%20settings%7B%0A%20%20%20%20devicesPinned%0A%20%20%7D%0A%7D" target="_blank">Try it now
                       <a/> </section>
               </div>
             </div>
@@ -3071,7 +3072,9 @@ https://demo.nearbycomputing.com
                   <head></head>
                   <body><pre><code class="hljs language-json">{
   <span class="hljs-attr">&quot;data&quot;</span>: {
-    <span class="hljs-attr">&quot;settings&quot;</span>: {}
+    <span class="hljs-attr">&quot;settings&quot;</span>: {
+      <span class="hljs-attr">&quot;devicesPinned&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>
+    }
   }
 }
 </code></pre> </body>
@@ -8306,6 +8309,15 @@ https://demo.nearbycomputing.com
                       <div class="json-property-type">
                         <div class="">
                           <a class="json-schema-ref" href="#/definitions/MapSettings">MapSettings</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="devicesPinned">
+                      <span class="json-property-name">devicesPinned:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-boolean">
+                          <a class="json-schema-ref" href="#/definitions/Boolean">Boolean</a>
                         </div>
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
