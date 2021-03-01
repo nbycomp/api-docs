@@ -111,6 +111,7 @@
           </section>
           <h5>Schema Definitions</h5>
           <a href="#definition-AllocatedVlan"> AllocatedVlan </a>
+          <a href="#definition-ApiTokens"> ApiTokens </a>
           <a href="#definition-BBox"> BBox </a>
           <a href="#definition-BlockDef"> BlockDef </a>
           <a href="#definition-BlockDefInput"> BlockDefInput </a>
@@ -149,6 +150,7 @@
           <a href="#definition-Port"> Port </a>
           <a href="#definition-PortInput"> PortInput </a>
           <a href="#definition-Progress"> Progress </a>
+          <a href="#definition-Role"> Role </a>
           <a href="#definition-Server"> Server </a>
           <a href="#definition-ServerInput"> ServerInput </a>
           <a href="#definition-Service"> Service </a>
@@ -166,6 +168,7 @@
           <a href="#definition-Tag"> Tag </a>
           <a href="#definition-TagInput"> TagInput </a>
           <a href="#definition-Time"> Time </a>
+          <a href="#definition-User"> User </a>
           <a href="#definition-ValueField"> ValueField </a>
           <a href="#definition-ValueFieldInput"> ValueFieldInput </a>
           <a href="#definition-ValueFieldType"> ValueFieldType </a>
@@ -3658,6 +3661,68 @@ https://demo.nearbycomputing.com
               </div>
             </div>
           </div>
+          <div id="definition-ApiTokens" class="definition panel" data-traverse-target="definition-ApiTokens">
+            <h2 class="panel-title">
+              <a name="/definitions/ApiTokens"></a>ApiTokens: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="id">
+                      <span class="json-property-name">id:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="googleMaps">
+                      <span class="json-property-name">googleMaps:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="mapbox">
+                      <span class="json-property-name">mapbox:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;googleMaps&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;mapbox&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
           <div id="definition-BBox" class="definition panel" data-traverse-target="definition-BBox">
             <h2 class="panel-title">
               <a name="/definitions/BBox"></a>BBox: object
@@ -7107,6 +7172,40 @@ https://demo.nearbycomputing.com
               </div>
             </div>
           </div>
+          <div id="definition-Role" class="definition panel" data-traverse-target="definition-Role">
+            <h2 class="panel-title">
+              <a name="/definitions/Role"></a>Role: string
+              <!-- <span class="json-property-type"><div class="json-property-type"></div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-anyOf">
+                  <dl>
+                    <dt>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-enum" title="Possible values">
+                        <span class="json-property-enum-item">USER</span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd> </dd>
+                    <dt>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-enum" title="Possible values">
+                        <span class="json-property-enum-item">ADMIN</span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd> </dd>
+                  </dl>
+                </section>
+              </div>
+            </div>
+          </div>
           <div id="definition-Server" class="definition panel" data-traverse-target="definition-Server">
             <h2 class="panel-title">
               <a name="/definitions/Server"></a>Server: object
@@ -8753,6 +8852,58 @@ https://demo.nearbycomputing.com
                   <html>
                   <head></head>
                   <body><pre><code class="hljs language-gql"><span class="hljs-symbol">object</span>
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-User" class="definition panel" data-traverse-target="definition-User">
+            <h2 class="panel-title">
+              <a name="/definitions/User"></a>User: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="id">
+                      <span class="json-property-name">id:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="role">
+                      <span class="json-property-name">role:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/Role">Role</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;role&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
 </code></pre> </body>
                   </html>
                   <!-- </div> -->
