@@ -26,13 +26,11 @@ run:
         -e APIGW_VALIDATE_JWT=false \
         -e APIGW_SCHEMA_PATH=/opt/schema/*.graphql \
         -e APIGW_SKIP_DB=true \
-        -e NSO_BASE_URL= \
-        -e NSO_RESTCONF_BASE_URL= \
-        -e LINKMETRICS_GRPC_ADDR= \
-        -e SETTINGS_GRPC_ADDR= \
-        -e DEVREPO_GRPC_ADDR= \
-        -e SERVICEMAN_GRPC_ADDR= \
+        -e CONNARTIST_PORT= \
         -e DEVICEMAN_GRPC_ADDR= \
+        -e LINKMETRICS_GRPC_ADDR= \
+        -e SERVICEMAN_GRPC_ADDR= \
+        -e SETTINGS_GRPC_ADDR= \
         api-gw
 
       if ! docker run --network docs -v "$PWD"/public:/public \
