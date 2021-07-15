@@ -119,6 +119,7 @@
           <a href="#definition-Boolean"> Boolean </a>
           <a href="#definition-Connection"> Connection </a>
           <a href="#definition-ConnectionEntity"> ConnectionEntity </a>
+          <a href="#definition-ConnectionInput"> ConnectionInput </a>
           <a href="#definition-Dependencies"> Dependencies </a>
           <a href="#definition-DeployTargetInput"> DeployTargetInput </a>
           <a href="#definition-Device"> Device </a>
@@ -661,6 +662,14 @@ https://demo.nearbycomputing.com
                     <head></head>
                     <body><pre><code class="hljs language-json">{
   <span class="hljs-attr">&quot;dev&quot;</span>: {
+    <span class="hljs-attr">&quot;connections&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;category&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+      }
+    ],
     <span class="hljs-attr">&quot;tags&quot;</span>: [
       <span class="hljs-string">&quot;string&quot;</span>
     ],
@@ -4403,6 +4412,81 @@ https://demo.nearbycomputing.com
               </div>
             </div>
           </div>
+          <div id="definition-ConnectionInput" class="definition panel" data-traverse-target="definition-ConnectionInput">
+            <h2 class="panel-title">
+              <a name="/definitions/ConnectionInput"></a>ConnectionInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="category">
+                      <span class="json-property-name">category:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="kind">
+                      <span class="json-property-name">kind:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="name">
+                      <span class="json-property-name">name:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="source">
+                      <span class="json-property-name">source:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;category&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
           <div id="definition-Dependencies" class="definition panel" data-traverse-target="definition-Dependencies">
             <h2 class="panel-title">
               <a name="/definitions/Dependencies"></a>Dependencies: object
@@ -5081,6 +5165,18 @@ https://demo.nearbycomputing.com
                 </section>
                 <section class="json-schema-properties">
                   <dl>
+                    <dt data-property-name="connections" class="has-description">
+                      <span class="json-property-name">connections:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/ConnectionInput">ConnectionInput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>List of connections (e.g. video streams, APIs) available on the device</p>
+                    </dd>
                     <dt data-property-name="tags" class="has-description">
                       <span class="json-property-name">tags:</span>
                       <div class="json-property-type">
@@ -5247,6 +5343,14 @@ https://demo.nearbycomputing.com
                   <html>
                   <head></head>
                   <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;connections&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;category&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  ],
   <span class="hljs-attr">&quot;tags&quot;</span>: [
     <span class="hljs-string">&quot;string&quot;</span>
   ],
