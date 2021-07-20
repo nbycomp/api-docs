@@ -130,6 +130,7 @@
           <a href="#definition-DeviceLayerInput"> DeviceLayerInput </a>
           <a href="#definition-DeviceLink"> DeviceLink </a>
           <a href="#definition-DevicesResult"> DevicesResult </a>
+          <a href="#definition-EditConnectionInput"> EditConnectionInput </a>
           <a href="#definition-EditDeviceInput"> EditDeviceInput </a>
           <a href="#definition-EntityType"> EntityType </a>
           <a href="#definition-FieldInput"> FieldInput </a>
@@ -5745,6 +5746,92 @@ https://demo.nearbycomputing.com
               </div>
             </div>
           </div>
+          <div id="definition-EditConnectionInput" class="definition panel" data-traverse-target="definition-EditConnectionInput">
+            <h2 class="panel-title">
+              <a name="/definitions/EditConnectionInput"></a>EditConnectionInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="id">
+                      <span class="json-property-name">id:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="category">
+                      <span class="json-property-name">category:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="kind">
+                      <span class="json-property-name">kind:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="name">
+                      <span class="json-property-name">name:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="source">
+                      <span class="json-property-name">source:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;category&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
           <div id="definition-EditDeviceInput" class="definition panel" data-traverse-target="definition-EditDeviceInput">
             <h2 class="panel-title">
               <a name="/definitions/EditDeviceInput"></a>EditDeviceInput: object
@@ -5854,6 +5941,24 @@ https://demo.nearbycomputing.com
                     <dd>
                       <p>Password used to authenticate when issuing IPMI commands</p>
                     </dd>
+                    <dt data-property-name="connections">
+                      <span class="json-property-name">connections:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/EditConnectionInput">EditConnectionInput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="deletedConnections">
+                      <span class="json-property-name">deletedConnections:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
                   </dl>
                 </section>
               </div>
@@ -5876,7 +5981,19 @@ https://demo.nearbycomputing.com
   <span class="hljs-attr">&quot;nztpProvision&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
   <span class="hljs-attr">&quot;ipmiAddress&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;ipmiUsername&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;ipmiPassword&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  <span class="hljs-attr">&quot;ipmiPassword&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;connections&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+      <span class="hljs-attr">&quot;category&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  ],
+  <span class="hljs-attr">&quot;deletedConnections&quot;</span>: [
+    <span class="hljs-string">&quot;object&quot;</span>
+  ]
 }
 </code></pre> </body>
                   </html>
