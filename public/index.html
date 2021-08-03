@@ -113,6 +113,7 @@
           <a href="#definition-AllocatedVlan"> AllocatedVlan </a>
           <a href="#definition-ApiTokens"> ApiTokens </a>
           <a href="#definition-BBox"> BBox </a>
+          <a href="#definition-BlockConnectionInput"> BlockConnectionInput </a>
           <a href="#definition-BlockDef"> BlockDef </a>
           <a href="#definition-BlockDefInput"> BlockDefInput </a>
           <a href="#definition-BlockInput"> BlockInput </a>
@@ -1386,6 +1387,12 @@ https://demo.nearbycomputing.com
           <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
         }
       ],
+      <span class="hljs-attr">&quot;connections&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;connId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+        }
+      ],
       <span class="hljs-attr">&quot;interfaces&quot;</span>: [
         {
           <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -1641,6 +1648,12 @@ https://demo.nearbycomputing.com
         {
           <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+        }
+      ],
+      <span class="hljs-attr">&quot;connections&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;connId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
         }
       ],
       <span class="hljs-attr">&quot;interfaces&quot;</span>: [
@@ -3797,6 +3810,65 @@ https://demo.nearbycomputing.com
               </div>
             </div>
           </div>
+          <div id="definition-BlockConnectionInput" class="definition panel" data-traverse-target="definition-BlockConnectionInput">
+            <h2 class="panel-title">
+              <a name="/definitions/BlockConnectionInput"></a>BlockConnectionInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="name" class="has-description">
+                      <span class="json-property-name">name:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>Field name</p>
+                    </dd>
+                    <dt data-property-name="connId" class="has-description">
+                      <span class="json-property-name">connId:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>Connection ID</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;connId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
           <div id="definition-BlockDef" class="definition panel" data-traverse-target="definition-BlockDef">
             <h2 class="panel-title">
               <a name="/definitions/BlockDef"></a>BlockDef: object
@@ -4173,6 +4245,18 @@ https://demo.nearbycomputing.com
                     <dd>
                       <p>List of fields used to provide parameters to the block</p>
                     </dd>
+                    <dt data-property-name="connections" class="has-description">
+                      <span class="json-property-name">connections:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/BlockConnectionInput">BlockConnectionInput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>List of connections to other blocks or devices</p>
+                    </dd>
                     <dt data-property-name="interfaces" class="has-description">
                       <span class="json-property-name">interfaces:</span>
                       <div class="json-property-type">
@@ -4208,6 +4292,12 @@ https://demo.nearbycomputing.com
     {
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  ],
+  <span class="hljs-attr">&quot;connections&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;connId&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
     }
   ],
   <span class="hljs-attr">&quot;interfaces&quot;</span>: [
