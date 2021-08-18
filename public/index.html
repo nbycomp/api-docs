@@ -114,6 +114,7 @@
           <a href="#definition-ApiTokens"> ApiTokens </a>
           <a href="#definition-BBox"> BBox </a>
           <a href="#definition-BlockConnection"> BlockConnection </a>
+          <a href="#definition-BlockConnectionFieldInput"> BlockConnectionFieldInput </a>
           <a href="#definition-BlockConnectionInput"> BlockConnectionInput </a>
           <a href="#definition-BlockDef"> BlockDef </a>
           <a href="#definition-BlockDefInput"> BlockDefInput </a>
@@ -3815,6 +3816,92 @@ https://demo.nearbycomputing.com
           <div id="definition-BlockConnection" class="definition panel" data-traverse-target="definition-BlockConnection">
             <h2 class="panel-title">
               <a name="/definitions/BlockConnection"></a>BlockConnection: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="id">
+                      <span class="json-property-name">id:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="index">
+                      <span class="json-property-name">index:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-number">
+                          <a class="json-schema-ref" href="#/definitions/Int">Int</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="yangField">
+                      <span class="json-property-name">yangField:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="label">
+                      <span class="json-property-name">label:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="kind">
+                      <span class="json-property-name">kind:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-string">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+  <span class="hljs-attr">&quot;yangField&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-BlockConnectionFieldInput" class="definition panel" data-traverse-target="definition-BlockConnectionFieldInput">
+            <h2 class="panel-title">
+              <a name="/definitions/BlockConnectionFieldInput"></a>BlockConnectionFieldInput: object
               <!-- <span class="json-property-type"><div class="json-property-type">object</div>
               <span class="json-property-range" title="Value limits"></span>
               
@@ -8641,6 +8728,15 @@ https://demo.nearbycomputing.com
                       <div class="json-property-type">
                         <div class="json-schema-ref-array">
                           <a class="json-schema-ref" href="#/definitions/ParentDeviceFieldInput">ParentDeviceFieldInput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="connectionFields">
+                      <span class="json-property-name">connectionFields:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/BlockConnectionFieldInput">BlockConnectionFieldInput</a>
                         </div>
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
