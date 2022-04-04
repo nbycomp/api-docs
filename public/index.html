@@ -84,6 +84,7 @@
           <a href="#definition-Device"> Device </a>
           <a href="#definition-DeviceInput"> DeviceInput </a>
           <a href="#definition-DeviceLink"> DeviceLink </a>
+          <a href="#definition-DeviceStatus"> DeviceStatus </a>
           <a href="#definition-DevicesResult"> DevicesResult </a>
           <a href="#definition-EditConnectionInput"> EditConnectionInput </a>
           <a href="#definition-EditDeviceInput"> EditDeviceInput </a>
@@ -704,7 +705,6 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;img&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;iconType&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;specs&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;mac&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;probeIp&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;nztpWorkflow&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
@@ -1543,14 +1543,12 @@ https://demo.nearbycomputing.com
                     <head></head>
                     <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> settings<span class="hljs-tag">{
   <span class="hljs-symbol">settings<span class="hljs-tag">{
-    <span class="hljs-symbol">devicesPinned</span>
-    <span class="hljs-symbol">deployGracePeriodMins</span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20settings%7B%0A%20%20settings%7B%0A%20%20%20%20devicesPinned%0A%20%20%20%20deployGracePeriodMins%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=query%20settings%7B%0A%20%20settings%7B%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -1591,10 +1589,7 @@ https://demo.nearbycomputing.com
                   <head></head>
                   <body><pre><code class="hljs language-json">{
   <span class="hljs-attr">&quot;data&quot;</span>: {
-    <span class="hljs-attr">&quot;settings&quot;</span>: {
-      <span class="hljs-attr">&quot;devicesPinned&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-      <span class="hljs-attr">&quot;deployGracePeriodMins&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>
-    }
+    <span class="hljs-attr">&quot;settings&quot;</span>: {}
   }
 }
 </code></pre> </body>
@@ -3781,7 +3776,7 @@ https://demo.nearbycomputing.com
                             <span class="json-property-name">return:</span>
                             <div class="json-property-type">
                               <div class="">
-                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                                <a class="json-schema-ref" href="#/definitions/DeviceStatus">DeviceStatus</a>
                               </div>
                             </div>
                             <span class="json-property-range" title="Value limits"></span>
@@ -4805,6 +4800,48 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                   </html>
                   <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-DeviceStatus" class="definition panel" data-traverse-target="definition-DeviceStatus">
+            <h2 class="panel-title">
+              <a name="/definitions/DeviceStatus"></a>DeviceStatus: string
+              <!-- <span class="json-property-type"><div class="json-property-type"></div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-anyOf">
+                  <dl>
+                    <dt>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-enum" title="Possible values">
+                        <span class="json-property-enum-item">UNKNOWN</span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd> </dd>
+                    <dt>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-enum" title="Possible values">
+                        <span class="json-property-enum-item">READY</span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd> </dd>
+                    <dt>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-enum" title="Possible values">
+                        <span class="json-property-enum-item">DEPLOYING</span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd> </dd>
+                  </dl>
                 </section>
               </div>
             </div>
@@ -7725,66 +7762,6 @@ https://demo.nearbycomputing.com
                         </dl>
                       </section>
                     </dt>
-                    <dt data-property-name="devicesPinned">
-                      <span class="json-property-name">devicesPinned:</span>
-                      <div class="json-property-type">object</div>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
-                    <dt class="json-inner-schema">
-                      <section class="json-schema-properties">
-                        <dl>
-                          <dt data-property-name="return">
-                            <span class="json-property-name">return:</span>
-                            <div class="json-property-type">
-                              <div class="">
-                                <a class="json-schema-ref" href="#/definitions/Boolean">Boolean</a>
-                              </div>
-                            </div>
-                            <span class="json-property-range" title="Value limits"></span>
-                          </dt>
-                          <dt data-property-name="arguments">
-                            <span class="json-property-name">arguments:</span>
-                            <div class="json-property-type">object</div>
-                            <span class="json-property-range" title="Value limits"></span>
-                          </dt>
-                          <dt class="json-inner-schema">
-                            <section class="json-schema-properties">
-                              <dl> </dl>
-                            </section>
-                          </dt>
-                        </dl>
-                      </section>
-                    </dt>
-                    <dt data-property-name="deployGracePeriodMins">
-                      <span class="json-property-name">deployGracePeriodMins:</span>
-                      <div class="json-property-type">object</div>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
-                    <dt class="json-inner-schema">
-                      <section class="json-schema-properties">
-                        <dl>
-                          <dt data-property-name="return">
-                            <span class="json-property-name">return:</span>
-                            <div class="json-property-type">
-                              <div class="">
-                                <a class="json-schema-ref" href="#/definitions/Int">Int</a>
-                              </div>
-                            </div>
-                            <span class="json-property-range" title="Value limits"></span>
-                          </dt>
-                          <dt data-property-name="arguments">
-                            <span class="json-property-name">arguments:</span>
-                            <div class="json-property-type">object</div>
-                            <span class="json-property-range" title="Value limits"></span>
-                          </dt>
-                          <dt class="json-inner-schema">
-                            <section class="json-schema-properties">
-                              <dl> </dl>
-                            </section>
-                          </dt>
-                        </dl>
-                      </section>
-                    </dt>
                   </dl>
                 </section>
               </div>
@@ -7815,14 +7792,6 @@ https://demo.nearbycomputing.com
         <span class="hljs-attr">&quot;arguments&quot;</span>: {}
       }
     },
-    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-  },
-  <span class="hljs-attr">&quot;devicesPinned&quot;</span>: {
-    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
-    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-  },
-  <span class="hljs-attr">&quot;deployGracePeriodMins&quot;</span>: {
-    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   }
 }
