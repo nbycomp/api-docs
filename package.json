@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dociql": "^1.0.3"
+    "dociql": "^1.1.7"
   }
 }
