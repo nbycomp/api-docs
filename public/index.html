@@ -2134,6 +2134,36 @@ https://demo.nearbycomputing.com
                         </dl>
                       </section>
                     </dt>
+                    <dt data-property-name="connections">
+                      <span class="json-property-name">connections:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="json-schema-ref-array">
+                                <a class="json-schema-ref" href="#/definitions/Connection">Connection</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
                     <dt data-property-name="resources">
                       <span class="json-property-name">resources:</span>
                       <div class="json-property-type">object</div>
@@ -2247,32 +2277,37 @@ https://demo.nearbycomputing.com
     <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   },
-  <span class="hljs-attr">&quot;resources&quot;</span>: {
+  <span class="hljs-attr">&quot;connections&quot;</span>: {
     <span class="hljs-attr">&quot;return&quot;</span>: [
       {
         <span class="hljs-attr">&quot;id&quot;</span>: {
           <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
           <span class="hljs-attr">&quot;arguments&quot;</span>: {}
         },
-        <span class="hljs-attr">&quot;name&quot;</span>: {
+        <span class="hljs-attr">&quot;category&quot;</span>: {
           <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;arguments&quot;</span>: {}
         },
-        <span class="hljs-attr">&quot;kind&quot;</span>: {
+        <span class="hljs-attr">&quot;description&quot;</span>: {
           <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;arguments&quot;</span>: {}
         },
-        <span class="hljs-attr">&quot;status&quot;</span>: {
-          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;entity&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: {
+            <span class="hljs-attr">&quot;id&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+            },
+            <span class="hljs-attr">&quot;type&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+            }
+          },
           <span class="hljs-attr">&quot;arguments&quot;</span>: {}
         },
-        <span class="hljs-attr">&quot;manifest&quot;</span>: {
-          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-        }
+        <span class="hljs-attr">&quot;kind&quot;</span>: {}
       }
-    ],
-    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+    ]
   }
 }
 </code></pre> </body>
@@ -7881,22 +7916,22 @@ https://demo.nearbycomputing.com
           <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;arguments&quot;</span>: {}
         },
-        <span class="hljs-attr">&quot;resources&quot;</span>: {
+        <span class="hljs-attr">&quot;connections&quot;</span>: {
           <span class="hljs-attr">&quot;return&quot;</span>: [
             {
               <span class="hljs-attr">&quot;id&quot;</span>: {
                 <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                 <span class="hljs-attr">&quot;arguments&quot;</span>: {}
               },
-              <span class="hljs-attr">&quot;name&quot;</span>: {
+              <span class="hljs-attr">&quot;category&quot;</span>: {
                 <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                 <span class="hljs-attr">&quot;arguments&quot;</span>: {}
               },
-              <span class="hljs-attr">&quot;kind&quot;</span>: {
+              <span class="hljs-attr">&quot;description&quot;</span>: {
                 <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                 <span class="hljs-attr">&quot;arguments&quot;</span>: {}
               },
-              <span class="hljs-attr">&quot;status&quot;</span>: {}
+              <span class="hljs-attr">&quot;entity&quot;</span>: {}
             }
           ]
         }
