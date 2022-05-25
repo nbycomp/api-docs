@@ -105,6 +105,7 @@
           <a href="#definition-OktoResource"> OktoResource </a>
           <a href="#definition-Progress"> Progress </a>
           <a href="#definition-ProvisionChart"> ProvisionChart </a>
+          <a href="#definition-ProvisionInput"> ProvisionInput </a>
           <a href="#definition-Role"> Role </a>
           <a href="#definition-Server"> Server </a>
           <a href="#definition-ServerInput"> ServerInput </a>
@@ -7001,6 +7002,135 @@ https://demo.nearbycomputing.com
     <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-ProvisionInput" class="definition panel" data-traverse-target="definition-ProvisionInput">
+            <h2 class="panel-title">
+              <a name="/definitions/ProvisionInput"></a>ProvisionInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="chartName" class="has-description">
+                      <span class="json-property-name">chartName:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>Chart name in Helm repo</p>
+                    </dd>
+                    <dt data-property-name="chartVersion" class="has-description">
+                      <span class="json-property-name">chartVersion:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>Chart semantic version number</p>
+                    </dd>
+                    <dt data-property-name="provisionerSite" class="has-description">
+                      <span class="json-property-name">provisionerSite:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>Site selector for Provisioner block deployment</p>
+                    </dd>
+                    <dt data-property-name="provisionInventory">
+                      <span class="json-property-name">provisionInventory:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="displayName" class="has-description">
+                      <span class="json-property-name">displayName:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>Display name of device to be shown in the UI</p>
+                    </dd>
+                    <dt data-property-name="position" class="has-description">
+                      <span class="json-property-name">position:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/LatLngInput">LatLngInput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>Geographical position of device</p>
+                    </dd>
+                    <dt data-property-name="site" class="has-description">
+                      <span class="json-property-name">site:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>Site that device belongs to</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;chartName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;chartVersion&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;provisionerSite&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;provisionInventory&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;position&quot;</span>: {
+    <span class="hljs-attr">&quot;lat&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+    <span class="hljs-attr">&quot;lng&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+  },
+  <span class="hljs-attr">&quot;site&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
 }
 </code></pre> </body>
                   </html>
