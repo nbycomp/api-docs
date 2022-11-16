@@ -10,15 +10,22 @@ info:
   description: Documentation for GraphQL API Gateway
 
 domains:
+  - name: Blocks
+    description: View information about one or more Block Charts
+    usecases:
+      - name: Block chart
+        description: Fetch a chart by name and version
+        query: query.blockChart
+      - name: Block charts
+        description: Fetch the latest versions of all charts in the marketplace
+        query: query.blockCharts
+
   - name: Devices
     description: View, register and remove devices
     usecases:
       - name: List devices
         description: Query one or more registered devices
         query: query.devices
-      - name: List nearby devices
-        description: Find devices within range of a reference device
-        query: query.nearbyDevices
       - name: Register device
         description: Register a new device
         query: mutation.device
@@ -41,9 +48,15 @@ domains:
       - name: Update service chain
         description: Modify a service chain that is already running
         query: mutation.updateServiceChain
+      - name: Rollback service chain
+        description: Revert to a previous revision of a service chain
+        query: mutation.rollbackServiceChain
       - name: Remove service chain
         description: Undeploy a running service chain
         query: mutation.removeServiceChain
+      - name: Okto resource logs
+        description: View the logs for a single Okto resource
+        query: query.oktoResourceLogs
 
   - name: Settings
     description: Fetch the settings for the currently logged in user
@@ -54,3 +67,53 @@ domains:
       - name: Set default map position
         description: Set the default position and zoom of the map shown in the dashboard
         query: mutation.setDefaultMapPosition
+      - name: Set block repo
+        description: Set credentials for block chart repo
+        query: mutation.setBlockRepo
+      - name: Set provision repo
+        description: Set credentials for provision chart repo
+        query: mutation.setProvisionRepo
+
+  - name: Sites
+    description: View and update information related to a site
+    usecases:
+      - name: Site
+        description: Fetch a site by ID
+        query: query.site
+      - name: Create site
+        description: Create a new site
+        query: mutation.createSite
+      - name: Edit site
+        description: Modify an existing site
+        query: mutation.editSite
+      - name: Remove site
+        description: Remove a site
+        query: mutation.removeSite
+
+  - name: Users
+    description: Manage dashboard user accounts
+    usecases:
+      - name: Users
+        description: List all users
+        query: query.users
+      - name: Create user
+        description: Register a new user
+        query: mutation.createUser
+      - name: Remove user
+        description: Remove a user
+        query: mutation.removeUser
+      - name: Recruit user
+        description: Recruit an existing user to another org
+        query: mutation.recruitUser
+      - name: Dismiss user
+        description: Remove a user from a specific org
+        query: mutation.dismissUser
+      - name: Generate recovery link
+        description: Generate a link for a user to reset their credentials
+        query: mutation.generateRecoveryLink
+      - name: Set current org
+        description: Switch contexts from one org to another
+        query: mutation.setCurrentOrg
+      - name: Set role
+        description: Change the role of an existing user
+        query: mutation.setRole
