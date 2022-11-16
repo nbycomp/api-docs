@@ -93,9 +93,9 @@ domains:
   - name: Users
     description: Manage dashboard user accounts
     usecases:
-      - name: Users
-        description: List all users
-        query: query.users
+      # - name: Users
+      #   description: List all users
+      #   query: query.users
       - name: Create user
         description: Register a new user
         query: mutation.createUser
