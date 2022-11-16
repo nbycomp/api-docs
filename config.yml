@@ -74,20 +74,20 @@ domains:
         description: Set credentials for provision chart repo
         query: mutation.setProvisionRepo
 
-  - name: Sites
-    description: View and update information related to a site
+  - name: Sites and Organizations
+    description: View and update information related to a site/organization
     usecases:
-      - name: Site
-        description: Fetch a site by ID
+      - name: Site / Organization
+        description: Fetch a site/organization by ID
         query: query.site
-      - name: Create site
-        description: Create a new site
+      - name: Create site/organization
+        description: Create a new site/organization
         query: mutation.createSite
-      - name: Edit site
-        description: Modify an existing site
+      - name: Edit site/organization
+        description: Modify an existing site/organization
         query: mutation.editSite
-      - name: Remove site
-        description: Remove a site
+      - name: Remove site/organization
+        description: Remove a site/organization
         query: mutation.removeSite
 
   - name: Users
