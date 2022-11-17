@@ -164,6 +164,7 @@
           <a href="#definition-LatLngInput"> LatLngInput </a>
           <a href="#definition-MapSettings"> MapSettings </a>
           <a href="#definition-OktoResource"> OktoResource </a>
+          <a href="#definition-OrgRole"> OrgRole </a>
           <a href="#definition-Progress"> Progress </a>
           <a href="#definition-Provision"> Provision </a>
           <a href="#definition-ProvisionChart"> ProvisionChart </a>
@@ -3089,7 +3090,6 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">name</span>
     <span class="hljs-symbol">email</span>
     <span class="hljs-symbol">loggedInRole</span>
-    <span class="hljs-symbol">role<span class="hljs-tag">(org: <span class="hljs-code">$org</span>)</span></span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
@@ -3108,7 +3108,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20createUser(%24name%3A%20String!%2C%20%24email%3A%20String!%2C%20%24org%3A%20ID!%2C%20%24role%3A%20Role!)%7B%0A%20%20createUser(name%3A%20%24name%2C%20email%3A%20%24email%2C%20org%3A%20%24org%2C%20role%3A%20%24role)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%20%20loggedInRole%0A%20%20%20%20role(org%3A%20%24org)%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=mutation%20createUser(%24name%3A%20String!%2C%20%24email%3A%20String!%2C%20%24org%3A%20ID!%2C%20%24role%3A%20Role!)%7B%0A%20%20createUser(name%3A%20%24name%2C%20email%3A%20%24email%2C%20org%3A%20%24org%2C%20role%3A%20%24role)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%20%20loggedInRole%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -3358,7 +3358,6 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">name</span>
     <span class="hljs-symbol">email</span>
     <span class="hljs-symbol">loggedInRole</span>
-    <span class="hljs-symbol">role<span class="hljs-tag">(org: <span class="hljs-code">$org</span>)</span></span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
@@ -3376,7 +3375,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20recruitUser(%24user%3A%20ID!%2C%20%24org%3A%20ID!%2C%20%24role%3A%20Role!)%7B%0A%20%20recruitUser(user%3A%20%24user%2C%20org%3A%20%24org%2C%20role%3A%20%24role)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%20%20loggedInRole%0A%20%20%20%20role(org%3A%20%24org)%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=mutation%20recruitUser(%24user%3A%20ID!%2C%20%24org%3A%20ID!%2C%20%24role%3A%20Role!)%7B%0A%20%20recruitUser(user%3A%20%24user%2C%20org%3A%20%24org%2C%20role%3A%20%24role)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%20%20loggedInRole%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -3730,7 +3729,6 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">name</span>
     <span class="hljs-symbol">email</span>
     <span class="hljs-symbol">loggedInRole</span>
-    <span class="hljs-symbol">role<span class="hljs-tag">(org: <span class="hljs-code">$org</span>)</span></span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
@@ -3746,7 +3744,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20setCurrentOrg(%24org%3A%20ID)%7B%0A%20%20setCurrentOrg(org%3A%20%24org)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%20%20loggedInRole%0A%20%20%20%20role(org%3A%20%24org)%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=mutation%20setCurrentOrg(%24org%3A%20ID)%7B%0A%20%20setCurrentOrg(org%3A%20%24org)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%20%20loggedInRole%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -3885,7 +3883,6 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">name</span>
     <span class="hljs-symbol">email</span>
     <span class="hljs-symbol">loggedInRole</span>
-    <span class="hljs-symbol">role<span class="hljs-tag">(org: <span class="hljs-code">$org</span>)</span></span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
@@ -3903,7 +3900,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20setRole(%24user%3A%20ID!%2C%20%24org%3A%20ID!%2C%20%24role%3A%20Role!)%7B%0A%20%20setRole(user%3A%20%24user%2C%20org%3A%20%24org%2C%20role%3A%20%24role)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%20%20loggedInRole%0A%20%20%20%20role(org%3A%20%24org)%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=mutation%20setRole(%24user%3A%20ID!%2C%20%24org%3A%20ID!%2C%20%24role%3A%20Role!)%7B%0A%20%20setRole(user%3A%20%24user%2C%20org%3A%20%24org%2C%20role%3A%20%24role)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%20%20loggedInRole%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -8628,6 +8625,238 @@ https://demo.nearbycomputing.com
               </div>
             </div>
           </div>
+          <div id="definition-OrgRole" class="definition panel" data-traverse-target="definition-OrgRole">
+            <h2 class="panel-title">
+              <a name="/definitions/OrgRole"></a>OrgRole: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="id">
+                      <span class="json-property-name">id:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="org">
+                      <span class="json-property-name">org:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/Site">Site</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="role">
+                      <span class="json-property-name">role:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/Role">Role</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;id&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;org&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: {
+      <span class="hljs-attr">&quot;id&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+      },
+      <span class="hljs-attr">&quot;displayName&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+      },
+      <span class="hljs-attr">&quot;description&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+      },
+      <span class="hljs-attr">&quot;ancestors&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: [
+          {
+            <span class="hljs-attr">&quot;id&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+            },
+            <span class="hljs-attr">&quot;displayName&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+            },
+            <span class="hljs-attr">&quot;description&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+            },
+            <span class="hljs-attr">&quot;ancestors&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: [
+                {
+                  <span class="hljs-attr">&quot;id&quot;</span>: {
+                    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                  },
+                  <span class="hljs-attr">&quot;displayName&quot;</span>: {
+                    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                  },
+                  <span class="hljs-attr">&quot;description&quot;</span>: {
+                    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                  },
+                  <span class="hljs-attr">&quot;ancestors&quot;</span>: {
+                    <span class="hljs-attr">&quot;return&quot;</span>: [
+                      {
+                        <span class="hljs-attr">&quot;id&quot;</span>: {
+                          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                        },
+                        <span class="hljs-attr">&quot;displayName&quot;</span>: {
+                          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                        },
+                        <span class="hljs-attr">&quot;description&quot;</span>: {
+                          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                        },
+                        <span class="hljs-attr">&quot;ancestors&quot;</span>: {
+                          <span class="hljs-attr">&quot;return&quot;</span>: [
+                            {
+                              <span class="hljs-attr">&quot;id&quot;</span>: {
+                                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                              },
+                              <span class="hljs-attr">&quot;displayName&quot;</span>: {
+                                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                              },
+                              <span class="hljs-attr">&quot;description&quot;</span>: {
+                                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                              },
+                              <span class="hljs-attr">&quot;ancestors&quot;</span>: {
+                                <span class="hljs-attr">&quot;return&quot;</span>: [
+                                  {
+                                    <span class="hljs-attr">&quot;id&quot;</span>: {
+                                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                                      <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                                    },
+                                    <span class="hljs-attr">&quot;displayName&quot;</span>: {
+                                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                                      <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                                    },
+                                    <span class="hljs-attr">&quot;description&quot;</span>: {
+                                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                                      <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
           <div id="definition-Progress" class="definition panel" data-traverse-target="definition-Progress">
             <h2 class="panel-title">
               <a name="/definitions/Progress"></a>Progress: object
@@ -11660,8 +11889,8 @@ https://demo.nearbycomputing.com
                         </dl>
                       </section>
                     </dt>
-                    <dt data-property-name="role">
-                      <span class="json-property-name">role:</span>
+                    <dt data-property-name="orgRoles">
+                      <span class="json-property-name">orgRoles:</span>
                       <div class="json-property-type">object</div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
@@ -11671,8 +11900,8 @@ https://demo.nearbycomputing.com
                           <dt data-property-name="return">
                             <span class="json-property-name">return:</span>
                             <div class="json-property-type">
-                              <div class="">
-                                <a class="json-schema-ref" href="#/definitions/Role">Role</a>
+                              <div class="json-schema-ref-array">
+                                <a class="json-schema-ref" href="#/definitions/OrgRole">OrgRole</a>
                               </div>
                             </div>
                             <span class="json-property-range" title="Value limits"></span>
@@ -11685,7 +11914,7 @@ https://demo.nearbycomputing.com
                           <dt class="json-inner-schema">
                             <section class="json-schema-properties">
                               <dl>
-                                <dt data-property-name="org">
+                                <dt data-property-name="org" class="has-description">
                                   <span class="json-property-name">org:</span>
                                   <div class="json-property-type">
                                     <div class="">
@@ -11693,42 +11922,11 @@ https://demo.nearbycomputing.com
                                     </div>
                                   </div>
                                   <span class="json-property-range" title="Value limits"></span>
-                                  <span class="json-property-required"></span>
                                 </dt>
+                                <dd>
+                                  <p>optional filter to return only a specific org</p>
+                                </dd>
                               </dl>
-                            </section>
-                          </dt>
-                        </dl>
-                      </section>
-                    </dt>
-                    <dt data-property-name="orgs" class="has-description">
-                      <span class="json-property-name">orgs:</span>
-                      <div class="json-property-type">object</div>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
-                    <dd>
-                      <p>only required for drop-down menu to select current working org</p>
-                    </dd>
-                    <dt class="json-inner-schema">
-                      <section class="json-schema-properties">
-                        <dl>
-                          <dt data-property-name="return">
-                            <span class="json-property-name">return:</span>
-                            <div class="json-property-type">
-                              <div class="json-schema-ref-array">
-                                <a class="json-schema-ref" href="#/definitions/Site">Site</a>
-                              </div>
-                            </div>
-                            <span class="json-property-range" title="Value limits"></span>
-                          </dt>
-                          <dt data-property-name="arguments">
-                            <span class="json-property-name">arguments:</span>
-                            <div class="json-property-type">object</div>
-                            <span class="json-property-range" title="Value limits"></span>
-                          </dt>
-                          <dt class="json-inner-schema">
-                            <section class="json-schema-properties">
-                              <dl> </dl>
                             </section>
                           </dt>
                         </dl>
