@@ -168,6 +168,7 @@
           <a href="#definition-Provision"> Provision </a>
           <a href="#definition-ProvisionChart"> ProvisionChart </a>
           <a href="#definition-ProvisionInput"> ProvisionInput </a>
+          <a href="#definition-PublishBlockChartInput"> PublishBlockChartInput </a>
           <a href="#definition-RecoveryLink"> RecoveryLink </a>
           <a href="#definition-RepoInput"> RepoInput </a>
           <a href="#definition-Role"> Role </a>
@@ -2025,12 +2026,13 @@ https://demo.nearbycomputing.com
   <span class="hljs-symbol">settings<span class="hljs-tag">{
     <span class="hljs-symbol">blockRepoUrl</span>
     <span class="hljs-symbol">provisionRepoUrl</span>
+    <span class="hljs-symbol">templateRepoUrl</span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20settings%7B%0A%20%20settings%7B%0A%20%20%20%20blockRepoUrl%0A%20%20%20%20provisionRepoUrl%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=query%20settings%7B%0A%20%20settings%7B%0A%20%20%20%20blockRepoUrl%0A%20%20%20%20provisionRepoUrl%0A%20%20%20%20templateRepoUrl%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -2073,7 +2075,8 @@ https://demo.nearbycomputing.com
   <span class="hljs-attr">&quot;data&quot;</span>: {
     <span class="hljs-attr">&quot;settings&quot;</span>: {
       <span class="hljs-attr">&quot;blockRepoUrl&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;provisionRepoUrl&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+      <span class="hljs-attr">&quot;provisionRepoUrl&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;templateRepoUrl&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   }
 }
@@ -9342,6 +9345,101 @@ https://demo.nearbycomputing.com
               </div>
             </div>
           </div>
+          <div id="definition-PublishBlockChartInput" class="definition panel" data-traverse-target="definition-PublishBlockChartInput">
+            <h2 class="panel-title">
+              <a name="/definitions/PublishBlockChartInput"></a>PublishBlockChartInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="templateName">
+                      <span class="json-property-name">templateName:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="templateVersion">
+                      <span class="json-property-name">templateVersion:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="chartYaml">
+                      <span class="json-property-name">chartYaml:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="valuesYaml">
+                      <span class="json-property-name">valuesYaml:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="overridesYaml">
+                      <span class="json-property-name">overridesYaml:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="blockName">
+                      <span class="json-property-name">blockName:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;templateName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;templateVersion&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;chartYaml&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;valuesYaml&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;overridesYaml&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;blockName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
           <div id="definition-RecoveryLink" class="definition panel" data-traverse-target="definition-RecoveryLink">
             <h2 class="panel-title">
               <a name="/definitions/RecoveryLink"></a>RecoveryLink: object
@@ -10191,6 +10289,36 @@ https://demo.nearbycomputing.com
                         </dl>
                       </section>
                     </dt>
+                    <dt data-property-name="templateRepoUrl">
+                      <span class="json-property-name">templateRepoUrl:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
                   </dl>
                 </section>
               </div>
@@ -10228,6 +10356,10 @@ https://demo.nearbycomputing.com
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   },
   <span class="hljs-attr">&quot;provisionRepoUrl&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;templateRepoUrl&quot;</span>: {
     <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   }
