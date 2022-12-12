@@ -140,6 +140,7 @@
           <a href="#definition-BlockInput"> BlockInput </a>
           <a href="#definition-Boolean"> Boolean </a>
           <a href="#definition-ChartKey"> ChartKey </a>
+          <a href="#definition-ChartMetaInput"> ChartMetaInput </a>
           <a href="#definition-Connection"> Connection </a>
           <a href="#definition-ConnectionEntity"> ConnectionEntity </a>
           <a href="#definition-ConnectionInput"> ConnectionInput </a>
@@ -5367,6 +5368,116 @@ https://demo.nearbycomputing.com
               </div>
             </div>
           </div>
+          <div id="definition-ChartMetaInput" class="definition panel" data-traverse-target="definition-ChartMetaInput">
+            <h2 class="panel-title">
+              <a name="/definitions/ChartMetaInput"></a>ChartMetaInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="name">
+                      <span class="json-property-name">name:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="version">
+                      <span class="json-property-name">version:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="displayName">
+                      <span class="json-property-name">displayName:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="vendor">
+                      <span class="json-property-name">vendor:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="description">
+                      <span class="json-property-name">description:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="iconUrl">
+                      <span class="json-property-name">iconUrl:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="categories">
+                      <span class="json-property-name">categories:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;vendor&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;iconUrl&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;categories&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ]
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
           <div id="definition-Connection" class="definition panel" data-traverse-target="definition-Connection">
             <h2 class="panel-title">
               <a name="/definitions/Connection"></a>Connection: object
@@ -9816,11 +9927,11 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
-                    <dt data-property-name="chartYaml">
-                      <span class="json-property-name">chartYaml:</span>
+                    <dt data-property-name="chartMeta">
+                      <span class="json-property-name">chartMeta:</span>
                       <div class="json-property-type">
                         <div class="">
-                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                          <a class="json-schema-ref" href="#/definitions/ChartMetaInput">ChartMetaInput</a>
                         </div>
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
@@ -9857,7 +9968,17 @@ https://demo.nearbycomputing.com
                   <body><pre><code class="hljs language-json">{
   <span class="hljs-attr">&quot;templateName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;templateVersion&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;chartYaml&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;chartMeta&quot;</span>: {
+    <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;vendor&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;iconUrl&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;categories&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ]
+  },
   <span class="hljs-attr">&quot;valuesYaml&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;overridesYaml&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
