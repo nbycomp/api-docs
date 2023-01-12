@@ -8006,8 +8006,8 @@ https://demo.nearbycomputing.com
                         </dl>
                       </section>
                     </dt>
-                    <dt data-property-name="mnc">
-                      <span class="json-property-name">mnc:</span>
+                    <dt data-property-name="mncs">
+                      <span class="json-property-name">mncs:</span>
                       <div class="json-property-type">object</div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
@@ -8017,7 +8017,7 @@ https://demo.nearbycomputing.com
                           <dt data-property-name="return">
                             <span class="json-property-name">return:</span>
                             <div class="json-property-type">
-                              <div class="">
+                              <div class="json-schema-ref-array">
                                 <a class="json-schema-ref" href="#/definitions/String">String</a>
                               </div>
                             </div>
@@ -8088,8 +8088,10 @@ https://demo.nearbycomputing.com
     <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   },
-  <span class="hljs-attr">&quot;mnc&quot;</span>: {
-    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;mncs&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   },
   <span class="hljs-attr">&quot;federationUrl&quot;</span>: {
@@ -8552,10 +8554,10 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
-                    <dt data-property-name="mnc">
-                      <span class="json-property-name">mnc:</span>
+                    <dt data-property-name="mncs">
+                      <span class="json-property-name">mncs:</span>
                       <div class="json-property-type">
-                        <div class="">
+                        <div class="json-schema-ref-array">
                           <a class="json-schema-ref" href="#/definitions/String">String</a>
                         </div>
                       </div>
@@ -8585,7 +8587,9 @@ https://demo.nearbycomputing.com
   <span class="hljs-attr">&quot;operatorName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;countryCode&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;mcc&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-  <span class="hljs-attr">&quot;mnc&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;mncs&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
   <span class="hljs-attr">&quot;federationUrl&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre> </body>
