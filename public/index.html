@@ -148,6 +148,7 @@
           <a href="#definition-CrossplaneChart"> CrossplaneChart </a>
           <a href="#definition-CrossplaneChartListing"> CrossplaneChartListing </a>
           <a href="#definition-CrossplaneConfigField"> CrossplaneConfigField </a>
+          <a href="#definition-CrossplaneConfigFieldInput"> CrossplaneConfigFieldInput </a>
           <a href="#definition-CrossplaneProvisionInput"> CrossplaneProvisionInput </a>
           <a href="#definition-DeployTargetInput"> DeployTargetInput </a>
           <a href="#definition-Device"> Device </a>
@@ -203,6 +204,7 @@
           <a href="#definition-TagInput"> TagInput </a>
           <a href="#definition-TelemetryUrl"> TelemetryUrl </a>
           <a href="#definition-Time"> Time </a>
+          <a href="#definition-UpdateCrossplaneProvisionInput"> UpdateCrossplaneProvisionInput </a>
           <a href="#definition-User"> User </a>
           <a href="#definition-_Service"> _Service </a>
         </nav>
@@ -6277,20 +6279,22 @@ https://demo.nearbycomputing.com
                         </dl>
                       </section>
                     </dt>
-                    <dt data-property-name="defaultConfig">
-                      <span class="json-property-name">defaultConfig:</span>
+                    <dt data-property-name="originalConfig" class="has-description">
+                      <span class="json-property-name">originalConfig:</span>
                       <div class="json-property-type">object</div>
                       <span class="json-property-range" title="Value limits"></span>
-                      <span class="json-property-required"></span>
                     </dt>
+                    <dd>
+                      <p>This comes from the values yaml that come from the original chart</p>
+                    </dd>
                     <dt class="json-inner-schema">
                       <section class="json-schema-properties">
                         <dl>
                           <dt data-property-name="return">
                             <span class="json-property-name">return:</span>
                             <div class="json-property-type">
-                              <div class="">
-                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              <div class="json-schema-ref-array">
+                                <a class="json-schema-ref" href="#/definitions/CrossplaneConfigField">CrossplaneConfigField</a>
                               </div>
                             </div>
                             <span class="json-property-range" title="Value limits"></span>
@@ -6359,8 +6363,19 @@ https://demo.nearbycomputing.com
     <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   },
-  <span class="hljs-attr">&quot;defaultConfig&quot;</span>: {
-    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;originalConfig&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;label&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        },
+        <span class="hljs-attr">&quot;value&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        }
+      }
+    ],
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   },
   <span class="hljs-attr">&quot;latestConfig&quot;</span>: {
@@ -6597,6 +6612,59 @@ https://demo.nearbycomputing.com
               </div>
             </div>
           </div>
+          <div id="definition-CrossplaneConfigFieldInput" class="definition panel" data-traverse-target="definition-CrossplaneConfigFieldInput">
+            <h2 class="panel-title">
+              <a name="/definitions/CrossplaneConfigFieldInput"></a>CrossplaneConfigFieldInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="label">
+                      <span class="json-property-name">label:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="value">
+                      <span class="json-property-name">value:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
           <div id="definition-CrossplaneProvisionInput" class="definition panel" data-traverse-target="definition-CrossplaneProvisionInput">
             <h2 class="panel-title">
               <a name="/definitions/CrossplaneProvisionInput"></a>CrossplaneProvisionInput: object
@@ -6649,16 +6717,19 @@ https://demo.nearbycomputing.com
                     <dd>
                       <p>Site selector for controller</p>
                     </dd>
-                    <dt data-property-name="configYaml">
-                      <span class="json-property-name">configYaml:</span>
+                    <dt data-property-name="config" class="has-description">
+                      <span class="json-property-name">config:</span>
                       <div class="json-property-type">
-                        <div class="">
-                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/CrossplaneConfigFieldInput">CrossplaneConfigFieldInput</a>
                         </div>
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
+                    <dd>
+                      <p>Array of key value pairs for the Device configuration</p>
+                    </dd>
                     <dt data-property-name="displayName" class="has-description">
                       <span class="json-property-name">displayName:</span>
                       <div class="json-property-type">
@@ -6711,7 +6782,12 @@ https://demo.nearbycomputing.com
   <span class="hljs-attr">&quot;chartName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;chartVersion&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;controllerSite&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-  <span class="hljs-attr">&quot;configYaml&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;config&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  ],
   <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;position&quot;</span>: {
     <span class="hljs-attr">&quot;lat&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
@@ -14646,6 +14722,99 @@ https://demo.nearbycomputing.com
                   <html>
                   <head></head>
                   <body><pre><code class="hljs language-gql"><span class="hljs-symbol">object</span>
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-UpdateCrossplaneProvisionInput" class="definition panel" data-traverse-target="definition-UpdateCrossplaneProvisionInput">
+            <h2 class="panel-title">
+              <a name="/definitions/UpdateCrossplaneProvisionInput"></a>UpdateCrossplaneProvisionInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="id">
+                      <span class="json-property-name">id:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="displayName">
+                      <span class="json-property-name">displayName:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="providerConfig">
+                      <span class="json-property-name">providerConfig:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/CrossplaneConfigFieldInput">CrossplaneConfigFieldInput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="position">
+                      <span class="json-property-name">position:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/LatLngInput">LatLngInput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="deviceSite">
+                      <span class="json-property-name">deviceSite:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;providerConfig&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  ],
+  <span class="hljs-attr">&quot;position&quot;</span>: {
+    <span class="hljs-attr">&quot;lat&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+    <span class="hljs-attr">&quot;lng&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+  },
+  <span class="hljs-attr">&quot;deviceSite&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+}
 </code></pre> </body>
                   </html>
                   <!-- </div> -->
