@@ -77,8 +77,11 @@ domains:
   - name: Sites and Organizations
     description: View and update information related to a site/organization
     usecases:
-      - name: Site / Organization
-        description: Fetch a site/organization by ID
+      - name: Organization
+        description: Fetch an organization by ID
+        query: query.org
+      - name: Site
+        description: Fetch a site by ID
         query: query.site
       - name: Create site/organization
         description: Create a new site/organization
