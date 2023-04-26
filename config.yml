@@ -10,7 +10,7 @@ info:
   description: Documentation for GraphQL API Gateway
 
 domains:
-  - name: Blocks
+  - name: Charts
     description: View information about one or more Block Charts
     usecases:
       - name: Block chart
@@ -19,6 +19,47 @@ domains:
       - name: Block charts
         description: Fetch the latest versions of all charts in the marketplace
         query: query.blockCharts
+      - name: Publish Block Chart
+        description: Publish a new Block Chart based on an existing template
+        query: mutation.publishBlockChart
+      - name: Delete Block Chart
+        description: Delete an existing Block Chart based on an existing template
+        query: mutation.deleteBlockChart
+      - name: Provision Chart
+        description: Fetch the baremetal / software values of a Provisioning Chart
+        query: query.provisionChart
+      - name: Provision Charts
+        description: Fetch a list of all versions of all Provision Charts
+        query: query.provisionCharts
+      - name: Crossplane Chart
+        description: Fetch the default config of a Crossplane Chart
+        query: query.crossplaneChart
+      - name: Crossplane Charts
+        description: Fetch a list of the latest versions of all Crossplane Charts
+        query: query.crossplaneCharts
+      - name: Publisher Template
+        description: Fetch a publisher template by name and version
+        query: query.templateChart
+      - name: Publisher Template
+        description: Fetch the latest versions of all Publisher Templates
+        query: query.templateCharts
+
+  - name: Connections
+    description: View connections from a device or service
+    usecases:
+      - name: Fetch Connections
+        description: List all connections from a given service or device
+        query: query.connections
+
+  - name: Crossplane Provisions
+    description: Create and update Crossplane provisions
+    usecases:
+      - name: Crossplane Provision
+        description: Create a crossplane provisioned device
+        query: mutation.crossplaneProvision
+      - name: Update Crossplane Provision
+        description: update a crossplane provision
+        query: mutation.updateCrossplaneProvision
 
   - name: Devices
     description: View, register and remove devices
@@ -32,6 +73,75 @@ domains:
       - name: Remove device
         description: Unregister a device
         query: mutation.removeDevice
+
+  - name: Federation
+    description: View, create and manage guest accounts and federation hosts
+    usecases:
+      - name: Federation Guests
+        description: List all Federation Guest accounts within an org
+        query: query.federationGuests
+      - name: Federation Guest
+        description: Fetch a single Federation Guest account
+        query: query.federationGuest
+      - name: Federation Hosts
+        description: List all Federation Hosts within an org
+        query: query.federationHosts
+      - name: Federation Host
+        description: Fetch a single Federation Host
+        query: query.federationHost
+      - name: Edit Federation
+        description: Edit a federation
+        query: mutation.editFederation
+      - name: Create Federation Guest
+        description: Create a Federation Guest account
+        query: mutation.createFederationGuest
+      - name: Edit Federation Guest
+        description: Edit an existing Federation Guest account
+        query: mutation.editFederationGuest
+      - name: Remove Federation Guest
+        description: Remove an existing Federation Guest account
+        query: mutation.removeFederationGuest
+      - name: Set Federation Guest status
+        description: Disable / enable a federation guest account
+        query: mutation.setFederationGuestStatus
+      - name: Create Federation Host
+        description: Create a Federation Host
+        query: mutation.createFederationHost
+      - name: Edit Federation Host
+        description: Edit an existing Federation Host
+        query: mutation.editFederationHost
+      - name: Remove Federation Host
+        description: Remove an existing Federation Host
+        query: mutation.removeFederationHost
+
+  - name: Management
+    description: Endpoints for managing your installation
+    usecases:
+      - name: API Tokens
+        description: Fetch API Tokens
+        query: query.apiTokens
+      - name: Version
+        description: Fetch the version of NearbyOne
+        query: query.version
+
+  - name: Okto Resources
+    description: View information on Okto Resources
+    usecases:
+      - name: Okto Resource Logs
+        description: View logs for a single Okto Resource
+        query: query.oktoResourceLogs
+
+  - name: Provisions
+    description:  View, create and manage provisions
+    usecases:
+      - name: Provisions
+        description: List all Provisions in a site
+        query: query.provisions
+      - name: Provision
+        description: Create a provision
+        query: mutation.provision
+      - name: Remove Provision
+        query: mutation.removeProvision
 
   - name: Services
     description: View information on currently deployed services
@@ -57,6 +167,9 @@ domains:
       - name: Okto resource logs
         description: View the logs for a single Okto resource
         query: query.oktoResourceLogs
+      - name: Set Block Control
+        description: Set a control value on a block connection
+        query: mutation.setControlValue
 
   - name: Settings
     description: Fetch the settings for the currently logged in user
@@ -73,6 +186,15 @@ domains:
       - name: Set provision repo
         description: Set credentials for provision chart repo
         query: mutation.setProvisionRepo
+      - name: Set template repo
+        description: Set credentials for template chart repo
+        query: mutation.setTemplateRepo
+      - name: Custom Completions
+        descriptions: Fetch custom completions for an org
+        query: query.customCompletions
+      - name: Set Custom Completions
+        description: Set custom completions for an org
+        query: mutation.setCustomCompletions
 
   - name: Sites and Organizations
     description: View and update information related to a site/organization
@@ -83,22 +205,31 @@ domains:
       - name: Site
         description: Fetch a site by ID
         query: query.site
-      - name: Create site/organization
-        description: Create a new site/organization
+      - name: Create site
+        description: Create a new site
         query: mutation.createSite
-      - name: Edit site/organization
-        description: Modify an existing site/organization
+      - name: Edit site
+        description: Modify an existing site
         query: mutation.editSite
-      - name: Remove site/organization
-        description: Remove a site/organization
+      - name: Remove site
+        description: Remove a site
         query: mutation.removeSite
+      - name: Create org
+        description: Create a new org
+        query: mutation.createOrg
+      - name: Edit org
+        description: Modify an existing org
+        query: mutation.editOrg
+      - name: Remove org
+        description: Remove an org
+        query: mutation.removeOrg
 
   - name: Users
     description: Manage dashboard user accounts
     usecases:
-      # - name: Users
-      #   description: List all users
-      #   query: query.users
+      - name: Users
+        description: List all users
+        query: query.users
       - name: Create user
         description: Register a new user
         query: mutation.createUser
