@@ -1146,7 +1146,7 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">revision</span>
     <span class="hljs-symbol">name</span>
     <span class="hljs-symbol">status</span>
-    <span class="hljs-symbol">tenant</span>
+    <span class="hljs-symbol">org</span>
     <span class="hljs-symbol">owner</span>
     <span class="hljs-symbol">createdAt</span>
   }</span></span>
@@ -1164,7 +1164,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20serviceChain(%24id%3A%20ID!)%7B%0A%20%20serviceChain(id%3A%20%24id)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20tenant%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=query%20serviceChain(%24id%3A%20ID!)%7B%0A%20%20serviceChain(id%3A%20%24id)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -1209,7 +1209,7 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;revision&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;tenant&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;org&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   }
@@ -1275,7 +1275,7 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">revision</span>
     <span class="hljs-symbol">name</span>
     <span class="hljs-symbol">status</span>
-    <span class="hljs-symbol">tenant</span>
+    <span class="hljs-symbol">org</span>
     <span class="hljs-symbol">owner</span>
     <span class="hljs-symbol">createdAt</span>
   }</span></span>
@@ -1295,7 +1295,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20serviceChains(%24sites%3A%20%5BID!%5D)%7B%0A%20%20serviceChains(sites%3A%20%24sites)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20tenant%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=query%20serviceChains(%24sites%3A%20%5BID!%5D)%7B%0A%20%20serviceChains(sites%3A%20%24sites)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -1341,7 +1341,7 @@ https://demo.nearbycomputing.com
         <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;revision&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>,
         <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;tenant&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;org&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
       }
     ]
@@ -1425,7 +1425,7 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">revision</span>
     <span class="hljs-symbol">name</span>
     <span class="hljs-symbol">status</span>
-    <span class="hljs-symbol">tenant</span>
+    <span class="hljs-symbol">org</span>
     <span class="hljs-symbol">owner</span>
     <span class="hljs-symbol">createdAt</span>
   }</span></span>
@@ -1452,7 +1452,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20deployServiceChain(%24name%3A%20String!%2C%20%24blocks%3A%20%5BBlockInput!%5D)%7B%0A%20%20deployServiceChain(name%3A%20%24name%2C%20blocks%3A%20%24blocks)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20tenant%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=mutation%20deployServiceChain(%24name%3A%20String!%2C%20%24blocks%3A%20%5BBlockInput!%5D)%7B%0A%20%20deployServiceChain(name%3A%20%24name%2C%20blocks%3A%20%24blocks)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -1497,7 +1497,7 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;revision&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;tenant&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;org&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   }
@@ -1593,7 +1593,7 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">revision</span>
     <span class="hljs-symbol">name</span>
     <span class="hljs-symbol">status</span>
-    <span class="hljs-symbol">tenant</span>
+    <span class="hljs-symbol">org</span>
     <span class="hljs-symbol">owner</span>
     <span class="hljs-symbol">createdAt</span>
   }</span></span>
@@ -1621,7 +1621,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20updateServiceChain(%24id%3A%20ID!%2C%20%24name%3A%20String!%2C%20%24blocks%3A%20%5BBlockInput!%5D)%7B%0A%20%20updateServiceChain(id%3A%20%24id%2C%20name%3A%20%24name%2C%20blocks%3A%20%24blocks)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20tenant%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=mutation%20updateServiceChain(%24id%3A%20ID!%2C%20%24name%3A%20String!%2C%20%24blocks%3A%20%5BBlockInput!%5D)%7B%0A%20%20updateServiceChain(id%3A%20%24id%2C%20name%3A%20%24name%2C%20blocks%3A%20%24blocks)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -1666,7 +1666,7 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;revision&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;tenant&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;org&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   }
@@ -1745,7 +1745,7 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">revision</span>
     <span class="hljs-symbol">name</span>
     <span class="hljs-symbol">status</span>
-    <span class="hljs-symbol">tenant</span>
+    <span class="hljs-symbol">org</span>
     <span class="hljs-symbol">owner</span>
     <span class="hljs-symbol">createdAt</span>
   }</span></span>
@@ -1764,7 +1764,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20rollbackServiceChain(%24id%3A%20ID!%2C%20%24revision%3A%20Int!)%7B%0A%20%20rollbackServiceChain(id%3A%20%24id%2C%20revision%3A%20%24revision)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20tenant%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=mutation%20rollbackServiceChain(%24id%3A%20ID!%2C%20%24revision%3A%20Int!)%7B%0A%20%20rollbackServiceChain(id%3A%20%24id%2C%20revision%3A%20%24revision)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -1809,7 +1809,7 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;revision&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;tenant&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;org&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   }
@@ -13453,8 +13453,8 @@ https://demo.nearbycomputing.com
                         </dl>
                       </section>
                     </dt>
-                    <dt data-property-name="tenant">
-                      <span class="json-property-name">tenant:</span>
+                    <dt data-property-name="org">
+                      <span class="json-property-name">org:</span>
                       <div class="json-property-type">object</div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
