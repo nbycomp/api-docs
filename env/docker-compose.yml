@@ -1,0 +1,24 @@
+version: "3.5"
+services:
+  api-gw:
+    image: registry.nearbycomputing.com/nearbyone/api-gateway:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - APIGW_AUD=""
+      - APIGW_ISS=""
+      - APIGW_JWKS_URL=""
+      - APIGW_VALIDATE_JWT=false
+      - CONNARTIST_PORT=""
+      - DEVICEMAN_GRPC_ADDR=""
+      - SERVICEMAN_GRPC_ADDR=""
+      - SETTINGS_GRPC_ADDR=""
+
+  api-docs:
+    image: apidocs
+    build:
+      context: ../
+    depends_on:
+      - api-gw
+    volumes:
+      - ../public:/public:z
