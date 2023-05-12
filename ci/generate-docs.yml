@@ -31,6 +31,9 @@ run:
         -e LINKMETRICS_GRPC_ADDR= \
         -e SERVICEMAN_GRPC_ADDR= \
         -e SETTINGS_GRPC_ADDR= \
+        -e DB_HOST= \
+        -e DB_USER= \
+        -e DB_PASSWORD= \
         api-gw
 
       if ! docker run --network docs -v "$PWD"/public:/public \
