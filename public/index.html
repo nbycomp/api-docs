@@ -5080,6 +5080,19 @@ https://demo.nearbycomputing.com
                 <section class="swagger-request-params">
                   <div class="prop-row prop-group">
                     <div class="prop-name">
+                      <div class="prop-title">org:
+                        <span class="prop-type">
+                          <div class="json-property-type">string</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>optional org to search within. If null, will use currently selected org from context</p>
+                    </div>
+                  </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
                       <div class="prop-title">sites:
                         <span class="prop-type">
                           <div class="json-property-type">string[]</div>
@@ -5103,8 +5116,8 @@ https://demo.nearbycomputing.com
                     <!-- <div class="hljs"> -->
                     <html>
                     <head></head>
-                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> serviceChains<span class="hljs-tag">(<span class="hljs-code">$sites</span>: [ID!])</span><span class="hljs-tag">{
-  <span class="hljs-symbol">serviceChains<span class="hljs-tag">(sites: <span class="hljs-code">$sites</span>)</span><span class="hljs-tag">{
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> serviceChains<span class="hljs-tag">(<span class="hljs-code">$org</span>: ID, <span class="hljs-code">$sites</span>: [ID!])</span><span class="hljs-tag">{
+  <span class="hljs-symbol">serviceChains<span class="hljs-tag">(org: <span class="hljs-code">$org</span>, sites: <span class="hljs-code">$sites</span>)</span><span class="hljs-tag">{
     <span class="hljs-symbol">id</span>
     <span class="hljs-symbol">revision</span>
     <span class="hljs-symbol">name</span>
@@ -5122,6 +5135,7 @@ https://demo.nearbycomputing.com
                     <html>
                     <head></head>
                     <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;org&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;sites&quot;</span>: [
     <span class="hljs-string">&quot;string&quot;</span>
   ]
@@ -5129,7 +5143,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20serviceChains(%24sites%3A%20%5BID!%5D)%7B%0A%20%20serviceChains(sites%3A%20%24sites)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=query%20serviceChains(%24org%3A%20ID%2C%20%24sites%3A%20%5BID!%5D)%7B%0A%20%20serviceChains(org%3A%20%24org%2C%20sites%3A%20%24sites)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
