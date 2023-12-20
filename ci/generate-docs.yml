@@ -28,6 +28,7 @@ run:
         -e APIGW_SKIP_DB=true \
         -e CONNARTIST_PORT= \
         -e DEVICEMAN_GRPC_ADDR= \
+        -e GRPC_API_GRPC_ADDR= \
         -e LINKMETRICS_GRPC_ADDR= \
         -e SERVICEMAN_GRPC_ADDR= \
         -e SETTINGS_GRPC_ADDR= \
