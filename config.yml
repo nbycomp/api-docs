@@ -1,4 +1,4 @@
-introspection: file://tmp/schema.graphql
+introspection: file:///tmp/schema.graphql
 
 servers:
   - url: https://demo.nearbycomputing.com
