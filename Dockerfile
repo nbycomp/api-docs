@@ -1,4 +1,4 @@
-FROM node:17-bullseye
+FROM node:18-bullseye
 
 COPY package-lock.json package.json /
 RUN npm ci
