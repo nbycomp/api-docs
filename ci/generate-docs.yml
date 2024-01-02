@@ -3,43 +3,18 @@ platform: linux
 image_resource:
   type: registry-image
   source:
-    repository: karlkfi/concourse-dcind
+    repository: registry.nearbycomputing.com/nbycomp/core/api-gateway/docs-task
+    username: robot$concourse
+    password: ((registry-password))
 inputs:
-  - name: api-gw-image
-  - name: task-image
+  - name: schema
 outputs:
   - name: public
 run:
-  path: entrypoint.sh
+  path: bash
   args:
-    - bash
     - -ceux
     - |
-      docker load -i api-gw-image/image.tar
-      docker tag "$(cat api-gw-image/digest)" api-gw
-
-      docker load -i task-image/image.tar
-
-      docker network create docs
-
-      docker run -d --name api-gw --network docs \
-        -e APIGW_VALIDATE_JWT=false \
-        -e APIGW_SCHEMA_PATH=/opt/schema/*.graphql \
-        -e APIGW_SKIP_DB=true \
-        -e CONNARTIST_PORT= \
-        -e DEVICEMAN_GRPC_ADDR= \
-        -e GRPC_API_GRPC_ADDR= \
-        -e LINKMETRICS_GRPC_ADDR= \
-        -e SERVICEMAN_GRPC_ADDR= \
-        -e SETTINGS_GRPC_ADDR= \
-        -e DB_HOST= \
-        -e DB_USER= \
-        -e DB_PASSWORD= \
-        api-gw
-
-      if ! docker run --network docs -v "$PWD"/public:/public \
-        registry.nearbycomputing.com/nbycomp/core/api-gateway/docs-task; then
-        echo 'API gateway logs:'
-        docker logs api-gw
-        exit 1
-      fi
+      cp schema/schema.graphql /tmp/
+      npm run build
+      cp -rt public/ /public/*

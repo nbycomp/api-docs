@@ -1,5 +1,4 @@
-# To fetch schema from
-introspection: http://api-gw:8080/query
+introspection: file:///tmp/schema.graphql
 
 servers:
   - url: https://demo.nearbycomputing.com
@@ -31,12 +30,12 @@ domains:
       - name: Provision Charts
         description: Fetch a list of all versions of all Provision Charts
         query: query.provisionCharts
-      - name: Crossplane Chart
-        description: Fetch the default config of a Crossplane Chart
-        query: query.crossplaneChart
-      - name: Crossplane Charts
-        description: Fetch a list of the latest versions of all Crossplane Charts
-        query: query.crossplaneCharts
+      - name: Cloud Resource Chart
+        description: Fetch the default config of a Cloud Resource Chart
+        query: query.cloudResourceChart
+      - name: Cloud Resource Charts
+        description: Fetch a list of the latest versions of all Cloud Resource Charts
+        query: query.cloudResourceCharts
       - name: Publisher Template
         description: Fetch a publisher template by name and version
         query: query.templateChart
@@ -52,14 +51,14 @@ domains:
         query: query.connections
 
   - name: Crossplane Provisions
-    description: Create and update Crossplane provisions
+    description: Create and update Cloud Resource provisions
     usecases:
-      - name: Crossplane Provision
-        description: Create a crossplane provisioned device
-        query: mutation.crossplaneProvision
-      - name: Update Crossplane Provision
-        description: update a crossplane provision
-        query: mutation.updateCrossplaneProvision
+      - name: Cloud Resource Provision
+        description: Provision a Cloud Resource
+        query: mutation.cloudResource
+      - name: Update Cloud Resource
+        description: update a provisioned Cloud Resource
+        query: mutation.updateCloudResource
 
   - name: Devices
     description: View, register and remove devices
@@ -140,8 +139,6 @@ domains:
       - name: Provision
         description: Create a provision
         query: mutation.provision
-      - name: Remove Provision
-        query: mutation.removeProvision
 
   - name: Services
     description: View information on currently deployed services
