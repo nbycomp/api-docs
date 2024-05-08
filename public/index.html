@@ -7562,6 +7562,21 @@ https://demo.nearbycomputing.com
             <div class="doc-row">
               <div class="doc-copy">
                 <section class="swagger-request-body"> </section>
+                <section class="swagger-request-params">
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">group:
+                        <span class="prop-type">
+                          <div class="json-property-type">string</div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p>Filter by Group ID</p>
+                    </div>
+                  </div>
+                </section>
               </div>
               <div class="doc-examples">
                 <section>
@@ -7573,8 +7588,8 @@ https://demo.nearbycomputing.com
                     <!-- <div class="hljs"> -->
                     <html>
                     <head></head>
-                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> users<span class="hljs-tag">{
-  <span class="hljs-symbol">users<span class="hljs-tag">{
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> users<span class="hljs-tag">(<span class="hljs-code">$group</span>: ID)</span><span class="hljs-tag">{
+  <span class="hljs-symbol">users<span class="hljs-tag">(group: <span class="hljs-code">$group</span>)</span><span class="hljs-tag">{
     <span class="hljs-symbol">id</span>
     <span class="hljs-symbol">name</span>
     <span class="hljs-symbol">email</span>
@@ -7584,7 +7599,17 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20users%7B%0A%20%20users%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%20%20loggedInRole%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <h5>Variables</h5>
+                    <!-- <div class="hljs"> -->
+                    <html>
+                    <head></head>
+                    <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;group&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                    </html>
+                    <!-- </div> -->
+                    <a href="https://demo.nearbycomputing.com?query=query%20users(%24group%3A%20ID)%7B%0A%20%20users(group%3A%20%24group)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%20%20loggedInRole%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
