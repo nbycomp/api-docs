@@ -7594,7 +7594,6 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">id</span>
     <span class="hljs-symbol">name</span>
     <span class="hljs-symbol">email</span>
-    <span class="hljs-symbol">loggedInRole</span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
@@ -7610,7 +7609,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20users(%24group%3A%20ID)%7B%0A%20%20users(group%3A%20%24group)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%20%20loggedInRole%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=query%20users(%24group%3A%20ID)%7B%0A%20%20users(group%3A%20%24group)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -8023,7 +8022,6 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">id</span>
     <span class="hljs-symbol">name</span>
     <span class="hljs-symbol">email</span>
-    <span class="hljs-symbol">loggedInRole</span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
@@ -8041,7 +8039,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20recruitUser(%24user%3A%20ID!%2C%20%24org%3A%20ID!%2C%20%24role%3A%20Role!)%7B%0A%20%20recruitUser(user%3A%20%24user%2C%20org%3A%20%24org%2C%20role%3A%20%24role)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%20%20loggedInRole%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=mutation%20recruitUser(%24user%3A%20ID!%2C%20%24org%3A%20ID!%2C%20%24role%3A%20Role!)%7B%0A%20%20recruitUser(user%3A%20%24user%2C%20org%3A%20%24org%2C%20role%3A%20%24role)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -8424,7 +8422,6 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">id</span>
     <span class="hljs-symbol">name</span>
     <span class="hljs-symbol">email</span>
-    <span class="hljs-symbol">loggedInRole</span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
@@ -8442,7 +8439,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20setRole(%24user%3A%20ID!%2C%20%24org%3A%20ID!%2C%20%24role%3A%20Role!)%7B%0A%20%20setRole(user%3A%20%24user%2C%20org%3A%20%24org%2C%20role%3A%20%24role)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%20%20loggedInRole%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=mutation%20setRole(%24user%3A%20ID!%2C%20%24org%3A%20ID!%2C%20%24role%3A%20Role!)%7B%0A%20%20setRole(user%3A%20%24user%2C%20org%3A%20%24org%2C%20role%3A%20%24role)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20email%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -9110,23 +9107,15 @@ https://demo.nearbycomputing.com
         <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;arguments&quot;</span>: {}
       },
-      <span class="hljs-attr">&quot;loggedInOrg&quot;</span>: {
-        <span class="hljs-attr">&quot;return&quot;</span>: {
-          <span class="hljs-attr">&quot;id&quot;</span>: {
-            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-          },
-          <span class="hljs-attr">&quot;displayName&quot;</span>: {
-            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-          },
-          <span class="hljs-attr">&quot;description&quot;</span>: {
-            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-          },
-          <span class="hljs-attr">&quot;sites&quot;</span>: {
-            <span class="hljs-attr">&quot;return&quot;</span>: [
-              {
+      <span class="hljs-attr">&quot;orgRoles&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: [
+          {
+            <span class="hljs-attr">&quot;id&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+            },
+            <span class="hljs-attr">&quot;org&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: {
                 <span class="hljs-attr">&quot;id&quot;</span>: {
                   <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                   <span class="hljs-attr">&quot;arguments&quot;</span>: {}
@@ -9139,37 +9128,49 @@ https://demo.nearbycomputing.com
                   <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                   <span class="hljs-attr">&quot;arguments&quot;</span>: {}
                 },
-                <span class="hljs-attr">&quot;org&quot;</span>: {
-                  <span class="hljs-attr">&quot;return&quot;</span>: {
-                    <span class="hljs-attr">&quot;id&quot;</span>: {
-                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                      <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                    },
-                    <span class="hljs-attr">&quot;displayName&quot;</span>: {
-                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                    },
-                    <span class="hljs-attr">&quot;description&quot;</span>: {
-                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                    },
-                    <span class="hljs-attr">&quot;sites&quot;</span>: {
-                      <span class="hljs-attr">&quot;return&quot;</span>: [
-                        {
+                <span class="hljs-attr">&quot;sites&quot;</span>: {
+                  <span class="hljs-attr">&quot;return&quot;</span>: [
+                    {
+                      <span class="hljs-attr">&quot;id&quot;</span>: {
+                        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                      },
+                      <span class="hljs-attr">&quot;displayName&quot;</span>: {
+                        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                      },
+                      <span class="hljs-attr">&quot;description&quot;</span>: {
+                        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                      },
+                      <span class="hljs-attr">&quot;org&quot;</span>: {
+                        <span class="hljs-attr">&quot;return&quot;</span>: {
                           <span class="hljs-attr">&quot;id&quot;</span>: {
                             <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                             <span class="hljs-attr">&quot;arguments&quot;</span>: {}
                           },
-                          <span class="hljs-attr">&quot;displayName&quot;</span>: {}
+                          <span class="hljs-attr">&quot;displayName&quot;</span>: {
+                            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                          },
+                          <span class="hljs-attr">&quot;description&quot;</span>: {
+                            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                          },
+                          <span class="hljs-attr">&quot;sites&quot;</span>: {
+                            <span class="hljs-attr">&quot;return&quot;</span>: [
+                              <span class="hljs-literal">null</span>
+                            ]
+                          }
                         }
-                      ]
+                      }
                     }
-                  }
+                  ]
                 }
               }
-            ]
+            }
           }
-        }
+        ]
       }
     }
   }
@@ -9310,23 +9311,15 @@ https://demo.nearbycomputing.com
             <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
             <span class="hljs-attr">&quot;arguments&quot;</span>: {}
           },
-          <span class="hljs-attr">&quot;loggedInOrg&quot;</span>: {
-            <span class="hljs-attr">&quot;return&quot;</span>: {
-              <span class="hljs-attr">&quot;id&quot;</span>: {
-                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-              },
-              <span class="hljs-attr">&quot;displayName&quot;</span>: {
-                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-              },
-              <span class="hljs-attr">&quot;description&quot;</span>: {
-                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-              },
-              <span class="hljs-attr">&quot;sites&quot;</span>: {
-                <span class="hljs-attr">&quot;return&quot;</span>: [
-                  {
+          <span class="hljs-attr">&quot;orgRoles&quot;</span>: {
+            <span class="hljs-attr">&quot;return&quot;</span>: [
+              {
+                <span class="hljs-attr">&quot;id&quot;</span>: {
+                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                },
+                <span class="hljs-attr">&quot;org&quot;</span>: {
+                  <span class="hljs-attr">&quot;return&quot;</span>: {
                     <span class="hljs-attr">&quot;id&quot;</span>: {
                       <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                       <span class="hljs-attr">&quot;arguments&quot;</span>: {}
@@ -9339,35 +9332,43 @@ https://demo.nearbycomputing.com
                       <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                       <span class="hljs-attr">&quot;arguments&quot;</span>: {}
                     },
-                    <span class="hljs-attr">&quot;org&quot;</span>: {
-                      <span class="hljs-attr">&quot;return&quot;</span>: {
-                        <span class="hljs-attr">&quot;id&quot;</span>: {
-                          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                        },
-                        <span class="hljs-attr">&quot;displayName&quot;</span>: {
-                          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                        },
-                        <span class="hljs-attr">&quot;description&quot;</span>: {
-                          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                        },
-                        <span class="hljs-attr">&quot;sites&quot;</span>: {
-                          <span class="hljs-attr">&quot;return&quot;</span>: [
-                            {
+                    <span class="hljs-attr">&quot;sites&quot;</span>: {
+                      <span class="hljs-attr">&quot;return&quot;</span>: [
+                        {
+                          <span class="hljs-attr">&quot;id&quot;</span>: {
+                            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                          },
+                          <span class="hljs-attr">&quot;displayName&quot;</span>: {
+                            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                          },
+                          <span class="hljs-attr">&quot;description&quot;</span>: {
+                            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                          },
+                          <span class="hljs-attr">&quot;org&quot;</span>: {
+                            <span class="hljs-attr">&quot;return&quot;</span>: {
                               <span class="hljs-attr">&quot;id&quot;</span>: {
-                                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+                                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                              },
+                              <span class="hljs-attr">&quot;displayName&quot;</span>: {
+                                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                              },
+                              <span class="hljs-attr">&quot;description&quot;</span>: {
+                                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
                               }
                             }
-                          ]
+                          }
                         }
-                      }
+                      ]
                     }
                   }
-                ]
+                }
               }
-            }
+            ]
           }
         }
       }
@@ -9631,23 +9632,15 @@ https://demo.nearbycomputing.com
                   <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                   <span class="hljs-attr">&quot;arguments&quot;</span>: {}
                 },
-                <span class="hljs-attr">&quot;loggedInOrg&quot;</span>: {
-                  <span class="hljs-attr">&quot;return&quot;</span>: {
-                    <span class="hljs-attr">&quot;id&quot;</span>: {
-                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                      <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                    },
-                    <span class="hljs-attr">&quot;displayName&quot;</span>: {
-                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                    },
-                    <span class="hljs-attr">&quot;description&quot;</span>: {
-                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                    },
-                    <span class="hljs-attr">&quot;sites&quot;</span>: {
-                      <span class="hljs-attr">&quot;return&quot;</span>: [
-                        {
+                <span class="hljs-attr">&quot;orgRoles&quot;</span>: {
+                  <span class="hljs-attr">&quot;return&quot;</span>: [
+                    {
+                      <span class="hljs-attr">&quot;id&quot;</span>: {
+                        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                      },
+                      <span class="hljs-attr">&quot;org&quot;</span>: {
+                        <span class="hljs-attr">&quot;return&quot;</span>: {
                           <span class="hljs-attr">&quot;id&quot;</span>: {
                             <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                             <span class="hljs-attr">&quot;arguments&quot;</span>: {}
@@ -9660,25 +9653,35 @@ https://demo.nearbycomputing.com
                             <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                             <span class="hljs-attr">&quot;arguments&quot;</span>: {}
                           },
-                          <span class="hljs-attr">&quot;org&quot;</span>: {
-                            <span class="hljs-attr">&quot;return&quot;</span>: {
-                              <span class="hljs-attr">&quot;id&quot;</span>: {
-                                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                              },
-                              <span class="hljs-attr">&quot;displayName&quot;</span>: {
-                                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                              },
-                              <span class="hljs-attr">&quot;description&quot;</span>: {
-                                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+                          <span class="hljs-attr">&quot;sites&quot;</span>: {
+                            <span class="hljs-attr">&quot;return&quot;</span>: [
+                              {
+                                <span class="hljs-attr">&quot;id&quot;</span>: {
+                                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                                },
+                                <span class="hljs-attr">&quot;displayName&quot;</span>: {
+                                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                                },
+                                <span class="hljs-attr">&quot;description&quot;</span>: {
+                                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                                },
+                                <span class="hljs-attr">&quot;org&quot;</span>: {
+                                  <span class="hljs-attr">&quot;return&quot;</span>: {
+                                    <span class="hljs-attr">&quot;id&quot;</span>: {
+                                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+                                    }
+                                  }
+                                }
                               }
-                            }
+                            ]
                           }
                         }
-                      ]
+                      }
                     }
-                  }
+                  ]
                 }
               }
             }
@@ -12575,23 +12578,15 @@ https://demo.nearbycomputing.com
         <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;arguments&quot;</span>: {}
       },
-      <span class="hljs-attr">&quot;loggedInOrg&quot;</span>: {
-        <span class="hljs-attr">&quot;return&quot;</span>: {
-          <span class="hljs-attr">&quot;id&quot;</span>: {
-            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-          },
-          <span class="hljs-attr">&quot;displayName&quot;</span>: {
-            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-          },
-          <span class="hljs-attr">&quot;description&quot;</span>: {
-            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-          },
-          <span class="hljs-attr">&quot;sites&quot;</span>: {
-            <span class="hljs-attr">&quot;return&quot;</span>: [
-              {
+      <span class="hljs-attr">&quot;orgRoles&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: [
+          {
+            <span class="hljs-attr">&quot;id&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+              <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+            },
+            <span class="hljs-attr">&quot;org&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: {
                 <span class="hljs-attr">&quot;id&quot;</span>: {
                   <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                   <span class="hljs-attr">&quot;arguments&quot;</span>: {}
@@ -12604,23 +12599,23 @@ https://demo.nearbycomputing.com
                   <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                   <span class="hljs-attr">&quot;arguments&quot;</span>: {}
                 },
-                <span class="hljs-attr">&quot;org&quot;</span>: {
-                  <span class="hljs-attr">&quot;return&quot;</span>: {
-                    <span class="hljs-attr">&quot;id&quot;</span>: {
-                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                      <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                    },
-                    <span class="hljs-attr">&quot;displayName&quot;</span>: {
-                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                    },
-                    <span class="hljs-attr">&quot;description&quot;</span>: {
-                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                      <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                    },
-                    <span class="hljs-attr">&quot;sites&quot;</span>: {
-                      <span class="hljs-attr">&quot;return&quot;</span>: [
-                        {
+                <span class="hljs-attr">&quot;sites&quot;</span>: {
+                  <span class="hljs-attr">&quot;return&quot;</span>: [
+                    {
+                      <span class="hljs-attr">&quot;id&quot;</span>: {
+                        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                      },
+                      <span class="hljs-attr">&quot;displayName&quot;</span>: {
+                        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                      },
+                      <span class="hljs-attr">&quot;description&quot;</span>: {
+                        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                      },
+                      <span class="hljs-attr">&quot;org&quot;</span>: {
+                        <span class="hljs-attr">&quot;return&quot;</span>: {
                           <span class="hljs-attr">&quot;id&quot;</span>: {
                             <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                             <span class="hljs-attr">&quot;arguments&quot;</span>: {}
@@ -12633,40 +12628,48 @@ https://demo.nearbycomputing.com
                             <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                             <span class="hljs-attr">&quot;arguments&quot;</span>: {}
                           },
-                          <span class="hljs-attr">&quot;org&quot;</span>: {
-                            <span class="hljs-attr">&quot;return&quot;</span>: {
-                              <span class="hljs-attr">&quot;id&quot;</span>: {
-                                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                              },
-                              <span class="hljs-attr">&quot;displayName&quot;</span>: {
-                                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                              },
-                              <span class="hljs-attr">&quot;description&quot;</span>: {
-                                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                              },
-                              <span class="hljs-attr">&quot;sites&quot;</span>: {
-                                <span class="hljs-attr">&quot;return&quot;</span>: [
-                                  {
+                          <span class="hljs-attr">&quot;sites&quot;</span>: {
+                            <span class="hljs-attr">&quot;return&quot;</span>: [
+                              {
+                                <span class="hljs-attr">&quot;id&quot;</span>: {
+                                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                                },
+                                <span class="hljs-attr">&quot;displayName&quot;</span>: {
+                                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                                },
+                                <span class="hljs-attr">&quot;description&quot;</span>: {
+                                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                                },
+                                <span class="hljs-attr">&quot;org&quot;</span>: {
+                                  <span class="hljs-attr">&quot;return&quot;</span>: {
                                     <span class="hljs-attr">&quot;id&quot;</span>: {
-                                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>
+                                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                                      <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                                    },
+                                    <span class="hljs-attr">&quot;displayName&quot;</span>: {
+                                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                                      <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                                    },
+                                    <span class="hljs-attr">&quot;description&quot;</span>: {
+                                      <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
                                     }
                                   }
-                                ]
+                                }
                               }
-                            }
+                            ]
                           }
                         }
-                      ]
+                      }
                     }
-                  }
+                  ]
                 }
               }
-            ]
+            }
           }
-        }
+        ]
       }
     }
   }
@@ -22990,66 +22993,6 @@ https://demo.nearbycomputing.com
                         </dl>
                       </section>
                     </dt>
-                    <dt data-property-name="loggedInOrg">
-                      <span class="json-property-name">loggedInOrg:</span>
-                      <div class="json-property-type">object</div>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
-                    <dt class="json-inner-schema">
-                      <section class="json-schema-properties">
-                        <dl>
-                          <dt data-property-name="return">
-                            <span class="json-property-name">return:</span>
-                            <div class="json-property-type">
-                              <div class="">
-                                <a class="json-schema-ref" href="#/definitions/Org">Org</a>
-                              </div>
-                            </div>
-                            <span class="json-property-range" title="Value limits"></span>
-                          </dt>
-                          <dt data-property-name="arguments">
-                            <span class="json-property-name">arguments:</span>
-                            <div class="json-property-type">object</div>
-                            <span class="json-property-range" title="Value limits"></span>
-                          </dt>
-                          <dt class="json-inner-schema">
-                            <section class="json-schema-properties">
-                              <dl> </dl>
-                            </section>
-                          </dt>
-                        </dl>
-                      </section>
-                    </dt>
-                    <dt data-property-name="loggedInRole">
-                      <span class="json-property-name">loggedInRole:</span>
-                      <div class="json-property-type">object</div>
-                      <span class="json-property-range" title="Value limits"></span>
-                    </dt>
-                    <dt class="json-inner-schema">
-                      <section class="json-schema-properties">
-                        <dl>
-                          <dt data-property-name="return">
-                            <span class="json-property-name">return:</span>
-                            <div class="json-property-type">
-                              <div class="">
-                                <a class="json-schema-ref" href="#/definitions/Role">Role</a>
-                              </div>
-                            </div>
-                            <span class="json-property-range" title="Value limits"></span>
-                          </dt>
-                          <dt data-property-name="arguments">
-                            <span class="json-property-name">arguments:</span>
-                            <div class="json-property-type">object</div>
-                            <span class="json-property-range" title="Value limits"></span>
-                          </dt>
-                          <dt class="json-inner-schema">
-                            <section class="json-schema-properties">
-                              <dl> </dl>
-                            </section>
-                          </dt>
-                        </dl>
-                      </section>
-                    </dt>
                     <dt data-property-name="orgRoles">
                       <span class="json-property-name">orgRoles:</span>
                       <div class="json-property-type">object</div>
@@ -23115,23 +23058,15 @@ https://demo.nearbycomputing.com
     <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   },
-  <span class="hljs-attr">&quot;loggedInOrg&quot;</span>: {
-    <span class="hljs-attr">&quot;return&quot;</span>: {
-      <span class="hljs-attr">&quot;id&quot;</span>: {
-        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-      },
-      <span class="hljs-attr">&quot;displayName&quot;</span>: {
-        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-      },
-      <span class="hljs-attr">&quot;description&quot;</span>: {
-        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-      },
-      <span class="hljs-attr">&quot;sites&quot;</span>: {
-        <span class="hljs-attr">&quot;return&quot;</span>: [
-          {
+  <span class="hljs-attr">&quot;orgRoles&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;id&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        },
+        <span class="hljs-attr">&quot;org&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: {
             <span class="hljs-attr">&quot;id&quot;</span>: {
               <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
               <span class="hljs-attr">&quot;arguments&quot;</span>: {}
@@ -23144,23 +23079,23 @@ https://demo.nearbycomputing.com
               <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
               <span class="hljs-attr">&quot;arguments&quot;</span>: {}
             },
-            <span class="hljs-attr">&quot;org&quot;</span>: {
-              <span class="hljs-attr">&quot;return&quot;</span>: {
-                <span class="hljs-attr">&quot;id&quot;</span>: {
-                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                },
-                <span class="hljs-attr">&quot;displayName&quot;</span>: {
-                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                },
-                <span class="hljs-attr">&quot;description&quot;</span>: {
-                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                },
-                <span class="hljs-attr">&quot;sites&quot;</span>: {
-                  <span class="hljs-attr">&quot;return&quot;</span>: [
-                    {
+            <span class="hljs-attr">&quot;sites&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: [
+                {
+                  <span class="hljs-attr">&quot;id&quot;</span>: {
+                    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                  },
+                  <span class="hljs-attr">&quot;displayName&quot;</span>: {
+                    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                  },
+                  <span class="hljs-attr">&quot;description&quot;</span>: {
+                    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                  },
+                  <span class="hljs-attr">&quot;org&quot;</span>: {
+                    <span class="hljs-attr">&quot;return&quot;</span>: {
                       <span class="hljs-attr">&quot;id&quot;</span>: {
                         <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                         <span class="hljs-attr">&quot;arguments&quot;</span>: {}
@@ -23173,42 +23108,54 @@ https://demo.nearbycomputing.com
                         <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                         <span class="hljs-attr">&quot;arguments&quot;</span>: {}
                       },
-                      <span class="hljs-attr">&quot;org&quot;</span>: {
-                        <span class="hljs-attr">&quot;return&quot;</span>: {
-                          <span class="hljs-attr">&quot;id&quot;</span>: {
-                            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                          },
-                          <span class="hljs-attr">&quot;displayName&quot;</span>: {
-                            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                          },
-                          <span class="hljs-attr">&quot;description&quot;</span>: {
-                            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                          },
-                          <span class="hljs-attr">&quot;sites&quot;</span>: {
-                            <span class="hljs-attr">&quot;return&quot;</span>: [
-                              {
+                      <span class="hljs-attr">&quot;sites&quot;</span>: {
+                        <span class="hljs-attr">&quot;return&quot;</span>: [
+                          {
+                            <span class="hljs-attr">&quot;id&quot;</span>: {
+                              <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+                              <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                            },
+                            <span class="hljs-attr">&quot;displayName&quot;</span>: {
+                              <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                              <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                            },
+                            <span class="hljs-attr">&quot;description&quot;</span>: {
+                              <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                              <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                            },
+                            <span class="hljs-attr">&quot;org&quot;</span>: {
+                              <span class="hljs-attr">&quot;return&quot;</span>: {
                                 <span class="hljs-attr">&quot;id&quot;</span>: {
                                   <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
                                   <span class="hljs-attr">&quot;arguments&quot;</span>: {}
                                 },
-                                <span class="hljs-attr">&quot;displayName&quot;</span>: {}
+                                <span class="hljs-attr">&quot;displayName&quot;</span>: {
+                                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                                },
+                                <span class="hljs-attr">&quot;description&quot;</span>: {
+                                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+                                },
+                                <span class="hljs-attr">&quot;sites&quot;</span>: {
+                                  <span class="hljs-attr">&quot;return&quot;</span>: [
+                                    <span class="hljs-literal">null</span>
+                                  ]
+                                }
                               }
-                            ]
+                            }
                           }
-                        }
+                        ]
                       }
                     }
-                  ]
+                  }
                 }
-              }
+              ]
             }
           }
-        ]
+        }
       }
-    }
+    ]
   }
 }
 </code></pre> </body>
