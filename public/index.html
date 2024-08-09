@@ -1070,6 +1070,7 @@ https://demo.nearbycomputing.com
   <span class="hljs-symbol">provisionChart<span class="hljs-tag">(name: <span class="hljs-code">$name</span>, version: <span class="hljs-code">$version</span>)</span><span class="hljs-tag">{
     <span class="hljs-symbol">name</span>
     <span class="hljs-symbol">version</span>
+    <span class="hljs-symbol">availableVersions</span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
@@ -1086,7 +1087,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20provisionChart(%24name%3A%20String!%2C%20%24version%3A%20String!)%7B%0A%20%20provisionChart(name%3A%20%24name%2C%20version%3A%20%24version)%7B%0A%20%20%20%20name%0A%20%20%20%20version%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=query%20provisionChart(%24name%3A%20String!%2C%20%24version%3A%20String!)%7B%0A%20%20provisionChart(name%3A%20%24name%2C%20version%3A%20%24version)%7B%0A%20%20%20%20name%0A%20%20%20%20version%0A%20%20%20%20availableVersions%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -1129,7 +1130,10 @@ https://demo.nearbycomputing.com
   <span class="hljs-attr">&quot;data&quot;</span>: {
     <span class="hljs-attr">&quot;provisionChart&quot;</span>: {
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+      <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;availableVersions&quot;</span>: [
+        <span class="hljs-string">&quot;string&quot;</span>
+      ]
     }
   }
 }
@@ -19583,6 +19587,36 @@ https://demo.nearbycomputing.com
                         </dl>
                       </section>
                     </dt>
+                    <dt data-property-name="availableVersions">
+                      <span class="json-property-name">availableVersions:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="json-schema-ref-array">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
                   </dl>
                 </section>
               </div>
@@ -19665,6 +19699,12 @@ https://demo.nearbycomputing.com
           <span class="hljs-attr">&quot;arguments&quot;</span>: {}
         }
       }
+    ],
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;availableVersions&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
     ],
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   }
