@@ -242,6 +242,3 @@ domains:
       - name: Generate recovery link
         description: Generate a link for a user to reset their credentials
         query: mutation.generateRecoveryLink
-      - name: Set role
-        description: Change the role of an existing user
-        query: mutation.setRole
