@@ -22513,6 +22513,30 @@ https://demo.nearbycomputing.com
                       <span class="json-property-range" title="Value limits"></span>
                       <span class="json-property-required"></span>
                     </dt>
+                    <dt data-property-name="displayName" class="has-description">
+                      <span class="json-property-name">displayName:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>Display name of device to be shown in the UI</p>
+                    </dd>
+                    <dt data-property-name="position" class="has-description">
+                      <span class="json-property-name">position:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/LatLngInput">LatLngInput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>Geographical position of device</p>
+                    </dd>
                     <dt data-property-name="chartVersion" class="has-description">
                       <span class="json-property-name">chartVersion:</span>
                       <div class="json-property-type">
@@ -22560,6 +22584,11 @@ https://demo.nearbycomputing.com
                   <head></head>
                   <body><pre><code class="hljs language-json">{
   <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+  <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;position&quot;</span>: {
+    <span class="hljs-attr">&quot;lat&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+    <span class="hljs-attr">&quot;lng&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>
+  },
   <span class="hljs-attr">&quot;chartVersion&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;provisionerSite&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
   <span class="hljs-attr">&quot;provisionInventory&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
