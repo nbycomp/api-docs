@@ -271,6 +271,7 @@
           <a href="#definition-BBox"> BBox </a>
           <a href="#definition-Block"> Block </a>
           <a href="#definition-BlockChart"> BlockChart </a>
+          <a href="#definition-BlockChartType"> BlockChartType </a>
           <a href="#definition-BlockConnectionInput"> BlockConnectionInput </a>
           <a href="#definition-BlockControl"> BlockControl </a>
           <a href="#definition-BlockInput"> BlockInput </a>
@@ -596,6 +597,23 @@ https://demo.nearbycomputing.com
                       <p class="no-description">(no description)</p>
                     </div>
                   </div>
+                  <div class="prop-row prop-group">
+                    <div class="prop-name">
+                      <div class="prop-title">chartType:
+                        <span class="prop-type">
+                          <div class="json-property-type">
+                            <div class="">
+                              <a class="json-schema-ref" href="#/definitions/BlockChartType">BlockChartType</a>
+                            </div>
+                          </div>
+                          <span class="json-property-range" title="Value limits"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="prop-value">
+                      <p class="no-description">(no description)</p>
+                    </div>
+                  </div>
                 </section>
               </div>
               <div class="doc-examples">
@@ -608,8 +626,8 @@ https://demo.nearbycomputing.com
                     <!-- <div class="hljs"> -->
                     <html>
                     <head></head>
-                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> blockCharts<span class="hljs-tag">(<span class="hljs-code">$category</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$vendors</span>: [ID!])</span><span class="hljs-tag">{
-  <span class="hljs-symbol">blockCharts<span class="hljs-tag">(category: <span class="hljs-code">$category</span>, vendors: <span class="hljs-code">$vendors</span>)</span><span class="hljs-tag">{
+                    <body><pre><code class="hljs language-gql"><span class="hljs-symbol"><span class="hljs-keyword">query</span> blockCharts<span class="hljs-tag">(<span class="hljs-code">$category</span>:<span class="hljs-type"> String,</span> <span class="hljs-code">$vendors</span>: [ID!], <span class="hljs-code">$chartType</span>:<span class="hljs-type"> BlockChartType)</span>{
+  blockCharts(category: <span class="hljs-code">$category</span>, vendors: <span class="hljs-code">$vendors</span>, chartType: <span class="hljs-code">$chartType</span>)</span><span class="hljs-tag">{
     <span class="hljs-symbol">id</span>
     <span class="hljs-symbol">name</span>
     <span class="hljs-symbol">version</span>
@@ -623,7 +641,7 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">vendor</span>
     <span class="hljs-symbol">logoUrl</span>
   }</span></span>
-}</span></span>
+}
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
@@ -635,12 +653,13 @@ https://demo.nearbycomputing.com
   <span class="hljs-attr">&quot;category&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;vendors&quot;</span>: [
     <span class="hljs-string">&quot;string&quot;</span>
-  ]
+  ],
+  <span class="hljs-attr">&quot;chartType&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20blockCharts(%24category%3A%20String%2C%20%24vendors%3A%20%5BID!%5D)%7B%0A%20%20blockCharts(category%3A%20%24category%2C%20vendors%3A%20%24vendors)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20version%0A%20%20%20%20availableVersions%0A%20%20%20%20categories%0A%20%20%20%20description%0A%20%20%20%20chartYaml%0A%20%20%20%20displayName%0A%20%20%20%20valuesSchema%0A%20%20%20%20overridesYaml%0A%20%20%20%20vendor%0A%20%20%20%20logoUrl%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=query%20blockCharts(%24category%3A%20String%2C%20%24vendors%3A%20%5BID!%5D%2C%20%24chartType%3A%20BlockChartType)%7B%0A%20%20blockCharts(category%3A%20%24category%2C%20vendors%3A%20%24vendors%2C%20chartType%3A%20%24chartType)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20version%0A%20%20%20%20availableVersions%0A%20%20%20%20categories%0A%20%20%20%20description%0A%20%20%20%20chartYaml%0A%20%20%20%20displayName%0A%20%20%20%20valuesSchema%0A%20%20%20%20overridesYaml%0A%20%20%20%20vendor%0A%20%20%20%20logoUrl%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -10570,6 +10589,40 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                   </html>
                   <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-BlockChartType" class="definition panel" data-traverse-target="definition-BlockChartType">
+            <h2 class="panel-title">
+              <a name="/definitions/BlockChartType"></a>BlockChartType: string
+              <!-- <span class="json-property-type"><div class="json-property-type"></div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-anyOf">
+                  <dl>
+                    <dt>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-enum" title="Possible values">
+                        <span class="json-property-enum-item">SERVICE</span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd> </dd>
+                    <dt>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-enum" title="Possible values">
+                        <span class="json-property-enum-item">MEC</span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd> </dd>
+                  </dl>
                 </section>
               </div>
             </div>
