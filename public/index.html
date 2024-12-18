@@ -474,7 +474,11 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">chartYaml</span>
     <span class="hljs-symbol">displayName</span>
     <span class="hljs-symbol">valuesSchema</span>
+    <span class="hljs-symbol">overridesJson</span>
     <span class="hljs-symbol">overridesYaml</span>
+    <span class="hljs-symbol">overridesSchema</span>
+    <span class="hljs-symbol">uiSchema</span>
+    <span class="hljs-symbol">uiEditSchema</span>
     <span class="hljs-symbol">vendor</span>
     <span class="hljs-symbol">logoUrl</span>
   }</span></span>
@@ -493,7 +497,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20blockChart(%24name%3A%20String!%2C%20%24version%3A%20String)%7B%0A%20%20blockChart(name%3A%20%24name%2C%20version%3A%20%24version)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20version%0A%20%20%20%20availableVersions%0A%20%20%20%20categories%0A%20%20%20%20description%0A%20%20%20%20chartYaml%0A%20%20%20%20displayName%0A%20%20%20%20valuesSchema%0A%20%20%20%20overridesYaml%0A%20%20%20%20vendor%0A%20%20%20%20logoUrl%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=query%20blockChart(%24name%3A%20String!%2C%20%24version%3A%20String)%7B%0A%20%20blockChart(name%3A%20%24name%2C%20version%3A%20%24version)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20version%0A%20%20%20%20availableVersions%0A%20%20%20%20categories%0A%20%20%20%20description%0A%20%20%20%20chartYaml%0A%20%20%20%20displayName%0A%20%20%20%20valuesSchema%0A%20%20%20%20overridesJson%0A%20%20%20%20overridesYaml%0A%20%20%20%20overridesSchema%0A%20%20%20%20uiSchema%0A%20%20%20%20uiEditSchema%0A%20%20%20%20vendor%0A%20%20%20%20logoUrl%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -548,7 +552,11 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;chartYaml&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;valuesSchema&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;overridesJson&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;overridesYaml&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;overridesSchema&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;uiSchema&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;uiEditSchema&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;vendor&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;logoUrl&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
@@ -650,7 +658,11 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">chartYaml</span>
     <span class="hljs-symbol">displayName</span>
     <span class="hljs-symbol">valuesSchema</span>
+    <span class="hljs-symbol">overridesJson</span>
     <span class="hljs-symbol">overridesYaml</span>
+    <span class="hljs-symbol">overridesSchema</span>
+    <span class="hljs-symbol">uiSchema</span>
+    <span class="hljs-symbol">uiEditSchema</span>
     <span class="hljs-symbol">vendor</span>
     <span class="hljs-symbol">logoUrl</span>
   }</span></span>
@@ -672,7 +684,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20blockCharts(%24category%3A%20String%2C%20%24vendors%3A%20%5BID!%5D%2C%20%24chartType%3A%20BlockChartType)%7B%0A%20%20blockCharts(category%3A%20%24category%2C%20vendors%3A%20%24vendors%2C%20chartType%3A%20%24chartType)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20version%0A%20%20%20%20availableVersions%0A%20%20%20%20categories%0A%20%20%20%20description%0A%20%20%20%20chartYaml%0A%20%20%20%20displayName%0A%20%20%20%20valuesSchema%0A%20%20%20%20overridesYaml%0A%20%20%20%20vendor%0A%20%20%20%20logoUrl%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=query%20blockCharts(%24category%3A%20String%2C%20%24vendors%3A%20%5BID!%5D%2C%20%24chartType%3A%20BlockChartType)%7B%0A%20%20blockCharts(category%3A%20%24category%2C%20vendors%3A%20%24vendors%2C%20chartType%3A%20%24chartType)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20version%0A%20%20%20%20availableVersions%0A%20%20%20%20categories%0A%20%20%20%20description%0A%20%20%20%20chartYaml%0A%20%20%20%20displayName%0A%20%20%20%20valuesSchema%0A%20%20%20%20overridesJson%0A%20%20%20%20overridesYaml%0A%20%20%20%20overridesSchema%0A%20%20%20%20uiSchema%0A%20%20%20%20uiEditSchema%0A%20%20%20%20vendor%0A%20%20%20%20logoUrl%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -728,7 +740,11 @@ https://demo.nearbycomputing.com
         <span class="hljs-attr">&quot;chartYaml&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;valuesSchema&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;overridesJson&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;overridesYaml&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;overridesSchema&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;uiSchema&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;uiEditSchema&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;vendor&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;logoUrl&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
       }
@@ -805,7 +821,11 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">chartYaml</span>
     <span class="hljs-symbol">displayName</span>
     <span class="hljs-symbol">valuesSchema</span>
+    <span class="hljs-symbol">overridesJson</span>
     <span class="hljs-symbol">overridesYaml</span>
+    <span class="hljs-symbol">overridesSchema</span>
+    <span class="hljs-symbol">uiSchema</span>
+    <span class="hljs-symbol">uiEditSchema</span>
     <span class="hljs-symbol">vendor</span>
     <span class="hljs-symbol">logoUrl</span>
   }</span></span>
@@ -839,7 +859,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20publishBlockChart(%24input%3A%20PublishBlockChartInput!)%7B%0A%20%20publishBlockChart(input%3A%20%24input)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20version%0A%20%20%20%20availableVersions%0A%20%20%20%20categories%0A%20%20%20%20description%0A%20%20%20%20chartYaml%0A%20%20%20%20displayName%0A%20%20%20%20valuesSchema%0A%20%20%20%20overridesYaml%0A%20%20%20%20vendor%0A%20%20%20%20logoUrl%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=mutation%20publishBlockChart(%24input%3A%20PublishBlockChartInput!)%7B%0A%20%20publishBlockChart(input%3A%20%24input)%7B%0A%20%20%20%20id%0A%20%20%20%20name%0A%20%20%20%20version%0A%20%20%20%20availableVersions%0A%20%20%20%20categories%0A%20%20%20%20description%0A%20%20%20%20chartYaml%0A%20%20%20%20displayName%0A%20%20%20%20valuesSchema%0A%20%20%20%20overridesJson%0A%20%20%20%20overridesYaml%0A%20%20%20%20overridesSchema%0A%20%20%20%20uiSchema%0A%20%20%20%20uiEditSchema%0A%20%20%20%20vendor%0A%20%20%20%20logoUrl%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -894,7 +914,11 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;chartYaml&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;displayName&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;valuesSchema&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;overridesJson&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;overridesYaml&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;overridesSchema&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;uiSchema&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;uiEditSchema&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;vendor&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;logoUrl&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
@@ -9754,6 +9778,36 @@ https://demo.nearbycomputing.com
                         </dl>
                       </section>
                     </dt>
+                    <dt data-property-name="valuesJson">
+                      <span class="json-property-name">valuesJson:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
                     <dt data-property-name="selectedVersion">
                       <span class="json-property-name">selectedVersion:</span>
                       <div class="json-property-type">object</div>
@@ -10041,6 +10095,10 @@ https://demo.nearbycomputing.com
     <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   },
+  <span class="hljs-attr">&quot;valuesJson&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
   <span class="hljs-attr">&quot;selectedVersion&quot;</span>: {
     <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
@@ -10087,7 +10145,23 @@ https://demo.nearbycomputing.com
         <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;arguments&quot;</span>: {}
       },
+      <span class="hljs-attr">&quot;overridesJson&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+      },
       <span class="hljs-attr">&quot;overridesYaml&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+      },
+      <span class="hljs-attr">&quot;overridesSchema&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+      },
+      <span class="hljs-attr">&quot;uiSchema&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+      },
+      <span class="hljs-attr">&quot;uiEditSchema&quot;</span>: {
         <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;arguments&quot;</span>: {}
       },
@@ -10106,29 +10180,7 @@ https://demo.nearbycomputing.com
     <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   },
-  <span class="hljs-attr">&quot;connections&quot;</span>: {
-    <span class="hljs-attr">&quot;return&quot;</span>: [
-      {
-        <span class="hljs-attr">&quot;id&quot;</span>: {
-          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-        },
-        <span class="hljs-attr">&quot;category&quot;</span>: {
-          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-        },
-        <span class="hljs-attr">&quot;description&quot;</span>: {
-          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-        },
-        <span class="hljs-attr">&quot;kind&quot;</span>: {
-          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-        },
-        <span class="hljs-attr">&quot;name&quot;</span>: {}
-      }
-    ]
-  }
+  <span class="hljs-attr">&quot;connections&quot;</span>: {}
 }
 </code></pre> </body>
                   </html>
@@ -10447,13 +10499,145 @@ https://demo.nearbycomputing.com
                         </dl>
                       </section>
                     </dt>
+                    <dt data-property-name="overridesJson" class="has-description">
+                      <span class="json-property-name">overridesJson:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>nearbyone/overrides.yaml, or values.yaml if it doesn&#39;t exist, converted from YAML to JSON</p>
+                    </dd>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
                     <dt data-property-name="overridesYaml" class="has-description">
                       <span class="json-property-name">overridesYaml:</span>
                       <div class="json-property-type">object</div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
                     <dd>
-                      <p>overrides.yaml, values.yaml if it doesn&#39;t exist</p>
+                      <p>nearbyone/overrides.yaml, or values.yaml if it doesn&#39;t exist</p>
+                    </dd>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="overridesSchema" class="has-description">
+                      <span class="json-property-name">overridesSchema:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>nearbyone/overrides.schema.json, or null if this file doesn&#39;t exist</p>
+                    </dd>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="uiSchema" class="has-description">
+                      <span class="json-property-name">uiSchema:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>nearbyone/ui.schema.json, or null if this file doesn&#39;t exist</p>
+                    </dd>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="uiEditSchema" class="has-description">
+                      <span class="json-property-name">uiEditSchema:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>nearbyone/ui-edit.schema.json, nearbyone/ui.schema.json, or null</p>
                     </dd>
                     <dt class="json-inner-schema">
                       <section class="json-schema-properties">
@@ -10596,7 +10780,23 @@ https://demo.nearbycomputing.com
     <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   },
+  <span class="hljs-attr">&quot;overridesJson&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
   <span class="hljs-attr">&quot;overridesYaml&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;overridesSchema&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;uiSchema&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;uiEditSchema&quot;</span>: {
     <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   },
@@ -21790,6 +21990,10 @@ https://demo.nearbycomputing.com
           <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;arguments&quot;</span>: {}
         },
+        <span class="hljs-attr">&quot;valuesJson&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        },
         <span class="hljs-attr">&quot;selectedVersion&quot;</span>: {
           <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
           <span class="hljs-attr">&quot;arguments&quot;</span>: {}
@@ -21836,31 +22040,24 @@ https://demo.nearbycomputing.com
               <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
               <span class="hljs-attr">&quot;arguments&quot;</span>: {}
             },
+            <span class="hljs-attr">&quot;overridesJson&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+            },
             <span class="hljs-attr">&quot;overridesYaml&quot;</span>: {
               <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
               <span class="hljs-attr">&quot;arguments&quot;</span>: {}
             },
-            <span class="hljs-attr">&quot;vendor&quot;</span>: {
+            <span class="hljs-attr">&quot;overridesSchema&quot;</span>: {
               <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
               <span class="hljs-attr">&quot;arguments&quot;</span>: {}
             },
-            <span class="hljs-attr">&quot;logoUrl&quot;</span>: {
+            <span class="hljs-attr">&quot;uiSchema&quot;</span>: {
               <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
               <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-            }
-          },
-          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-        },
-        <span class="hljs-attr">&quot;status&quot;</span>: {
-          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-        },
-        <span class="hljs-attr">&quot;connections&quot;</span>: {
-          <span class="hljs-attr">&quot;return&quot;</span>: [
-            {
-              <span class="hljs-attr">&quot;id&quot;</span>: {}
-            }
-          ]
+            },
+            <span class="hljs-attr">&quot;uiEditSchema&quot;</span>: {}
+          }
         }
       }
     ]
