@@ -19,7 +19,7 @@ local task_concat_schema = {
     outputs: [{ name: 'schema' }],
     run: { path: 'sh', args: [
       '-c',
-      'cat api-gw/graphql-backend/schema/*.graphql > schema/schema.graphql',
+      'cat api-gw/api-gateway/schema/*.graphql > schema/schema.graphql',
     ] },
   },
 };
@@ -35,9 +35,9 @@ local task_concat_schema = {
     resource.repo('api-docs', api_docs_repo),
     resource.repo('api-docs-no-html', api_docs_repo, { ignore_paths: ['public'] }),
     resource.repo('api-docs-html', api_docs_repo, { paths: ['public'] }),
-    resource.repo('api-gw', api_gw_repo, { paths: ['graphql-backend'] }),
+    resource.repo('api-gw', api_gw_repo, { paths: ['api-gateway'] }),
     resource.image('api-docs-task', api_docs_task_repository, 'latest'),
-    resource.pr('nbycomp/graphql-hello-world', { paths: ['graphql-backend'] }) { name: 'api-gw-pr' },
+    resource.pr('nbycomp/graphql-hello-world', { paths: ['api-gateway'] }) { name: 'api-gw-pr' },
   ],
 
   jobs: [
