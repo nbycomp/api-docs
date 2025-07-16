@@ -100,9 +100,6 @@ domains:
       - name: Remove Federation Guest
         description: Remove an existing Federation Guest account
         query: mutation.removeFederationGuest
-      - name: Set Federation Guest status
-        description: Disable / enable a federation guest account
-        query: mutation.setFederationGuestStatus
       - name: Create Federation Host
         description: Create a Federation Host
         query: mutation.createFederationHost
