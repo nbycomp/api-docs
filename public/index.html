@@ -4770,6 +4770,7 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">org</span>
     <span class="hljs-symbol">owner</span>
     <span class="hljs-symbol">createdAt</span>
+    <span class="hljs-symbol">formConnection<span class="hljs-tag">(name: <span class="hljs-code">$name</span>)</span></span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
@@ -4785,7 +4786,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20serviceChain(%24id%3A%20ID!)%7B%0A%20%20serviceChain(id%3A%20%24id)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=query%20serviceChain(%24id%3A%20ID!)%7B%0A%20%20serviceChain(id%3A%20%24id)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%20%20formConnection(name%3A%20%24name)%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -4831,7 +4832,8 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;revision&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;org&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+      <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;formConnection&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   }
 }
@@ -4912,6 +4914,7 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">org</span>
     <span class="hljs-symbol">owner</span>
     <span class="hljs-symbol">createdAt</span>
+    <span class="hljs-symbol">formConnection<span class="hljs-tag">(name: <span class="hljs-code">$name</span>)</span></span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
@@ -4930,7 +4933,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=query%20serviceChains(%24org%3A%20ID%2C%20%24sites%3A%20%5BID!%5D)%7B%0A%20%20serviceChains(org%3A%20%24org%2C%20sites%3A%20%24sites)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=query%20serviceChains(%24org%3A%20ID%2C%20%24sites%3A%20%5BID!%5D)%7B%0A%20%20serviceChains(org%3A%20%24org%2C%20sites%3A%20%24sites)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%20%20formConnection(name%3A%20%24name)%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -4977,7 +4980,8 @@ https://demo.nearbycomputing.com
         <span class="hljs-attr">&quot;revision&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>,
         <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;org&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-        <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+        <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;formConnection&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
       }
     ]
   }
@@ -5063,6 +5067,7 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">org</span>
     <span class="hljs-symbol">owner</span>
     <span class="hljs-symbol">createdAt</span>
+    <span class="hljs-symbol">formConnection<span class="hljs-tag">(name: <span class="hljs-code">$name</span>)</span></span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
@@ -5087,7 +5092,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20deployServiceChain(%24name%3A%20String!%2C%20%24blocks%3A%20%5BBlockInput!%5D)%7B%0A%20%20deployServiceChain(name%3A%20%24name%2C%20blocks%3A%20%24blocks)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=mutation%20deployServiceChain(%24name%3A%20String!%2C%20%24blocks%3A%20%5BBlockInput!%5D)%7B%0A%20%20deployServiceChain(name%3A%20%24name%2C%20blocks%3A%20%24blocks)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%20%20formConnection(name%3A%20%24name)%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -5133,7 +5138,8 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;revision&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;org&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+      <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;formConnection&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   }
 }
@@ -5231,6 +5237,7 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">org</span>
     <span class="hljs-symbol">owner</span>
     <span class="hljs-symbol">createdAt</span>
+    <span class="hljs-symbol">formConnection<span class="hljs-tag">(name: <span class="hljs-code">$name</span>)</span></span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
@@ -5256,7 +5263,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20updateServiceChain(%24id%3A%20ID!%2C%20%24name%3A%20String!%2C%20%24blocks%3A%20%5BBlockInput!%5D)%7B%0A%20%20updateServiceChain(id%3A%20%24id%2C%20name%3A%20%24name%2C%20blocks%3A%20%24blocks)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=mutation%20updateServiceChain(%24id%3A%20ID!%2C%20%24name%3A%20String!%2C%20%24blocks%3A%20%5BBlockInput!%5D)%7B%0A%20%20updateServiceChain(id%3A%20%24id%2C%20name%3A%20%24name%2C%20blocks%3A%20%24blocks)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%20%20formConnection(name%3A%20%24name)%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -5302,7 +5309,8 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;revision&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;org&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+      <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;formConnection&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   }
 }
@@ -5383,6 +5391,7 @@ https://demo.nearbycomputing.com
     <span class="hljs-symbol">org</span>
     <span class="hljs-symbol">owner</span>
     <span class="hljs-symbol">createdAt</span>
+    <span class="hljs-symbol">formConnection<span class="hljs-tag">(name: <span class="hljs-code">$name</span>)</span></span>
   }</span></span>
 }</span></span>
 </code></pre> </body>
@@ -5399,7 +5408,7 @@ https://demo.nearbycomputing.com
 </code></pre> </body>
                     </html>
                     <!-- </div> -->
-                    <a href="https://demo.nearbycomputing.com?query=mutation%20rollbackServiceChain(%24id%3A%20ID!%2C%20%24revision%3A%20Int!)%7B%0A%20%20rollbackServiceChain(id%3A%20%24id%2C%20revision%3A%20%24revision)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
+                    <a href="https://demo.nearbycomputing.com?query=mutation%20rollbackServiceChain(%24id%3A%20ID!%2C%20%24revision%3A%20Int!)%7B%0A%20%20rollbackServiceChain(id%3A%20%24id%2C%20revision%3A%20%24revision)%7B%0A%20%20%20%20id%0A%20%20%20%20revision%0A%20%20%20%20name%0A%20%20%20%20status%0A%20%20%20%20org%0A%20%20%20%20owner%0A%20%20%20%20createdAt%0A%20%20%20%20formConnection(name%3A%20%24name)%0A%20%20%7D%0A%7D" target="_blank">Try it now</a>
                 </section>
               </div>
             </div>
@@ -5445,7 +5454,8 @@ https://demo.nearbycomputing.com
       <span class="hljs-attr">&quot;revision&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span>,
       <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
       <span class="hljs-attr">&quot;org&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-      <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+      <span class="hljs-attr">&quot;owner&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;formConnection&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
     }
   }
 }
@@ -27770,6 +27780,47 @@ https://demo.nearbycomputing.com
                           <dt class="json-inner-schema">
                             <section class="json-schema-properties">
                               <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="formConnection">
+                      <span class="json-property-name">formConnection:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl>
+                                <dt data-property-name="name">
+                                  <span class="json-property-name">name:</span>
+                                  <div class="json-property-type">
+                                    <div class="">
+                                      <a class="json-schema-ref" href="#/definitions/String">String</a>
+                                    </div>
+                                  </div>
+                                  <span class="json-property-range" title="Value limits"></span>
+                                  <span class="json-property-required"></span>
+                                </dt>
+                              </dl>
                             </section>
                           </dt>
                         </dl>
