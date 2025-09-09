@@ -74,7 +74,7 @@ domains:
         query: mutation.removeDevice
 
   - name: Federation
-    description: View, create and manage guest accounts and federation hosts
+    description: View, create and manage federation guest accounts
     usecases:
       - name: Federation Guests
         description: List all Federation Guest accounts within an org
@@ -82,12 +82,6 @@ domains:
       - name: Federation Guest
         description: Fetch a single Federation Guest account
         query: query.federationGuest
-      - name: Federation Hosts
-        description: List all Federation Hosts within an org
-        query: query.federationHosts
-      - name: Federation Host
-        description: Fetch a single Federation Host
-        query: query.federationHost
       - name: Edit Federation
         description: Edit a federation
         query: mutation.editFederation
@@ -100,15 +94,6 @@ domains:
       - name: Remove Federation Guest
         description: Remove an existing Federation Guest account
         query: mutation.removeFederationGuest
-      - name: Create Federation Host
-        description: Create a Federation Host
-        query: mutation.createFederationHost
-      - name: Edit Federation Host
-        description: Edit an existing Federation Host
-        query: mutation.editFederationHost
-      - name: Remove Federation Host
-        description: Remove an existing Federation Host
-        query: mutation.removeFederationHost
 
   - name: Management
     description: Endpoints for managing your installation
