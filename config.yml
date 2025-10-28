@@ -24,12 +24,6 @@ domains:
       - name: Delete Block Chart
         description: Delete an existing Block Chart based on an existing template
         query: mutation.deleteBlockChart
-      - name: Provision Chart
-        description: Fetch the baremetal / software values of a Provisioning Chart
-        query: query.provisionChart
-      - name: Provision Charts
-        description: Fetch a list of all versions of all Provision Charts
-        query: query.provisionCharts
       - name: Cloud Resource Chart
         description: Fetch the default config of a Cloud Resource Chart
         query: query.cloudResourceChart
@@ -111,16 +105,6 @@ domains:
       - name: Okto Resource Logs
         description: View logs for a single Okto Resource
         query: query.oktoResourceLogs
-
-  - name: Provisions
-    description:  View, create and manage provisions
-    usecases:
-      - name: Provisions
-        description: List all Provisions in a site
-        query: query.provisions
-      - name: Provision
-        description: Create a provision
-        query: mutation.provision
 
   - name: Services
     description: View information on currently deployed services
