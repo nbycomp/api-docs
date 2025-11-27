@@ -29050,8 +29050,8 @@ https://demo.nearbycomputing.com
                         </dl>
                       </section>
                     </dt>
-                    <dt data-property-name="mecSite">
-                      <span class="json-property-name">mecSite:</span>
+                    <dt data-property-name="cloudSite">
+                      <span class="json-property-name">cloudSite:</span>
                       <div class="json-property-type">object</div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
@@ -29062,7 +29062,7 @@ https://demo.nearbycomputing.com
                             <span class="json-property-name">return:</span>
                             <div class="json-property-type">
                               <div class="">
-                                <a class="json-schema-ref" href="#/definitions/MecSite">MecSite</a>
+                                <a class="json-schema-ref" href="#/definitions/CloudSite">CloudSite</a>
                               </div>
                             </div>
                             <span class="json-property-range" title="Value limits"></span>
@@ -29196,13 +29196,13 @@ https://demo.nearbycomputing.com
     <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   },
-  <span class="hljs-attr">&quot;mecSite&quot;</span>: {
+  <span class="hljs-attr">&quot;cloudSite&quot;</span>: {
     <span class="hljs-attr">&quot;return&quot;</span>: {
       <span class="hljs-attr">&quot;id&quot;</span>: {
         <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
         <span class="hljs-attr">&quot;arguments&quot;</span>: {}
       },
-      <span class="hljs-attr">&quot;displayName&quot;</span>: {
+      <span class="hljs-attr">&quot;name&quot;</span>: {
         <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;arguments&quot;</span>: {}
       },
@@ -29210,77 +29210,77 @@ https://demo.nearbycomputing.com
         <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
         <span class="hljs-attr">&quot;arguments&quot;</span>: {}
       },
-      <span class="hljs-attr">&quot;cluster&quot;</span>: {
+      <span class="hljs-attr">&quot;deployment&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+      },
+      <span class="hljs-attr">&quot;opStatus&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+      },
+      <span class="hljs-attr">&quot;adminStatus&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+      },
+      <span class="hljs-attr">&quot;info&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: [
+          {
+            <span class="hljs-attr">&quot;key&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+            },
+            <span class="hljs-attr">&quot;value&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+            }
+          }
+        ],
+        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+      },
+      <span class="hljs-attr">&quot;capacity&quot;</span>: {
         <span class="hljs-attr">&quot;return&quot;</span>: {
-          <span class="hljs-attr">&quot;id&quot;</span>: {
-            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-          },
-          <span class="hljs-attr">&quot;tags&quot;</span>: {
-            <span class="hljs-attr">&quot;return&quot;</span>: [
-              <span class="hljs-string">&quot;string&quot;</span>
-            ],
-            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-          },
-          <span class="hljs-attr">&quot;displayName&quot;</span>: {
+          <span class="hljs-attr">&quot;cpu&quot;</span>: {
             <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
             <span class="hljs-attr">&quot;arguments&quot;</span>: {}
           },
-          <span class="hljs-attr">&quot;position&quot;</span>: {
+          <span class="hljs-attr">&quot;memory&quot;</span>: {
+            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+          },
+          <span class="hljs-attr">&quot;disk&quot;</span>: {
+            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+          },
+          <span class="hljs-attr">&quot;network&quot;</span>: {
+            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+          }
+        },
+        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+      },
+      <span class="hljs-attr">&quot;resources&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: {
+          <span class="hljs-attr">&quot;consumed&quot;</span>: {
             <span class="hljs-attr">&quot;return&quot;</span>: {
-              <span class="hljs-attr">&quot;lat&quot;</span>: {
-                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+              <span class="hljs-attr">&quot;vcpu&quot;</span>: {
+                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                 <span class="hljs-attr">&quot;arguments&quot;</span>: {}
               },
-              <span class="hljs-attr">&quot;lng&quot;</span>: {
-                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+              <span class="hljs-attr">&quot;memory&quot;</span>: {
+                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+              },
+              <span class="hljs-attr">&quot;disk&quot;</span>: {
+                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
                 <span class="hljs-attr">&quot;arguments&quot;</span>: {}
               }
             },
             <span class="hljs-attr">&quot;arguments&quot;</span>: {}
           },
-          <span class="hljs-attr">&quot;specs&quot;</span>: {
-            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-          },
-          <span class="hljs-attr">&quot;status&quot;</span>: {
-            <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-          },
-          <span class="hljs-attr">&quot;progress&quot;</span>: {
+          <span class="hljs-attr">&quot;available&quot;</span>: {
             <span class="hljs-attr">&quot;return&quot;</span>: {
-              <span class="hljs-attr">&quot;step&quot;</span>: {
-                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-              },
-              <span class="hljs-attr">&quot;goal&quot;</span>: {
-                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
-                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-              }
-            },
-            <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-          },
-          <span class="hljs-attr">&quot;connections&quot;</span>: {
-            <span class="hljs-attr">&quot;return&quot;</span>: [
-              {
-                <span class="hljs-attr">&quot;id&quot;</span>: {
-                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
-                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                },
-                <span class="hljs-attr">&quot;category&quot;</span>: {
-                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                },
-                <span class="hljs-attr">&quot;description&quot;</span>: {
-                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                },
-                <span class="hljs-attr">&quot;kind&quot;</span>: {
-                  <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
-                  <span class="hljs-attr">&quot;arguments&quot;</span>: {}
-                }
-              }
-            ]
+              <span class="hljs-attr">&quot;vcpu&quot;</span>: {}
+            }
           }
         }
       }
