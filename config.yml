@@ -49,7 +49,7 @@ domains:
     usecases:
       - name: Cloud Resource Provision
         description: Provision a Cloud Resource
-        query: mutation.cloudResource
+        query: mutation.deployCloudResource
       - name: Update Cloud Resource
         description: update a provisioned Cloud Resource
         query: mutation.updateCloudResource
