@@ -152,12 +152,6 @@ domains:
       - name: Set template repo
         description: Set credentials for template chart repo
         query: mutation.setTemplateRepo
-      - name: Custom Completions
-        descriptions: Fetch custom completions for an org
-        query: query.customCompletions
-      - name: Set Custom Completions
-        description: Set custom completions for an org
-        query: mutation.setCustomCompletions
 
   - name: Sites and Organizations
     description: View and update information related to a site/organization
