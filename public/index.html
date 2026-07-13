@@ -220,6 +220,7 @@
           </section>
           <h5>Schema Definitions</h5>
           <a href="#definition-AlarmStatus"> AlarmStatus </a>
+          <a href="#definition-AnnotationMatchInput"> AnnotationMatchInput </a>
           <a href="#definition-ApiTokens"> ApiTokens </a>
           <a href="#definition-AuditLogEntity"> AuditLogEntity </a>
           <a href="#definition-AuditLogEntityType"> AuditLogEntityType </a>
@@ -231,6 +232,7 @@
           <a href="#definition-BBox"> BBox </a>
           <a href="#definition-Block"> Block </a>
           <a href="#definition-BlockChart"> BlockChart </a>
+          <a href="#definition-BlockChartEntry"> BlockChartEntry </a>
           <a href="#definition-BlockChartFormDependencies"> BlockChartFormDependencies </a>
           <a href="#definition-BlockChartFormDependency"> BlockChartFormDependency </a>
           <a href="#definition-BlockChartType"> BlockChartType </a>
@@ -243,6 +245,7 @@
           <a href="#definition-Boolean"> Boolean </a>
           <a href="#definition-ChainContextInput"> ChainContextInput </a>
           <a href="#definition-ChartConfigField"> ChartConfigField </a>
+          <a href="#definition-ChartFilterInput"> ChartFilterInput </a>
           <a href="#definition-ChartKey"> ChartKey </a>
           <a href="#definition-ChartMetaInput"> ChartMetaInput </a>
           <a href="#definition-ChartTypeInput"> ChartTypeInput </a>
@@ -356,6 +359,7 @@
           <a href="#definition-ProvisionPhase"> ProvisionPhase </a>
           <a href="#definition-ProvisionStatusSearchTerm"> ProvisionStatusSearchTerm </a>
           <a href="#definition-PublishBlockChartInput"> PublishBlockChartInput </a>
+          <a href="#definition-QueryBlockChartsResponse"> QueryBlockChartsResponse </a>
           <a href="#definition-QueryConnectionsResponse"> QueryConnectionsResponse </a>
           <a href="#definition-QueryGroupInput"> QueryGroupInput </a>
           <a href="#definition-QueryOperator"> QueryOperator </a>
@@ -6981,6 +6985,61 @@ https://demo.nearbycomputing.com
               </div>
             </div>
           </div>
+          <div id="definition-AnnotationMatchInput" class="definition panel" data-traverse-target="definition-AnnotationMatchInput">
+            <h2 class="panel-title">
+              <a name="/definitions/AnnotationMatchInput"></a>AnnotationMatchInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="key">
+                      <span class="json-property-name">key:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="value" class="has-description">
+                      <span class="json-property-name">value:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>unset = key-presence check</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
           <div id="definition-ApiTokens" class="definition panel" data-traverse-target="definition-ApiTokens">
             <h2 class="panel-title">
               <a name="/definitions/ApiTokens"></a>ApiTokens: object
@@ -9612,6 +9671,435 @@ https://demo.nearbycomputing.com
               </div>
             </div>
           </div>
+          <div id="definition-BlockChartEntry" class="definition panel" data-traverse-target="definition-BlockChartEntry">
+            <h2 class="panel-title">
+              <a name="/definitions/BlockChartEntry"></a>BlockChartEntry: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>A chart-catalog index entry with its raw Chart.yaml annotations.</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="id">
+                      <span class="json-property-name">id:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="name">
+                      <span class="json-property-name">name:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="version">
+                      <span class="json-property-name">version:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="displayName">
+                      <span class="json-property-name">displayName:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="description">
+                      <span class="json-property-name">description:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="vendor">
+                      <span class="json-property-name">vendor:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="categories">
+                      <span class="json-property-name">categories:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="json-schema-ref-array">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="allVersions">
+                      <span class="json-property-name">allVersions:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="json-schema-ref-array">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="logoUrl">
+                      <span class="json-property-name">logoUrl:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="chartType" class="has-description">
+                      <span class="json-property-name">chartType:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>raw Chart.yaml <code>type</code> annotation</p>
+                    </dd>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/String">String</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="annotations">
+                      <span class="json-property-name">annotations:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="json-schema-ref-array">
+                                <a class="json-schema-ref" href="#/definitions/KeyValue">KeyValue</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;id&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;name&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;version&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;displayName&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;description&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;vendor&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;categories&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;allVersions&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: [
+      <span class="hljs-string">&quot;string&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;logoUrl&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;chartType&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;annotations&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;key&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        },
+        <span class="hljs-attr">&quot;value&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        }
+      }
+    ],
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
           <div id="definition-BlockChartFormDependencies" class="definition panel" data-traverse-target="definition-BlockChartFormDependencies">
             <h2 class="panel-title">
               <a name="/definitions/BlockChartFormDependencies"></a>BlockChartFormDependencies: object
@@ -11054,6 +11542,83 @@ https://demo.nearbycomputing.com
     <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;boolean&quot;</span>,
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-ChartFilterInput" class="definition panel" data-traverse-target="definition-ChartFilterInput">
+            <h2 class="panel-title">
+              <a name="/definitions/ChartFilterInput"></a>ChartFilterInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>Filter for queryBlockCharts. All criteria AND together.</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="chartTypes" class="has-description">
+                      <span class="json-property-name">chartTypes:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>raw Chart.yaml <code>type</code> annotation strings</p>
+                    </dd>
+                    <dt data-property-name="annotations">
+                      <span class="json-property-name">annotations:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/AnnotationMatchInput">AnnotationMatchInput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt data-property-name="search" class="has-description">
+                      <span class="json-property-name">search:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/String">String</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>case-insensitive substring on name/displayName</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;chartTypes&quot;</span>: [
+    <span class="hljs-string">&quot;string&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;annotations&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+    }
+  ],
+  <span class="hljs-attr">&quot;search&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
 }
 </code></pre> </body>
                   </html>
@@ -28925,6 +29490,168 @@ https://demo.nearbycomputing.com
   },
   <span class="hljs-attr">&quot;valuesYaml&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
   <span class="hljs-attr">&quot;overridesYaml&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-QueryBlockChartsResponse" class="definition panel" data-traverse-target="definition-QueryBlockChartsResponse">
+            <h2 class="panel-title">
+              <a name="/definitions/QueryBlockChartsResponse"></a>QueryBlockChartsResponse: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="totalCount">
+                      <span class="json-property-name">totalCount:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/Int">Int</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="items">
+                      <span class="json-property-name">items:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="json-schema-ref-array">
+                                <a class="json-schema-ref" href="#/definitions/BlockChartEntry">BlockChartEntry</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;totalCount&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;number&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;items&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: [
+      {
+        <span class="hljs-attr">&quot;id&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;object&quot;</span>,
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        },
+        <span class="hljs-attr">&quot;name&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        },
+        <span class="hljs-attr">&quot;version&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        },
+        <span class="hljs-attr">&quot;displayName&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        },
+        <span class="hljs-attr">&quot;description&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        },
+        <span class="hljs-attr">&quot;vendor&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        },
+        <span class="hljs-attr">&quot;categories&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: [
+            <span class="hljs-string">&quot;string&quot;</span>
+          ],
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        },
+        <span class="hljs-attr">&quot;allVersions&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: [
+            <span class="hljs-string">&quot;string&quot;</span>
+          ],
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        },
+        <span class="hljs-attr">&quot;logoUrl&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        },
+        <span class="hljs-attr">&quot;chartType&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        },
+        <span class="hljs-attr">&quot;annotations&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;key&quot;</span>: {
+                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+              },
+              <span class="hljs-attr">&quot;value&quot;</span>: {
+                <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+              }
+            }
+          ],
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        }
+      }
+    ],
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  }
 }
 </code></pre> </body>
                   </html>
