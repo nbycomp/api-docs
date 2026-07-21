@@ -322,6 +322,9 @@
           <a href="#definition-GlobalRepo"> GlobalRepo </a>
           <a href="#definition-GlobalRepoDisposition"> GlobalRepoDisposition </a>
           <a href="#definition-GlobalRepoInput"> GlobalRepoInput </a>
+          <a href="#definition-GlobalRepoScope"> GlobalRepoScope </a>
+          <a href="#definition-GlobalRepoScopeInput"> GlobalRepoScopeInput </a>
+          <a href="#definition-GlobalRepoScopeMode"> GlobalRepoScopeMode </a>
           <a href="#definition-GlobalSettings"> GlobalSettings </a>
           <a href="#definition-GlobalSettingsRegistration"> GlobalSettingsRegistration </a>
           <a href="#definition-HostedComputeResource"> HostedComputeResource </a>
@@ -23499,6 +23502,37 @@ https://demo.nearbycomputing.com
                         </dl>
                       </section>
                     </dt>
+                    <dt data-property-name="scope">
+                      <span class="json-property-name">scope:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/GlobalRepoScope">GlobalRepoScope</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
                   </dl>
                 </section>
               </div>
@@ -23548,6 +23582,21 @@ https://demo.nearbycomputing.com
   },
   <span class="hljs-attr">&quot;description&quot;</span>: {
     <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;scope&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: {
+      <span class="hljs-attr">&quot;mode&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+      },
+      <span class="hljs-attr">&quot;orgIds&quot;</span>: {
+        <span class="hljs-attr">&quot;return&quot;</span>: [
+          <span class="hljs-string">&quot;object&quot;</span>
+        ],
+        <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+      }
+    },
     <span class="hljs-attr">&quot;arguments&quot;</span>: {}
   }
 }
@@ -23671,6 +23720,18 @@ https://demo.nearbycomputing.com
                       </div>
                       <span class="json-property-range" title="Value limits"></span>
                     </dt>
+                    <dt data-property-name="scope" class="has-description">
+                      <span class="json-property-name">scope:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/GlobalRepoScopeInput">GlobalRepoScopeInput</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>omitted means the repo applies to all orgs</p>
+                    </dd>
                   </dl>
                 </section>
               </div>
@@ -23690,11 +23751,217 @@ https://demo.nearbycomputing.com
     <span class="hljs-attr">&quot;password&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
     <span class="hljs-attr">&quot;bearerToken&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
   },
-  <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>
+  <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;scope&quot;</span>: {
+    <span class="hljs-attr">&quot;mode&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;orgIds&quot;</span>: [
+      <span class="hljs-string">&quot;object&quot;</span>
+    ]
+  }
 }
 </code></pre> </body>
                   </html>
                   <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-GlobalRepoScope" class="definition panel" data-traverse-target="definition-GlobalRepoScope">
+            <h2 class="panel-title">
+              <a name="/definitions/GlobalRepoScope"></a>GlobalRepoScope: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-description">
+                  <p>Which orgs a global repo applies to.</p>
+                </section>
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="mode">
+                      <span class="json-property-name">mode:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="">
+                                <a class="json-schema-ref" href="#/definitions/GlobalRepoScopeMode">GlobalRepoScopeMode</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                    <dt data-property-name="orgIds" class="has-description">
+                      <span class="json-property-name">orgIds:</span>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dd>
+                      <p>org ids; only populated when mode is ORG_LIST</p>
+                    </dd>
+                    <dt class="json-inner-schema">
+                      <section class="json-schema-properties">
+                        <dl>
+                          <dt data-property-name="return">
+                            <span class="json-property-name">return:</span>
+                            <div class="json-property-type">
+                              <div class="json-schema-ref-array">
+                                <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                              </div>
+                            </div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt data-property-name="arguments">
+                            <span class="json-property-name">arguments:</span>
+                            <div class="json-property-type">object</div>
+                            <span class="json-property-range" title="Value limits"></span>
+                          </dt>
+                          <dt class="json-inner-schema">
+                            <section class="json-schema-properties">
+                              <dl> </dl>
+                            </section>
+                          </dt>
+                        </dl>
+                      </section>
+                    </dt>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;mode&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  },
+  <span class="hljs-attr">&quot;orgIds&quot;</span>: {
+    <span class="hljs-attr">&quot;return&quot;</span>: [
+      <span class="hljs-string">&quot;object&quot;</span>
+    ],
+    <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+  }
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-GlobalRepoScopeInput" class="definition panel" data-traverse-target="definition-GlobalRepoScopeInput">
+            <h2 class="panel-title">
+              <a name="/definitions/GlobalRepoScopeInput"></a>GlobalRepoScopeInput: object
+              <!-- <span class="json-property-type"><div class="json-property-type">object</div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-properties">
+                  <dl>
+                    <dt data-property-name="mode">
+                      <span class="json-property-name">mode:</span>
+                      <div class="json-property-type">
+                        <div class="">
+                          <a class="json-schema-ref" href="#/definitions/GlobalRepoScopeMode">GlobalRepoScopeMode</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                      <span class="json-property-required"></span>
+                    </dt>
+                    <dt data-property-name="orgIds" class="has-description">
+                      <span class="json-property-name">orgIds:</span>
+                      <div class="json-property-type">
+                        <div class="json-schema-ref-array">
+                          <a class="json-schema-ref" href="#/definitions/ID">ID</a>
+                        </div>
+                      </div>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd>
+                      <p>Allowed (possibly empty) only when mode is ORG_LIST. An empty list means the repo applies to no org — still distinct from ALL_ORGS, which also covers orgs created later.</p>
+                    </dd>
+                  </dl>
+                </section>
+              </div>
+              <div class="doc-examples">
+                <section>
+                  <h5>Example</h5>
+                  <!-- <div class="hljs"> -->
+                  <html>
+                  <head></head>
+                  <body><pre><code class="hljs language-json">{
+  <span class="hljs-attr">&quot;mode&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+  <span class="hljs-attr">&quot;orgIds&quot;</span>: [
+    <span class="hljs-string">&quot;object&quot;</span>
+  ]
+}
+</code></pre> </body>
+                  </html>
+                  <!-- </div> -->
+                </section>
+              </div>
+            </div>
+          </div>
+          <div id="definition-GlobalRepoScopeMode" class="definition panel" data-traverse-target="definition-GlobalRepoScopeMode">
+            <h2 class="panel-title">
+              <a name="/definitions/GlobalRepoScopeMode"></a>GlobalRepoScopeMode: string
+              <!-- <span class="json-property-type"><div class="json-property-type"></div>
+              <span class="json-property-range" title="Value limits"></span>
+              
+              
+              </span> -->
+            </h2>
+            <div class="doc-row">
+              <div class="doc-copy">
+                <section class="json-schema-anyOf">
+                  <dl>
+                    <dt>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-enum" title="Possible values">
+                        <span class="json-property-enum-item">ALL_ORGS</span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd> </dd>
+                    <dt>
+                      <div class="json-property-type">object</div>
+                      <span class="json-property-enum" title="Possible values">
+                        <span class="json-property-enum-item">ORG_LIST</span>
+                      </span>
+                      <span class="json-property-range" title="Value limits"></span>
+                    </dt>
+                    <dd> </dd>
+                  </dl>
                 </section>
               </div>
             </div>
@@ -23795,6 +24062,21 @@ https://demo.nearbycomputing.com
         },
         <span class="hljs-attr">&quot;description&quot;</span>: {
           <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+          <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+        },
+        <span class="hljs-attr">&quot;scope&quot;</span>: {
+          <span class="hljs-attr">&quot;return&quot;</span>: {
+            <span class="hljs-attr">&quot;mode&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: <span class="hljs-string">&quot;string&quot;</span>,
+              <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+            },
+            <span class="hljs-attr">&quot;orgIds&quot;</span>: {
+              <span class="hljs-attr">&quot;return&quot;</span>: [
+                <span class="hljs-string">&quot;object&quot;</span>
+              ],
+              <span class="hljs-attr">&quot;arguments&quot;</span>: {}
+            }
+          },
           <span class="hljs-attr">&quot;arguments&quot;</span>: {}
         }
       }
